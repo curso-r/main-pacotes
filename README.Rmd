@@ -18,6 +18,6 @@ Para informações sobre o curso e inscrição, acesse: [https://curso-r.com/cur
 **Acesse o material completo do curso escolhendo uma das turmas abaixo**.
 
 ```{r, echo = FALSE, message = FALSE, warning = FALSE}
-knitr::kable(CursoRutils:::listar_turmas_recentes("main-pacotes"))
+knitr::kable(CursoRutils:::listar_turmas_recentes("pacotes"))
 ```
 
