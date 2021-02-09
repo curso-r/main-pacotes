@@ -9,6 +9,10 @@ Para informações sobre o curso e inscrição, acesse:
 **Acesse o material completo do curso escolhendo uma das turmas
 abaixo**.
 
-| Turma        | Material                                   | Github                                      |
-| :----------- | :----------------------------------------- | :------------------------------------------ |
-| Maio de 2021 | <https://curso-r.github.io/202105-pacotes> | <https://github.com/curso-r/202105-pacotes> |
+| Turma          | Material                                   | Github                                      |
+| :------------- | :----------------------------------------- | :------------------------------------------ |
+| Agosto de 2021 | <https://curso-r.github.io/202108-pacotes> | <https://github.com/curso-r/202108-pacotes> |
+| Maio de 2021   | <https://curso-r.github.io/202105-pacotes> | <https://github.com/curso-r/202105-pacotes> |
+
+**Atenção**: o material de cursos que ainda não começaram pode não
+existir ainda.

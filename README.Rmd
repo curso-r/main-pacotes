@@ -21,3 +21,4 @@ Para informações sobre o curso e inscrição, acesse: [https://curso-r.com/cur
 knitr::kable(CursoRutils:::listar_turmas_recentes("pacotes"))
 ```
 
+**Atenção**: o material de cursos que ainda não começaram pode não existir ainda.
