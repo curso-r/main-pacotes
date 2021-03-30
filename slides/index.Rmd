@@ -1,0 +1,295 @@
+---
+title: "Pacotes 📦"
+author: "<img src = 'https://d33wubrfki0l68.cloudfront.net/9b0699f18268059bdd2e5c21538a29eade7cbd2b/67e5c/img/logo/cursor1-5.png' width = '20%'>"
+date: ""
+output:
+  xaringan::moon_reader:
+    css: ["default", "default-fonts", "css/custom-intro.css"]
+    lib_dir: libs
+    nature:
+      highlightStyle: github
+      highlightLines: true
+      countIncrementalSlides: false
+      ratio: "16:9"
+---
+
+```{r, child="00-preamble.Rmd"}
+
+```
+
+
+# Sumário
+
+1. [Sobre a Curso-R](#sobre-curso-r)
+
+1. [Sobre o curso](#sobre-o-curso)
+
+1. [Fundamentos de desenvolvimento de pacotes em R](#fundamentos-pacote)
+
+1. [Documentação](#documentacao)
+
+1. [Testes unitários e consistência de código](#testes-unitarios)
+
+1. [Disponibilizando seu pacote](#disponibilizando-o-pacote)
+
+---
+class: middle, center
+name: sobre-curso-r
+
+# Sobre a Curso-R
+
+---
+
+class: middle, center
+
+## A empresa
+
+.pull-left[
+```{r, echo = FALSE}
+knitr::include_graphics("https://d33wubrfki0l68.cloudfront.net/295643c6243701ae6a9bac3fb8ad467ff0ce3c84/d1785/img/logo/cursor1-41.png")
+```
+
+<br>
+<br>
+
+```{r, echo = FALSE}
+knitr::include_graphics("img/logo_r6.png")
+```
+
+]
+
+.pull-right[
+```{r, echo = FALSE, out.width="90%"}
+knitr::include_graphics("img/produtos.png")
+```
+]
+
+**[www.curso-r.com](https://www.curso-r.com)**
+
+---
+
+## Ministrantes
+
+.pull-left[
+
+### Caio Lente
+
+```{r, echo=FALSE, out.width="30%"}
+knitr::include_graphics("img/caio.jpeg")
+```
+
+Mestrando em Ciência da Computação no IME-USP e cientista de dados na Terranova Consultoria. Programador desde os 15 anos, começou a se apaixonar pelo R em 2016 e agora não fala em outra coisa. Metido a designer, maníaco da organização e metade texano.
+
+]
+
+
+.pull-right[
+
+### Beatriz Milz
+
+```{r, echo=FALSE, out.width="30%"}
+knitr::include_graphics("img/bea.jpg")
+```
+
+Doutoranda em Ciência Ambiental (PROCAM/IEE/USP) na Universidade de São Paulo. Co-organizadora da [R-Ladies São Paulo](https://www.meetup.com/R-Ladies-Sao-Paulo/). Instrutora da [Carpentries](https://carpentries.org/instructors/), um projeto que tem como missão ensinar habilidades de ciência de dados para pessoas pesquisadoras. Instrutora de tidyverse [certificada pela RStudio](https://education.rstudio.com/trainers/people/milz+beatriz/). 
+
+
+
+]
+
+---
+
+## Linha do tempo
+
+
+
+```{r, echo=FALSE, out.width="40%"}
+knitr::include_graphics("img/linha_do_tempo.png")
+```
+
+
+---
+
+## Nossos cursos
+
+
+.pull-left[
+<div class="container center">
+  <div class="card">
+    <h2>Programação em R</h2>
+    <hr style = "background-color: #3bb44a;"/>
+    <p><a href = "https://www.curso-r.com/cursos/intro-programacao/">Introdução à programação com R</a></p>
+    <p><a href = "https://www.curso-r.com/cursos/r4ds-1/">R para Ciência de dados I</a></p>
+    <p><a href = "https://www.curso-r.com/cursos/r4ds-2/">R para Ciência de dados II</a></p>
+    <p><a href = "https://www.curso-r.com/cursos/pacotes/">Pacotes</a></p>
+    <p><a href = "https://www.curso-r.com/cursos/rcpp/">Introdução ao R com C++</a></p>
+
+  </div>
+</div>
+
+<br>
+
+<div class="container center">
+  <div class="card">
+    <h2>Extração de dados</h2>
+    <hr style = "background-color: #eeba30;"/>
+    <p><a href = "https://www.curso-r.com/cursos/faxina/">Faxina de dados</a></p>
+    <p><a href = "https://www.curso-r.com/cursos/web-scraping/">Web scraping</a></p>
+
+  </div>
+</div>
+]
+
+
+.pull-right[
+<div class="container center">
+  <div class="card">
+    <h2>Modelagem</h2>
+    <hr style = "background-color: #996699;"/>
+    <p><a href = "https://www.curso-r.com/cursos/regressao-linear/">Regressão Linear</a></p>
+    <p><a href = "https://www.curso-r.com/cursos/intro-machine-learning/">Machine Learning</a></p>
+    <p><a href = "https://www.curso-r.com/cursos/xgboost/">XGBoost</a></p>
+    <p><a href = "https://www.curso-r.com/cursos/deep-learning/">Deep Learning</a></p>
+  </div>
+</div>
+
+<br><br> 
+
+<div class="container center">
+  <div class="card">
+    <h2>Comunicação e automação</h2>
+    <hr style = "background-color: #ff6699;"/>
+    <p><a href = "https://www.curso-r.com/cursos/dashboards/">Relatórios e visualização de dados</a></p>
+    <p><a href = "https://www.curso-r.com/cursos/dashboards/">Dashboards com R</a></p>
+    <p><a href = "https://www.curso-r.com/cursos/deploy/">Deploy</a></p>
+  </div>
+</div>
+]
+
+
+---
+class: middle, center
+name: sobre-o-curso
+
+# Sobre o curso
+
+---
+
+## Nesse curso vamos falar de... 📦
+
+.pull-left[
+- **Fundamentos de desenvolvimento de pacotes em R**
+  - Git e GitHub
+  - O arquivo DESCRIPTION
+  - Estrutura de pastas e arquivos
+  - O pacote {usethis}
+  - Melhores práticas de desenvolvimento de pacotes
+
+- **Documentação**
+  - Criando bons nomes
+  - Documentação de funções
+  - Documentação de bases de dados
+  - Acentos, encoding e variáveis globais
+]
+
+--
+.pull-right[
+
+- **Testes unitários e consistência de código**
+  - O pacote {testthat}
+  - Tipos de testes
+  - Passando no devtools::check()
+
+
+- **Disponibilizando seu pacote**
+  - Disponibilizando em um repositório
+  - Criando um {pkgdown}
+  - Integração contínua com Github Actions
+  - Regras para colocar um pacote no CRAN
+
+]
+
+---
+
+## Informações gerais
+
+- As aulas vão das 9h às 13, com uma pausa de 10 min em torno das 11:00
+- As aulas serão gravadas e disponibilizadas no Google Classroom
+- Podem mandar dúvidas no chat do Zoom ou abrir o microfone para perguntar
+- Teremos bastante exercícios para resolver durante o workshop, então se prepare!
+
+## Informações de vocês
+
+- Nós gostaríamos de saber sobre vocês:
+
+  - Nome
+  - Com o que trabalha?
+  - Como imagina usar pacotes no futuro?
+
+
+---
+
+## Tirando dúvidas
+
+- **Não existe dúvida idiota**.
+ 
+ 
+- Fora do horário do workshop:
+  - perguntas gerais sobre o workshop deverão ser feitas no Classroom.
+  - perguntas sobre R, principalmente as que envolverem código, deverão ser enviadas no [nosso discourse](https://discourse.curso-r.com/).
+
+- [Veja aqui dicas de como fazer uma boa pergunta](https://discourse.curso-r.com/t/como-escrever-uma-boa-pergunta/542).
+
+---
+## Por que usar o discourse?
+
+- Muito melhor para escrever textos que possuem códigos. Com ele, podemos usar o pacote `{reprex}`!
+
+- Saber pesquisar sobre erros e fazer a pergunta certa é essencial para aprender e resolver problemas de programação.
+
+- No discourse, teremos mais pessoas acompanhando e respondendo as dúvidas.
+
+- Em um ambiente aberto, as suas dúvidas vão contribuir com a comunidade.
+
+**https://discourse.curso-r.com/**
+
+---
+class: middle, center
+name: fundamentos-pacote
+
+# Fundamentos de desenvolvimento de pacotes em R
+
+---
+
+.destaque[Escrever :) ]
+
+---
+class: middle, center
+name: documentacao
+
+# Documentação
+
+---
+
+.destaque[Escrever :) ]
+
+---
+class: middle, center
+name: testes-unitarios
+
+# Testes unitários e consistência de código
+
+---
+
+.destaque[Escrever :) ]
+
+---
+class: middle, center
+name: disponibilizando-o-pacote
+
+# Disponibilizando seu pacote
+
+---
+
+.destaque[Escrever :) ]
+
