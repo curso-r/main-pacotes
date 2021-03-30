@@ -11,6 +11,8 @@ knitr::opts_chunk$set(
 )
 ```
 
+# Pacotes
+
 Repositório principal do curso Pacotes.
 
 Para informações sobre o curso e inscrição, acesse: [https://curso-r.com/cursos](https://curso-r.com/cursos)
@@ -49,3 +51,37 @@ knitr::kable(CursoRutils:::listar_turmas_recentes("pacotes"))
   - Criando um {pkgdown}
   - Integração contínua com Github Actions
   - Regras para colocar um pacote no CRAN
+
+## Pré-requisitos
+
+- Instalar o R e o RStudio:
+
+  - [Guia de instalação do R](https://livro.curso-r.com/1-1-instalacao-do-r.html)
+  
+  - [Guia de instalação do RStudio](https://livro.curso-r.com/1-2-instalacao-do-rstudio.html)
+
+- Instalar o [Git](https://git-scm.com/)
+  - Guia de instalação  - Em breve
+
+- Criar uma conta no [GitHub](https://github.com/)
+
+
+## Pacotes necessários
+
+```{r eval=FALSE, include=TRUE}
+pacotes <- c(
+  "devtools",
+  "usethis",
+  "pkgdown",
+  "testthat"
+) 
+
+install.packages(pacotes)
+```
+
+
+
+```{r eval=FALSE, include=FALSE}
+materiais <- readr::read_lines("material.txt")
+zip::zip("material_do_curso.zip", materiais)
+```

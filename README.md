@@ -1,6 +1,8 @@
 
 <!-- README.md is generated from README.Rmd. Please edit that file -->
 
+# Pacotes
+
 Repositório principal do curso Pacotes.
 
 Para informações sobre o curso e inscrição, acesse:
@@ -39,3 +41,30 @@ existir ainda.
     -   Criando um {pkgdown}
     -   Integração contínua com Github Actions
     -   Regras para colocar um pacote no CRAN
+
+## Pré-requisitos
+
+-   Instalar o R e o RStudio:
+
+    -   [Guia de instalação do
+        R](https://livro.curso-r.com/1-1-instalacao-do-r.html)
+
+    -   [Guia de instalação do
+        RStudio](https://livro.curso-r.com/1-2-instalacao-do-rstudio.html)
+
+-   Instalar o [Git](https://git-scm.com/)
+
+    -   Guia de instalação - Em breve
+
+-   Criar uma conta no [GitHub](https://github.com/)
+
+## Pacotes necessários
+
+``` r
+pacotes <- c(
+  "devtools",
+  "usethis",
+  "pkgdown",
+  "testthat"
+) 
+```
