@@ -74,7 +74,8 @@ pacotes <- c(
   "usethis",
   "pkgdown",
   "testthat",
-  "roxygen2"
+  "roxygen2", 
+  "knitr"
 ) 
 
 install.packages(pacotes)

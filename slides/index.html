@@ -284,12 +284,20 @@ name: preparando-o-ambiente
 
 - [RStudio instalado](https://livro.curso-r.com/1-1-instalacao-do-r.html) ✅
 
+- [Ferramentas de desenvolvimento](https://r-pkgs.org/setup.html#setup-tools): ✅
+  - Windows: [RTools instalado](https://livro.curso-r.com/1-3-instalacao-adicionais.html#rtools) 
+  - Linux: [r-base-dev](https://livro.curso-r.com/1-3-instalacao-adicionais.html#rtools)
+  - macOS: Xcode command line tools
+
 - [Pacotes necessários instalados](https://github.com/curso-r/main-pacotes#pacotes-necess%C3%A1rios)  ✅
 
 - [Git instalado](https://git-scm.com/) ✅
 
 - [Conta no GitHub criada](https://github.com/)  ✅
 
+-  `devtools::has_devel()`
+
+- .revisar[Caio, vc acha uma boa prática usar `use_devtools()`?]
 
 ---
 class: middle, center, inverse
@@ -445,6 +453,7 @@ Essa é a estrutura criada quando usamos a função `usethis::create_package()`:
 - `LICENSE`: especifica os termos de uso e distribuição do seu pacote.
 
 - `.Rbuildignore`: .revisar[Lista arquivos  que são necessários ter no diretório, mas que não devem ser incluídos ao compilar o pacote R a partir do código-fonte.]
+&lt;!-- usethis::use_build_ignore("..") ajuda a adicionar arquivos no .Rbuildignore--&gt;
 
 - `NAMESPACE`: .revisar[Não devemos editar este arquivo manualmente. O NAMESPACE declara: 
   - as funções que o pacote exporta para uso externo; 
@@ -625,9 +634,21 @@ Para escrever `dplyr::`, por exemplo, basta digitar `d`, `p`, `l` e apertar TAB 
 - O uso do `::` é fundamental na criação e organização de pacotes.
 
 ---
+.revisar[
+## Documentar as dependências
 
-.fazer[falar sobre o usethis::use_package(), usethis::use_dev_package() e usethis::use_pipe()]
+Além de usar o `::` ao usar funções de outros pacotes, é importante também que essas dependências sejam documentadas na seção Imports do arquivo DESCRIPTION.
 
+Existem 3 funções principais para isso:
+
+- `usethis::use_package("nome_do_pacote")`: Essa função permite adicionar pacotes que foram instalados via CRAN na lista de Imports. 
+
+- `usethis::use_dev_package("nome_do_pacote")`: Essa função permite adicionar pacotes que não foram instalados via CRAN (ex. instalados via GitHub) na lista de Imports. 
+
+- `usethis::use_pipe()`: Se você usa o pipe nas funções do seu pacote, será necessário usar essa função.
+
+Importante: NUNCA devemos usar o `library()` dentro de um pacote.
+]
 
 ---
 class: middle, center, inverse
@@ -867,6 +888,8 @@ Lembrando que nomes de pacotes
 
 - Não podem acabar com ponto
 
+Boa prática: Não é aconselhável usar pontos no nome de pacotes. ([fonte](https://r-pkgs.org/workflows101.html#formal-requirements))
+
 ---
 ## Passo 2: adicione o Git
 
@@ -954,6 +977,8 @@ usethis::use_github()
 4. Commit: Edite e "Commite" as mudanças no código
 5. Push: Suba os commits para o Github
 Extra. Pull: Baixe o estado atual do projeto
+
+.ideia[Onde podemos falar do usethis::use_readme_rmd() + usethis::build_readme() ?]
 
 ---
 ## Cuidados
