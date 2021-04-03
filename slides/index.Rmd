@@ -336,6 +336,7 @@ knitr::include_graphics("img/021-organizacao-de-projetos/pacote.gif")
 > Tradução: Qualquer coisa que possa ser automatizada, deve ser automatizada.
 
 > Fonte: [Wickham & Bryan - Livro R Packages](https://r-pkgs.org/intro.html)
+
 ---
 ## Simplificando tudo: usethis
 
@@ -401,25 +402,68 @@ O arquivo `NomeDoPacote.Rproj` indica para o RStudio que aquele diretório será
 Fixar o diretório de trabalho como a pasta raiz do projeto, ao lado da regra de manter todos os arquivos dentro da pasta do projeto, garante que sua análise poderá ser executada por qualquer pessoa e em qualquer computador sem a preocupação de ajustar caminhos até os arquivos utilizados ou criados pelo seu código.
 
 ---
+
 ## Estrutura básica do pacote
 
-- Essa é a estrutura criada quando usamos a função `usethis::create_package()`:
+Essa é a estrutura criada quando usamos a função `usethis::create_package()`:
 
+- `MeuProjeto.Rproj`: este arquivo faz com que este diretório seja um projeto no RStudio (RStudio Project).
 
 - `DESCRIPTION`: define o nome, descrição, versão, licença, dependências e outras caracaterísticas do seu pacote.
 
-- `R/`: arqui ficam suas funções desenvolvidas em R.
+- `R/`: aqui ficam as funções desenvolvidas em R.
 
 - `LICENSE`: especifica os termos de uso e distribuição do seu pacote.
 
-- `.Rbuildignore`: .destaque[escrever!]
+- `.Rbuildignore`: .revisar[Lista arquivos  que são necessários ter no diretório, mas que não devem ser incluídos ao compilar o pacote R a partir do código-fonte.]
 
-- `NAMESPACE`: .destaque[escrever!]
+- `NAMESPACE`: .revisar[Não devemos editar este arquivo manualmente. O NAMESPACE declara: 
+  - as funções que o pacote exporta para uso externo; 
+  - e as funções externas que seu pacote importa de outros pacotes.]
+
+---
+
+## Estrutura do pacote: outros diretórios e arquivos
+
+.fazer[Acho legal falar de outros tipos diretorios mais comuns, como o inst/]
+
+- `.gitignore`: Lista arquivos que deverão ser ignorados ao versionar o pacote com Git. 
+
+.ideias[Cuidado aqui. Verificar se explicamos o que é git antes.]
+
+---
+
+.fazer[Acho legal falar sobre como adicionar uma licença no pacote. `usethis::use_mit_license("Seu nome aqui")]
+
+---
+
+.fazer[slide sobre o ciclo que o hadley mostra nas palestras: editar, load all, check]
 
 
-.destaque[Acho legal falar de outros tipos diretorios mais comuns, como o inst/
+---
 
-gitignore]
+.revisar[
+
+## Ideia da primeira parte prática
+
+- Criar um pacote
+
+- Observar a estrutura do diretório
+
+- `devtools::load_all()` +  `devtools::check()` 
+
+<!-- vai aparecer um warning de que precisa criar uma licença -->
+
+- Adicionar uma licença no pacote
+
+- Alterar o description: nome da pessoa autora, descrição do pacote.
+]
+
+
+---
+class: middle, center, inverse
+
+# Funções
 
 ---
 ## A pasta R
@@ -463,7 +507,7 @@ No mundo ideal, na pasta `R/` do seu projeto haverá uma coleção de arquivos, 
 - Funções no R são *nomes* que guardam um **código de R**. A ideia é a seguinte: sempre que você executar uma função, o código que ela guarda será executado e um resultado nos será devolvido.
 
 
-.destaque[falar sobre o usethis::use_r()]
+.fazer[falar sobre o usethis::use_r()]
 
 ---
 
@@ -546,10 +590,15 @@ Para escrever `dplyr::`, por exemplo, basta digitar `d`, `p`, `l` e apertar TAB 
 
 ---
 
-.destaque[falar sobre o usethis::use_package(), usethis::use_dev_package() e usethis::use_pipe()]
+.fazer[falar sobre o usethis::use_package(), usethis::use_dev_package() e usethis::use_pipe()]
+
 
 ---
+class: middle, center, inverse
+# Bases de dados
 
+
+---
 ## Dados
 
 Se você quiser inserir dados ao seu pacote, você pode utilizar a função `usethis::use_data(meus_dados)`. 
@@ -582,6 +631,27 @@ Para isso, utilize a função `usethis::use_data_raw("meus_dados")`. Ela criará
 
 - Dentro dessa pasta você não deve carregar outros pacotes com `library()`, mas sim usar o operador `::`.
 
+
+---
+
+## Resumo dos passos iniciais
+
+<!-- anotacoes da leitura do rpkgs -->
+
+- Criamos um pacote usando a função `usethis::create_package("~/caminho/ate/o/pacote")`
+
+- No arquivo DESCRIPTION, adicionamos o nome das pessoas autoras, além do título e descrição do pacote.
+
+- Adicionar uma licença
+
+- Versionamos o projeto usando `usethis::use_git()`
+
+- Crie suas funções: a funçao `usethis::use_r("nome_da_funcao")` cria o arquivo para isso
+
+- A funcão `devtools::load_all()` simula o processo de instalação e carregamento do pacote. As funções criadas ficam disponíveis para uso. Atalho:  Ctrl + Shift + L (Windows e Linux) ou Cmd + Shift + L (macOS).
+
+- A função `devtools::check()` verifica se o pacote está funcionando. Pode apresentar erros, avisos e notas. Leia a mensagem no console :)
+
 ---
 class: middle, center
 name: documentacao
@@ -612,14 +682,16 @@ fun <- function(a, b) {
 
 O parâmetro `@export` indica que a função ficará disponível quando rodarmos `library(MeuProjeto)`.
 
-.destaque[falar sobre o atalho do roxygen]
+.fazer[falar sobre o atalho do roxygen]
+
+- Para deixar a documentação das suas funções acessível (no help do R), use a função `devtools::document()`. Atalhos: Ctrl + Shift + D (Windows e Linux) ou Cmd + Shift + D (macOS).
 
 ---
-.destaque[falar sobre documentação de funções]
+.fazer[falar sobre documentação de funções]
 
-.destaque[falar sobre documentação de base de dados]
+.fazer[falar sobre documentação de base de dados]
 
-.destaque[Acentos, encoding e variáveis globais]
+.fazer[Acentos, encoding e variáveis globais]
 
 
 
@@ -660,15 +732,21 @@ name: testes-unitarios
 
 ---
 
-.destaque[Escrever :) ]
+.fazer[Escrever :) ]
 
-.destaque[O pacote {testthat}]
+.fazer[O pacote {testthat}  
+`usethis::use_testthat()`
+`usethis::use_test("nome_da_funcao")`
 
-.destaque[Tipos de testes]
+atalho: Ctrl + Shift + T (Windows e Linux) ou Cmd + Shift + T (macOS).]
 
-.destaque[O pacote {testthat}]
+.fazer[Tipos de testes
 
+`testthat::expect_identical()`
 
+]
+
+Vamos falar sobre o pacote covr?  https://covr.r-lib.org/
 
 ---
 class: middle, center
@@ -738,7 +816,7 @@ O grande cupido dessa amizade é o `{usethis}`.
 
 O diagrama abaixo exemplifica o fluxo de trabalho de um projeto com versionamento.
 
-.destaque[lembrete pra mim mesma: algumas funcoes mudaram. revisar. separar o que é setup do que é do fluxo de trabalho]
+.fazer[lembrete pra mim mesma: algumas funcoes mudaram. revisar. separar o que é setup do que é do fluxo de trabalho]
 
 ```{r echo=FALSE, fig.align='center', out.width="70%"}
 knitr::include_graphics("img/021-organizacao-de-projetos/fluxo_github_rstudio.png")
@@ -843,12 +921,12 @@ knitr::include_graphics("img/021-organizacao-de-projetos/passo_5_pull.gif")
 
 ## Resumo
 
-- 1. Repositório: Criar projeto/pacote
-- 2. Adicionar Git
-- 3. Adicionar GitHub
-- 4. Commit: Edite e "Commite" as mudanças no código
-- 5. Push: Suba os commits para o Github
-- Extra. Pull: Baixe o estado atual do projeto
+1. Repositório: Criar projeto/pacote
+2. Adicionar Git
+3. Adicionar GitHub
+4. Commit: Edite e "Commite" as mudanças no código
+5. Push: Suba os commits para o Github
+Extra. Pull: Baixe o estado atual do projeto
 
 ---
 ## Cuidados
@@ -859,22 +937,24 @@ knitr::include_graphics("img/021-organizacao-de-projetos/passo_5_pull.gif")
 
 ---
 
-.destaque[colocar conteudo sobre Criando um {pkgdown}]
+.fazer[colocar conteudo sobre Criando um {pkgdown}]
 
-.destaque[Integração contínua com Github Actions]
+.fazer[Integração contínua com Github Actions]
 
-.destaque[Regras para colocar um pacote no CRAN]
+.fazer[Regras para colocar um pacote no CRAN]
 
 
 
 
 ---
-# Referências
+# Referências  e materiais para estudo
 
 - [Zen do R](https://curso-r.github.io/zen-do-r/), livro em desenvolvimento pela Curso-R.
 
 - [R Packages](https://r-pkgs.org), livro aprofundado sobre desenvolvimento de pacotes.
 
-- [Apresentação da Bea Milz](https://beatrizmilz.github.io/RLadies-Git-RStudio-2019).
+- [R for Data Science - capítulo sobre Funcões](https://r4ds.had.co.nz/functions.html)
 
+- [Materiais da R-Ladies SP sobre a Hacktoberfest 2020](https://r-ladies-sao-paulo.github.io/2020-hacktoberfest/).
 
+- [Folha de dicas do Git em Português](https://training.github.com/downloads/pt_BR/github-git-cheat-sheet/)

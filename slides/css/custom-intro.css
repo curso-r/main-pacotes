@@ -170,6 +170,14 @@ a, a > code {
   font-size: 25px;
 }
 
-.destaque{
+.ideias{
   background-color: #ffff00;
+}
+
+.revisar{
+  background-color: #669966;
+}
+
+.fazer{
+  background-color: #ff7f7f;
 }
