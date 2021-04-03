@@ -65,6 +65,9 @@ pacotes <- c(
   "devtools",
   "usethis",
   "pkgdown",
-  "testthat"
+  "testthat",
+  "roxygen2"
 ) 
+
+install.packages(pacotes)
 ```

@@ -211,39 +211,22 @@ name: sobre-o-curso
 ---
 ## Nesse curso vamos falar de... 📦
 
-.pull-left[
+
 - **Fundamentos de desenvolvimento de pacotes em R**
-  - O arquivo DESCRIPTION
-  - Estrutura de pastas e arquivos
-  - O pacote {usethis}
-  - Melhores práticas de desenvolvimento de pacotes
+
 
 - **Documentação**
-  - Criando bons nomes
-  - Documentação de funções
-  - Documentação de bases de dados
-  - Acentos, encoding e variáveis globais
-]
 
---
-.pull-right[
 
 - **Testes unitários e consistência de código**
-  - O pacote {testthat}
-  - Tipos de testes
-  - Passando no devtools::check()
+
 
 
 - **Disponibilizando seu pacote**
-  - Controlando as versões com Git
-  - Disponibilizando em um repositório no GitHub
-  - Criando um {pkgdown}
-  - Integração contínua com Github Actions
-  - Regras para colocar um pacote no CRAN
 
 &lt;!-- Acho bem legal o Zenodo, mas acho que não cabe no tempo. Quem sabe na próxima :) --&gt;
 
-]
+
 
 ---
 
@@ -297,15 +280,15 @@ name: preparando-o-ambiente
 ---
 ## Check-list antes de começar a aula
 
-- R instalado ✅
+- [R instalado](https://livro.curso-r.com/1-1-instalacao-do-r.html) ✅
 
-- RStudio instalado ✅
+- [RStudio instalado](https://livro.curso-r.com/1-1-instalacao-do-r.html) ✅
 
-- Pacotes necessários instalados  ✅
+- [Pacotes necessários instalados](https://github.com/curso-r/main-pacotes#pacotes-necess%C3%A1rios)  ✅
 
-- Git instalado ✅
+- [Git instalado](https://git-scm.com/) ✅
 
-- Conta no GitHub criada ✅
+- [Conta no GitHub criada](https://github.com/)  ✅
 
 
 ---
@@ -323,6 +306,7 @@ O primeiro abriga absolutamente todos os objetos criados por uma sessão R, enqu
 
 Ao reabrir o RStudio, o conteúdo armazenados nestes arquivos será carregado no ambiente de trabalho atual como se nada tivesse acontecido.
 
+.footnote[Leia mais [neste capítulo do livro Zen do R](https://curso-r.github.io/zen-do-r/rdata-rhistory.html).]
 ---
 ### Por que desistir do .RData e .Rhistory 
 
@@ -335,8 +319,6 @@ Ao reabrir o RStudio, o conteúdo armazenados nestes arquivos será carregado no
 - A menos que pretendamos sentar com colegas para explicar como utilizar os objetos do `.RData` e do `.Rhistory`, <span style="color:#6495ed; font-weight: bold;">não pode-se esperar que outra pessoa seja capaz de reproduzir uma análise</span>.
 
 - O R trata todos os objetos guardados na memória igualmente. Isso significa que ele também irá armazenar nos arquivos ocultos todas as bases de dados da sessão. Assim, <span style="color:#6495ed; font-weight: bold;">o</span> `.RData` <span style="color:#6495ed; font-weight: bold;">pode ser um arquivo de múltiplos gigabytes</span>.
-
-
 
 
 ---
@@ -357,21 +339,34 @@ Um pacote do R nada mais é do que uma forma específica de organizar seus códi
 &gt; Pacotes são a unidade fundamental de código R reprodutível. &lt;br&gt;
 &gt; Hadley Wickham
 
+.pull-left[
+- Pacotes incluem: 
+  - Funções em R
+  - Documentação sobre como usá-las
+  - Testes
+  - Dados de exemplo
+]
+
+.pull-right[
 &lt;img src="img/021-organizacao-de-projetos/pacote.gif" style="display: block; margin: auto;" /&gt;
+]
 
 ---
 ## Vantagens
 
-- Padroniza a organização das análises
+- Padroniza a organização dos códigos
 
 - Integração com pacotes que aceleram desenvolvimento
 
 - Motiva e facilita a documentação do código
 
-- Facilita o compartilhamento e a reutilização de códigos em outros projetos
+- Facilita o compartilhamento e a reutilização de códigos em outros projetos e com outras pessoas
 
+&gt; Anything that can be automated, should be automated
 
+&gt; Tradução: Qualquer coisa que possa ser automatizada, deve ser automatizada.
 
+&gt; Fonte: [Wickham &amp; Bryan - Livro R Packages](https://r-pkgs.org/intro.html)
 ---
 ## Simplificando tudo: usethis
 
@@ -430,7 +425,7 @@ usethis::create_package("~/Documents/Meuprojeto")
 ---
 ## Diretório de trabalho
 
-O arquivo `Proj.Rproj` indica para o RStudio que aquele diretório será a raiz de um projeto e que, sempre que o projeto estiver aberto, será utilizado por padrão como o diretório de trabalho.
+O arquivo `NomeDoPacote.Rproj` indica para o RStudio que aquele diretório será a raiz de um projeto e que, sempre que o projeto estiver aberto, será utilizado por padrão como o diretório de trabalho.
 
 Fixar o diretório de trabalho como a pasta raiz do projeto, ao lado da regra de manter todos os arquivos dentro da pasta do projeto, garante que sua análise poderá ser executada por qualquer pessoa e em qualquer computador sem a preocupação de ajustar caminhos até os arquivos utilizados ou criados pelo seu código.
 
@@ -451,7 +446,9 @@ Fixar o diretório de trabalho como a pasta raiz do projeto, ao lado da regra de
 - `NAMESPACE`: .destaque[escrever!]
 
 
-.destaque[Acho legal falar de outros tipos diretorios mais comuns, como o inst/]
+.destaque[Acho legal falar de outros tipos diretorios mais comuns, como o inst/
+
+gitignore]
 
 ---
 ## A pasta R
@@ -484,6 +481,9 @@ No mundo ideal, na pasta `R/` do seu projeto haverá uma coleção de arquivos, 
 - Programas com funções normalmente são muito mais enxutos e limpos do que *scripts* soltos, pois estes estimulam repetição de código. 
 
 - Ao encontrar um bug, haverá apenas um lugar para concertar; se surgir a necessidade de modificar uma propriedade, haverá apenas um lugar para editar; se aquele código se tornar obsoleto, haverá apenas um lugar para deletar.
+
+.footnote[Leia mais [neste capítulo do livro R for Data Science](https://r4ds.had.co.nz/functions.html).]
+
 
 ---
 
@@ -599,7 +599,7 @@ Arquivos `.rda` são extremamente estáveis, compactos e podem ser carregados ra
 
 Se a base que você quiser colocar no pacote for o resultado de um processo de manipulação de uma base crua, você pode salvar o código desse processo na pasta `data-raw`. 
 
-Para isso, utilize a função `usethis::data_raw("meus_dados")`. Ela criará uma pasta `data-raw/` na raiz do seu pacote, caso ela não exista ainda, e um arquivo `meus_dados.R` onde você colocará o código de manipulação da base crua.
+Para isso, utilize a função `usethis::use_data_raw("meus_dados")`. Ela criará uma pasta `data-raw/` na raiz do seu pacote, caso ela não exista ainda, e um arquivo `meus_dados.R` onde você colocará o código de manipulação da base crua.
 
 ---
 ## Qual a diferença entre R/ e data-raw/?
@@ -690,6 +690,10 @@ class: middle, center
 name: testes-unitarios
 
 # Testes unitários e consistência de código
+
+
+.footnote[Leia mais [neste capítulo do livro Zen do R](https://curso-r.github.io/zen-do-r/testes.html).]
+
 
 ---
 
