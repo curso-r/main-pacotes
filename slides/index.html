@@ -25,6 +25,15 @@
     <script src="libs/xaringanExtra_fit-screen-0.2.6/fit-screen.js"></script>
     <link href="libs/panelset-0.2.6/panelset.css" rel="stylesheet" />
     <script src="libs/panelset-0.2.6/panelset.js"></script>
+    <script src="libs/htmlwidgets-1.5.3/htmlwidgets.js"></script>
+    <script src="libs/jquery-3.5.1/jquery.min.js"></script>
+    <link href="libs/datatables-css-0.0.0/datatables-crosstalk.css" rel="stylesheet" />
+    <script src="libs/datatables-binding-0.17/datatables.js"></script>
+    <link href="libs/dt-core-1.10.20/css/jquery.dataTables.min.css" rel="stylesheet" />
+    <link href="libs/dt-core-1.10.20/css/jquery.dataTables.extra.css" rel="stylesheet" />
+    <script src="libs/dt-core-1.10.20/js/jquery.dataTables.min.js"></script>
+    <link href="libs/crosstalk-1.1.1/css/crosstalk.css" rel="stylesheet" />
+    <script src="libs/crosstalk-1.1.1/js/crosstalk.min.js"></script>
     <link rel="stylesheet" href="css/custom-intro.css" type="text/css" />
   </head>
   <body>
@@ -482,7 +491,7 @@ Essa é a estrutura criada quando usamos a função `usethis::create_package()`:
 
 .revisar[
 
-## Ideia da primeira parte prática
+## Parte prática 🖥️
 
 - Criar um pacote
 
@@ -647,8 +656,272 @@ Existem 3 funções principais para isso:
 
 - `usethis::use_pipe()`: Se você usa o pipe nas funções do seu pacote, será necessário usar essa função.
 
-Importante: NUNCA devemos usar o `library()` dentro de um pacote.
+Boas práticas:
+- NUNCA devemos usar o `library()` dentro de um pacote.
+- Não adicionar "metapackages" no Imports (como o tidyverse).
 ]
+
+---
+
+## Discussão em sala
+
+- Como podemos transformar o código a seguir em uma função que faz parte de um pacote?
+
+- Exemplo: Importar a base mananciais, e calcular a média do volume de água armazenado (em %) para o sistema Cantareira, em abril de 2021.
+
+
+```r
+library(tidyverse)
+library(lubridate)
+url_mananciais &lt;- "https://github.com/beatrizmilz/mananciais/raw/master/inst/extdata/mananciais.csv"
+mananciais &lt;- read_csv2(url_mananciais)
+mananciais %&gt;% 
+  mutate(ano = year(data), mes = month(data)) %&gt;% 
+  group_by(sistema, ano, mes) %&gt;% 
+  summarise(media_volume_porcentagem = mean(volume_porcentagem)) %&gt;% 
+  filter(ano == 2021, mes == 4, sistema == "Cantareira") 
+```
+
+```
+#&gt; # A tibble: 1 x 4
+#&gt; # Groups:   sistema, ano [1]
+#&gt;   sistema      ano   mes media_volume_porcentagem
+#&gt;   &lt;chr&gt;      &lt;dbl&gt; &lt;dbl&gt;                    &lt;dbl&gt;
+#&gt; 1 Cantareira  2021     4                     52.7
+```
+
+
+---
+
+.panelset[
+.panel[.panel-name[Código original]
+
+
+```r
+library(tidyverse)
+library(lubridate)
+url_mananciais &lt;- "https://github.com/beatrizmilz/mananciais/raw/master/inst/extdata/mananciais.csv"
+mananciais &lt;- read_csv2(url_mananciais)
+mananciais %&gt;% 
+  mutate(ano = year(data), mes = month(data)) %&gt;% 
+  group_by(sistema, ano, mes) %&gt;% 
+  summarise(media_volume_porcentagem = mean(volume_porcentagem)) %&gt;% 
+  filter(ano == 2021, mes == 4, sistema == "Cantareira") 
+```
+
+```
+#&gt; # A tibble: 1 x 4
+#&gt; # Groups:   sistema, ano [1]
+#&gt;   sistema      ano   mes media_volume_porcentagem
+#&gt;   &lt;chr&gt;      &lt;dbl&gt; &lt;dbl&gt;                    &lt;dbl&gt;
+#&gt; 1 Cantareira  2021     4                     52.7
+```
+
+]
+.panel[.panel-name[Passo 1]
+
+Passo 1: Adicionar os quatro pontos :: 
+
+
+```r
+library(tidyverse)
+library(lubridate)
+url_mananciais &lt;- "https://github.com/beatrizmilz/mananciais/raw/master/inst/extdata/mananciais.csv"
+mananciais &lt;- `readr::`read_csv2(url_mananciais)
+mananciais %&gt;% 
+  `dplyr::`mutate(ano = `lubridate::`year(data), mes = `lubridate::`month(data)) %&gt;% 
+  `dplyr::`group_by(sistema, ano, mes) %&gt;% 
+  `dplyr::`summarise(media_volume_porcentagem = `base::`mean(volume_porcentagem)) %&gt;% 
+  `dplyr::`filter(ano == 2021, mes == 4, sistema == "Cantareira") 
+```
+
+]
+
+
+
+.panel[.panel-name[Passo 2]
+
+Passo 2: Declarar as dependências com a função `usethis::use_package()`. Não precisaremos mais do `library(...)`!
+
+Vamos **remover** isso do código da função...
+```r
+library(tidyverse)
+library(lubridate)
+```
+E declararemos as dependências.. faremos isso no console, e não no código da função!
+```r 
+library(usethis)
+use_package("lubridate")
+use_package("readr")
+use_package("dplyr")
+
+# Também usamos o pipe!
+use_pipe()
+```
+
+]
+
+.panel[.panel-name[Passo 3]
+
+Passo 3: Adicionar o código dentro de uma função. Chamaremos de calcular_media_volume.
+
+
+```r
+*calcular_media_volume &lt;- function() {
+  url_mananciais &lt;-
+    "https://github.com/beatrizmilz/mananciais/raw/master/inst/extdata/mananciais.csv"
+  mananciais &lt;- readr::read_csv2(url_mananciais)
+  mananciais %&gt;%
+    dplyr::mutate(ano = lubridate::year(data), mes = lubridate::month(data)) %&gt;%
+    dplyr::group_by(sistema, ano, mes) %&gt;%
+    dplyr::summarise(media_volume_porcentagem = base::mean(volume_porcentagem)) %&gt;%
+    dplyr::filter(ano == 2021, mes == 4, sistema == "Cantareira")
+*} 
+```
+
+]]
+
+---
+
+.panelset[
+
+
+.panel[.panel-name[Indo além!]
+
+Pensar em quais podem ser os argumentos da nossa função. E se eu quiser calcular a média em outro mês? Outro ano? Outro sistema?
+
+
+```r
+calcular_media_volume &lt;- function(`sistema, ano, mes`) {
+  url_mananciais &lt;-
+    "https://github.com/beatrizmilz/mananciais/raw/master/inst/extdata/mananciais.csv"
+  mananciais &lt;- readr::read_csv2(url_mananciais)
+  mananciais %&gt;%
+    dplyr::mutate(ano = lubridate::year(data), mes = lubridate::month(data)) %&gt;%
+    dplyr::group_by(sistema, ano, mes) %&gt;%
+    dplyr::summarise(media_volume_porcentagem = base::mean(volume_porcentagem)) %&gt;%
+    dplyr::filter(ano == `{{ano}}`, mes == `{{mes}}`, sistema == `{{sistema}}`) 
+} 
+```
+Exemplo de uso:
+```r
+&gt; calcular_media_volume(sistema = "Guarapiranga", ano = 2021, mes = 3)
+```
+
+]
+
+.panel[.panel-name[Indo além +1]
+
+E se eu quiser que a função possibilite calcular a média para todos os meses do ano?
+
+
+```r
+calcular_media_volume &lt;- function(sistema, ano, `mes = 1:12`) {
+  url_mananciais &lt;-
+    "https://github.com/beatrizmilz/mananciais/raw/master/inst/extdata/mananciais.csv"
+  mananciais &lt;- readr::read_csv2(url_mananciais)
+  mananciais %&gt;%
+    dplyr::mutate(ano = lubridate::year(data), mes = lubridate::month(data)) %&gt;%
+    dplyr::group_by(sistema, ano, mes) %&gt;%
+    dplyr::summarise(media_volume_porcentagem = base::mean(volume_porcentagem)) %&gt;%
+    dplyr::filter(ano == {{ano}}, mes `%in%` {{mes}}, sistema == {{sistema}})  
+
+} 
+```
+Exemplo de uso:
+
+```r
+calcular_media_volume(sistema = "Guarapiranga", ano = 2021)
+```
+
+
+]
+
+
+.panel[.panel-name[Indo além +2]
+
+E se eu quiser que a função possibilite calcular a média para todos os anos da base?
+
+
+```r
+calcular_media_volume &lt;- function(sistema, `ano = 2000:2021`, mes = 1:12) {
+  url_mananciais &lt;-
+    "https://github.com/beatrizmilz/mananciais/raw/master/inst/extdata/mananciais.csv"
+  mananciais &lt;- readr::read_csv2(url_mananciais)
+  mananciais %&gt;%
+    dplyr::mutate(ano = lubridate::year(data), mes = lubridate::month(data)) %&gt;%
+    dplyr::group_by(sistema, ano, mes) %&gt;%
+    dplyr::summarise(media_volume_porcentagem = base::mean(volume_porcentagem)) %&gt;%
+    dplyr::filter(ano `%in%` {{ano}}, mes %in% {{mes}}, sistema == {{sistema}})  
+} 
+```
+Exemplo de uso:
+
+```r
+calcular_media_volume(sistema = "Guarapiranga")
+```
+
+
+]
+
+
+
+.panel[.panel-name[Exemplo até aqui]
+
+
+
+
+
+
+```r
+calcular_media_volume(sistema = "Guarapiranga", ano = 2021) %&gt;% DT::datatable()
+```
+
+<div id="htmlwidget-ca63b4c67174b5f2e1e8" style="width:100%;height:auto;" class="datatables html-widget"></div>
+<script type="application/json" data-for="htmlwidget-ca63b4c67174b5f2e1e8">{"x":{"filter":"none","data":[["1","2","3","4"],["Guarapiranga","Guarapiranga","Guarapiranga","Guarapiranga"],[2021,2021,2021,2021],[1,2,3,4],[65.5387096774193,69.3392857142857,73.8774193548387,71.04]],"container":"<table class=\"display\">\n  <thead>\n    <tr>\n      <th> <\/th>\n      <th>sistema<\/th>\n      <th>ano<\/th>\n      <th>mes<\/th>\n      <th>media_volume_porcentagem<\/th>\n    <\/tr>\n  <\/thead>\n<\/table>","options":{"columnDefs":[{"className":"dt-right","targets":[2,3,4]},{"orderable":false,"targets":0}],"order":[],"autoWidth":false,"orderClasses":false}},"evals":[],"jsHooks":[]}</script>
+
+
+]
+.panel[.panel-name[Mais idéias 💡]
+
+
+Podemos continuar pensando em formas de melhorar nossas funções. 
+
+Ideias para melhorar esse exemplo:
+
+- Arredondar os resultados da média para até 2 casas decimais.
+
+- Possibilitar calcular a média para outras variáveis.
+
+- A importação da base é uma etapa que demora. Possibilitar que a base de dados seja armazenada no pacote, e utilizar a base do próprio pacote, diminuiria o tempo de execução da função.
+
+- Ao infinito e além 🚀🚀🚀
+
+
+]
+
+
+]
+
+
+---
+
+.revisar[
+
+## Parte prática 🖥️
+
+- Criar um arquivo onde iremos escrever a função para o pacote. Dica : use a função `usethis::use_r("nome_funcao")` !
+
+- Copie o código disponível [neste arquivo](#) e cole no arquivo criado. .fazer[(precisamos criar o código)]
+
+- Adapte o código e o transforme em uma função! Não esqueça das dependências.
+
+- Verifique que o arquivo onde sua função foi escrita está no diretório `R/`, e que as dependências estão descritas no arquivo DESCRIPTION.
+
+- Carregue o pacote com `devtools::load_all()`, e confira se está tudo ok com `devtools::check()` !
+
+]
+
 
 ---
 class: middle, center, inverse
@@ -752,6 +1025,7 @@ O parâmetro `@export` indica que a função ficará disponível quando rodarmos
 .fazer[Acentos, encoding e variáveis globais]
 
 
+`utils::globalVariables(c("variavel1", "variavel2"))`
 
 ---
 ## Comunicação
@@ -1015,6 +1289,7 @@ Extra. Pull: Baixe o estado atual do projeto
 <script src="https://remarkjs.com/downloads/remark-latest.min.js"></script>
 <script>var slideshow = remark.create({
 "highlightStyle": "github",
+"highlightSpans": true,
 "highlightLines": true,
 "countIncrementalSlides": false,
 "ratio": "16:9"
