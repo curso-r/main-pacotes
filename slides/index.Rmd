@@ -558,18 +558,18 @@ Podemos usar a função `usethis::use_r("nome_da_funcao")` para que um arquivo s
 Assim que escrevermos/modificarmos alguma função, podemos carregá-las para testá-las manualmente com a função `devtools::load_all()`
 
 
----
-## Funções
+<!-- --- -->
+<!-- ## Funções -->
 
-Quando uma tarefa de análise de dados aumenta em complexidade, o número de funções e arquivos necessários para manter tudo em ordem cresce exponencialmente. 
+<!-- Quando uma tarefa de análise de dados aumenta em complexidade, o número de funções e arquivos necessários para manter tudo em ordem cresce exponencialmente.  -->
 
-Um arquivo para ler os dados, outro para limpar os nomes das colunas, mais um para fazer joins… Cada um deles com incontáveis blocos de código que rapidamente se transformam em uma [macarronada](https://pt.wikipedia.org/wiki/C%C3%B3digo_espaguete).
+<!-- Um arquivo para ler os dados, outro para limpar os nomes das colunas, mais um para fazer joins… Cada um deles com incontáveis blocos de código que rapidamente se transformam em uma [macarronada](https://pt.wikipedia.org/wiki/C%C3%B3digo_espaguete). -->
 
-`r colorido("O primeiro passo para sair dessa situação é transformar tudo em funções")`.
+<!-- `r colorido("O primeiro passo para sair dessa situação é transformar tudo em funções")`. -->
 
-Funções têm argumentos e saídas, enquanto código solto pode modificar globais e criar resultados tardios que são impossíveis de acompanhar sem conhecer profundamente a tarefa sendo realizada.
+<!-- Funções têm argumentos e saídas, enquanto código solto pode modificar globais e criar resultados tardios que são impossíveis de acompanhar sem conhecer profundamente a tarefa sendo realizada. -->
 
-No mundo ideal, na pasta `R/` do seu projeto haverá uma coleção de arquivos, cada um com uma coleção de funções relacionadas e bem documentadas, e apenas alguns arquivos que utilizam essas funções para realizar a análise em si. 
+<!-- No mundo ideal, na pasta `R/` do seu projeto haverá uma coleção de arquivos, cada um com uma coleção de funções relacionadas e bem documentadas, e apenas alguns arquivos que utilizam essas funções para realizar a análise em si.  -->
 
 ---
 ## Vantagens de usar funções
@@ -584,22 +584,6 @@ No mundo ideal, na pasta `R/` do seu projeto haverá uma coleção de arquivos, 
 
 
 
-
----
-
-### Argumentos de funções
-
-As funções podem receber **argumentos**. Argumentos são os valores que colocamos dentro dos parênteses e que as funções precisam para funcionar (calcular algum resultado). 
-
-
-
-Os argumentos das funções também têm nomes, que podemos ou não usar na hora de usar uma função. Veja por exemplo a função `seq()`. 
-
-```{r}
-seq(from = 4, to = 10, by = 2)
-```
-
-Entre outros argumentos, ela possui os argumentos `from=`, `to=` e `by=`. O que ela faz é criar uma sequência (vetor) de `by` em `by` que começa em `from` e termina em `to`. No exemplo, criamos uma função de 2 em 2 que começa em 4 e termina em 10.
 
 ---
 ## Criando a sua própria função
@@ -617,25 +601,6 @@ nome_da_funcao <- function(argumento_1, argumento_2) {
 ```
 
 Repare que `function` é um nome reservado no R, isto é, você não pode criar um objeto com esse nome.
-
----
-
-Um exemplo: vamos criar uma função que soma dois números.
-
-```{r}
-minha_soma <- function(x, y) {
-  soma <- x + y
-  
-  soma  # resultado retornado
-}
-```
-
-Essa função tem os seguintes componentes:
-
-- `minha_soma`: nome da função
-- `x` e `y`: argumentos da função
-- `soma <- x + y`: operação que a função executa
-- `soma`: valor retornado pela função
 
 
 ---

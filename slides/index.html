@@ -597,18 +597,18 @@ Podemos usar a função `usethis::use_r("nome_da_funcao")` para que um arquivo s
 Assim que escrevermos/modificarmos alguma função, podemos carregá-las para testá-las manualmente com a função `devtools::load_all()`
 
 
----
-## Funções
+&lt;!-- --- --&gt;
+&lt;!-- ## Funções --&gt;
 
-Quando uma tarefa de análise de dados aumenta em complexidade, o número de funções e arquivos necessários para manter tudo em ordem cresce exponencialmente. 
+&lt;!-- Quando uma tarefa de análise de dados aumenta em complexidade, o número de funções e arquivos necessários para manter tudo em ordem cresce exponencialmente.  --&gt;
 
-Um arquivo para ler os dados, outro para limpar os nomes das colunas, mais um para fazer joins… Cada um deles com incontáveis blocos de código que rapidamente se transformam em uma [macarronada](https://pt.wikipedia.org/wiki/C%C3%B3digo_espaguete).
+&lt;!-- Um arquivo para ler os dados, outro para limpar os nomes das colunas, mais um para fazer joins… Cada um deles com incontáveis blocos de código que rapidamente se transformam em uma [macarronada](https://pt.wikipedia.org/wiki/C%C3%B3digo_espaguete). --&gt;
 
-<span style="color:#6495ed; font-weight: bold;">O primeiro passo para sair dessa situação é transformar tudo em funções</span>.
+&lt;!-- <span style="color:#6495ed; font-weight: bold;">O primeiro passo para sair dessa situação é transformar tudo em funções</span>. --&gt;
 
-Funções têm argumentos e saídas, enquanto código solto pode modificar globais e criar resultados tardios que são impossíveis de acompanhar sem conhecer profundamente a tarefa sendo realizada.
+&lt;!-- Funções têm argumentos e saídas, enquanto código solto pode modificar globais e criar resultados tardios que são impossíveis de acompanhar sem conhecer profundamente a tarefa sendo realizada. --&gt;
 
-No mundo ideal, na pasta `R/` do seu projeto haverá uma coleção de arquivos, cada um com uma coleção de funções relacionadas e bem documentadas, e apenas alguns arquivos que utilizam essas funções para realizar a análise em si. 
+&lt;!-- No mundo ideal, na pasta `R/` do seu projeto haverá uma coleção de arquivos, cada um com uma coleção de funções relacionadas e bem documentadas, e apenas alguns arquivos que utilizam essas funções para realizar a análise em si.  --&gt;
 
 ---
 ## Vantagens de usar funções
@@ -623,27 +623,6 @@ No mundo ideal, na pasta `R/` do seu projeto haverá uma coleção de arquivos, 
 
 
 
-
----
-
-### Argumentos de funções
-
-As funções podem receber **argumentos**. Argumentos são os valores que colocamos dentro dos parênteses e que as funções precisam para funcionar (calcular algum resultado). 
-
-
-
-Os argumentos das funções também têm nomes, que podemos ou não usar na hora de usar uma função. Veja por exemplo a função `seq()`. 
-
-
-```r
-seq(from = 4, to = 10, by = 2)
-```
-
-```
-#&gt; [1]  4  6  8 10
-```
-
-Entre outros argumentos, ela possui os argumentos `from=`, `to=` e `by=`. O que ela faz é criar uma sequência (vetor) de `by` em `by` que começa em `from` e termina em `to`. No exemplo, criamos uma função de 2 em 2 que começa em 4 e termina em 10.
 
 ---
 ## Criando a sua própria função
@@ -662,26 +641,6 @@ nome_da_funcao &lt;- function(argumento_1, argumento_2) {
 ```
 
 Repare que `function` é um nome reservado no R, isto é, você não pode criar um objeto com esse nome.
-
----
-
-Um exemplo: vamos criar uma função que soma dois números.
-
-
-```r
-minha_soma &lt;- function(x, y) {
-  soma &lt;- x + y
-  
-  soma  # resultado retornado
-}
-```
-
-Essa função tem os seguintes componentes:
-
-- `minha_soma`: nome da função
-- `x` e `y`: argumentos da função
-- `soma &lt;- x + y`: operação que a função executa
-- `soma`: valor retornado pela função
 
 
 ---
@@ -927,8 +886,8 @@ calcular_media_volume(sistema = "Guarapiranga")
 calcular_media_volume(sistema = "Guarapiranga", ano = 2021) %&gt;% DT::datatable()
 ```
 
-<div id="htmlwidget-bef35c5e46ed8fe2fd44" style="width:100%;height:auto;" class="datatables html-widget"></div>
-<script type="application/json" data-for="htmlwidget-bef35c5e46ed8fe2fd44">{"x":{"filter":"none","data":[["1","2","3","4"],["Guarapiranga","Guarapiranga","Guarapiranga","Guarapiranga"],[2021,2021,2021,2021],[1,2,3,4],[65.5387096774193,69.3392857142857,73.8774193548387,70.8666666666667]],"container":"<table class=\"display\">\n  <thead>\n    <tr>\n      <th> <\/th>\n      <th>sistema<\/th>\n      <th>ano<\/th>\n      <th>mes<\/th>\n      <th>media_volume_porcentagem<\/th>\n    <\/tr>\n  <\/thead>\n<\/table>","options":{"columnDefs":[{"className":"dt-right","targets":[2,3,4]},{"orderable":false,"targets":0}],"order":[],"autoWidth":false,"orderClasses":false}},"evals":[],"jsHooks":[]}</script>
+<div id="htmlwidget-78e152c8933267ab6221" style="width:100%;height:auto;" class="datatables html-widget"></div>
+<script type="application/json" data-for="htmlwidget-78e152c8933267ab6221">{"x":{"filter":"none","data":[["1","2","3","4"],["Guarapiranga","Guarapiranga","Guarapiranga","Guarapiranga"],[2021,2021,2021,2021],[1,2,3,4],[65.5387096774193,69.3392857142857,73.8774193548387,70.8666666666667]],"container":"<table class=\"display\">\n  <thead>\n    <tr>\n      <th> <\/th>\n      <th>sistema<\/th>\n      <th>ano<\/th>\n      <th>mes<\/th>\n      <th>media_volume_porcentagem<\/th>\n    <\/tr>\n  <\/thead>\n<\/table>","options":{"columnDefs":[{"className":"dt-right","targets":[2,3,4]},{"orderable":false,"targets":0}],"order":[],"autoWidth":false,"orderClasses":false}},"evals":[],"jsHooks":[]}</script>
 
 
 ]
