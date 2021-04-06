@@ -121,9 +121,7 @@ class: middle, center
 ## Ministrantes
 
 .pull-left[
-
 ### Caio Lente
-
 &lt;img src="img/caio.jpeg" width="30%" style="display: block; margin: auto;" /&gt;
 
 Mestrando em Ciência da Computação no IME-USP e cientista de dados na Terranova Consultoria. Programador desde os 15 anos, começou a se apaixonar pelo R em 2016 e agora não fala em outra coisa. Metido a designer, maníaco da organização e metade texano.
@@ -132,9 +130,7 @@ Mestrando em Ciência da Computação no IME-USP e cientista de dados na Terrano
 
 
 .pull-right[
-
 ### Beatriz Milz
-
 &lt;img src="img/bea.jpg" width="30%" style="display: block; margin: auto;" /&gt;
 
 Doutoranda em Ciência Ambiental (PROCAM/IEE/USP) na Universidade de São Paulo. Co-organizadora da [R-Ladies São Paulo](https://www.meetup.com/R-Ladies-Sao-Paulo/). Instrutora da [Carpentries](https://carpentries.org/instructors/), um projeto que tem como missão ensinar habilidades de ciência de dados para pessoas pesquisadoras. Instrutora de tidyverse [certificada pela RStudio](https://education.rstudio.com/trainers/people/milz+beatriz/). 
@@ -1049,13 +1045,17 @@ fun &lt;- function(a, b) {
 ---
 ## Comunicação
 
-Se você precisar construir sites, relatórios, dashboards estáticos (flexdashboard) dentro do seu pacote, você pode criar uma pasta chamada `docs/` na raiz do seu projeto para guardar esses arquivos.
+### Vignettes
 
 É muito comum a construção de *vignettes* para documentar o pacote. Elas são documentos em HTML melhor formatados do que a tradicional documentação do R.
 
 Você pode usar a função `usethis::use_vignette()` para criar *vignettes*.
 
+### Outros
 
+Se você precisar construir sites, relatórios, dashboards estáticos (flexdashboard) dentro do seu pacote, você pode criar uma pasta chamada `docs/` na raiz do seu projeto para guardar esses arquivos.
+
+Veremos também como criar um site do pacote criado com o `{pkgdown}`.
 
 ---
 
@@ -1171,7 +1171,6 @@ class: middle, center, inverse
 
 .pull-left[
 
-No nosso caso, pacote e repositório serão termos equivalentes.
 
 <span style="color:#6495ed; font-weight: bold;">Pacotes do R e repositórios do GitHub são melhores amigos.</span>
 
@@ -1194,11 +1193,51 @@ O grande cupido dessa amizade é o `{usethis}`.
 
 O diagrama abaixo exemplifica o fluxo de trabalho de um projeto com versionamento.
 
-.fazer[lembrete pra mim mesma: algumas funcoes mudaram. revisar. separar o que é setup do que é do fluxo de trabalho]
 
 &lt;img src="img/021-organizacao-de-projetos/fluxo_github_rstudio.png" width="50%" style="display: block; margin: auto;" /&gt;
 
+
 ---
+
+## Configure o Git e o GitHub no seu RStudio
+
+Antes de começarmos a versionar o código do nosso pacote, vamos configurar o Git e o GitHub no RStudio. 
+
+Esse processo precisa ser feito apenas uma vez!
+
+---
+
+### Configure seu usuário do Git
+
+
+```r
+usethis::use_git_config(
+  user.name = "SEU NOME NO GITHUB", 
+  user.email = "seu_email_no@github.com"
+)
+```
+
+- Em `user.name`, pode ser seu nome mesmo, não precisa ser o nickname.
+
+- O `user.email` precisa ser o que está vinculado à sua conta do GitHub.
+
+---
+
+### Configure o Personal Access Token
+
+- Ao conectar com o GitHub, você será instruída(o) a criar um *Personal Access Token* (PAT).
+
+
+- O PAT serve para autenticar ao github, podendo ser utilizado como senha de acesso ou internamente para automatizar tarefas (como criar um repositório).
+
+- Para acessar seu PAT, rode `usethis::github_token()`. 
+
+- Se quiser editá-lo, rode `usethis::edit_r_environ()` e lembre-se de reiniciar sua sessão do R.
+
+---
+
+## Usar o Git para versionar seu pacote
+
 ## Passo 1: crie e configure seu pacote
 
 
@@ -1217,7 +1256,7 @@ Lembrando que nomes de pacotes
 Boa prática: Não é aconselhável usar pontos no nome de pacotes. ([fonte](https://r-pkgs.org/workflows101.html#formal-requirements))
 
 ---
-## Passo 2: adicione o Git
+## Passo 2: Versione com o Git
 
 
 ```r
@@ -1229,20 +1268,6 @@ apareceu) você adiciona controle de versão.
 
 - Você receberá algumas instruções para seguir, mas está tudo certo.
 
----
-## Passo 2½: Configure seu usuário do Git
-
-
-```r
-usethis::use_git_config(
-  user.name = "SEU NOME NO GITHUB", 
-  user.email = "seu_email_no@github.com"
-)
-```
-
-- Em `user.name`, pode ser seu nome mesmo, não precisa ser o nickname.
-
-- O `user.email` precisa ser o que está vinculado à sua conta do GitHub.
 
 ---
 ## Passo 3: Adicione o GitHub
@@ -1256,17 +1281,7 @@ usethis::use_github()
 
 - Mais uma vez, você receberá algumas instruções, mas lembre-se apenas de selecionar o método de autenticação `https`.
 
----
-## Personal Access Token
 
-- Ao conectar com o GitHub, você será instruída(o) a criar um *Personal Access Token* (PAT).
-
-
-- O PAT serve para autenticar ao github, podendo ser utilizado como senha de acesso ou internamente para automatizar tarefas (como criar um repositório).
-
-- Para acessar seu PAT, rode `usethis::github_token()`. 
-
-- Se quiser editá-lo, rode `usethis::edit_r_environ()` e lembre-se de reiniciar sua sessão do R.
 
 ---
 ## Passo 4: Stage &amp; Commit
