@@ -248,11 +248,13 @@ name: sobre-o-curso
 
 ## Informações de vocês
 
-- Nós gostaríamos de saber sobre vocês:
+- Nós gostaríamos de saber sobre vocês (escreva no chat ✍️😀):
 
-  - Nome
-  - Com o que trabalha?
-  - Como imagina usar pacotes no futuro?
+  1. Qual é o seu nome?
+  1. Com o que você trabalha?
+  1. Qual é o seu pacote favorito?
+  1. Como imagina usar pacotes no futuro?
+
 
 
 ---
@@ -487,28 +489,37 @@ use_`nome_da_licenca`_license()
 ```
 
 ---
+class: inverse, middle, center
 
-.fazer[slide sobre o ciclo que o hadley mostra nas palestras: editar, load all, check]
+## 🔁
+
+Modifique o código
+
+Recarregue com devtools::load_all() 
+
+Explore no console
+
+&lt;!-- Esse slide não tá bom não --&gt;
+
 
 
 ---
 
-.revisar[
 
 ## Parte prática 🖥️
 
-- Vamos criar um pacote, usando a função `usethis::create_package()`. 
+- Crie um pacote, usando a função `usethis::create_package()`. 
 
-- Observar a estrutura do diretório
+- Observe a estrutura do diretório
 
 - Carregue o pacote com `devtools::load_all()`. Cheque se está tudo OK com o seu pacote com `devtools::check()` .
 
 &lt;!-- vai aparecer um warning de que precisa criar uma licença --&gt;
 
-- Adicionar uma licença no pacote, com `usethis::use_***_license()`.
+- Adicione uma licença no pacote, com `usethis::use_***_license()`.
 
-- Alterar o DESCRIPTION: nome da pessoa autora, descrição do pacote.
-]
+- Altere o DESCRIPTION: nome da pessoa autora, descrição do pacote.
+
 
 
 ---
@@ -865,8 +876,8 @@ calcular_media_volume(sistema = "Guarapiranga")
 calcular_media_volume(sistema = "Guarapiranga", ano = 2021) %&gt;% DT::datatable()
 ```
 
-<div id="htmlwidget-312207361b17671d3ef0" style="width:100%;height:auto;" class="datatables html-widget"></div>
-<script type="application/json" data-for="htmlwidget-312207361b17671d3ef0">{"x":{"filter":"none","data":[["1","2","3","4"],["Guarapiranga","Guarapiranga","Guarapiranga","Guarapiranga"],[2021,2021,2021,2021],[1,2,3,4],[65.5387096774193,69.3392857142857,73.8774193548387,71.04]],"container":"<table class=\"display\">\n  <thead>\n    <tr>\n      <th> <\/th>\n      <th>sistema<\/th>\n      <th>ano<\/th>\n      <th>mes<\/th>\n      <th>media_volume_porcentagem<\/th>\n    <\/tr>\n  <\/thead>\n<\/table>","options":{"columnDefs":[{"className":"dt-right","targets":[2,3,4]},{"orderable":false,"targets":0}],"order":[],"autoWidth":false,"orderClasses":false}},"evals":[],"jsHooks":[]}</script>
+<div id="htmlwidget-bd42d41f63a1ab8ee644" style="width:100%;height:auto;" class="datatables html-widget"></div>
+<script type="application/json" data-for="htmlwidget-bd42d41f63a1ab8ee644">{"x":{"filter":"none","data":[["1","2","3","4"],["Guarapiranga","Guarapiranga","Guarapiranga","Guarapiranga"],[2021,2021,2021,2021],[1,2,3,4],[65.5387096774193,69.3392857142857,73.8774193548387,71.04]],"container":"<table class=\"display\">\n  <thead>\n    <tr>\n      <th> <\/th>\n      <th>sistema<\/th>\n      <th>ano<\/th>\n      <th>mes<\/th>\n      <th>media_volume_porcentagem<\/th>\n    <\/tr>\n  <\/thead>\n<\/table>","options":{"columnDefs":[{"className":"dt-right","targets":[2,3,4]},{"orderable":false,"targets":0}],"order":[],"autoWidth":false,"orderClasses":false}},"evals":[],"jsHooks":[]}</script>
 
 
 ]
@@ -898,7 +909,7 @@ Ideias para melhorar esse exemplo:
 
 ## Parte prática 🖥️
 
-- Criar um arquivo onde iremos escrever a função para o pacote. Dica : use a função `usethis::use_r("nome_funcao")` !
+- Crie um arquivo onde iremos escrever a função para o pacote. Dica : use a função `usethis::use_r("nome_funcao")` !
 
 - Copie o código disponível [neste arquivo](#) e cole no arquivo criado. .fazer[(precisamos criar o código)]
 

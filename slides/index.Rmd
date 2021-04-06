@@ -207,11 +207,13 @@ name: sobre-o-curso
 
 ## Informações de vocês
 
-- Nós gostaríamos de saber sobre vocês:
+- Nós gostaríamos de saber sobre vocês (escreva no chat ✍️😀):
 
-  - Nome
-  - Com o que trabalha?
-  - Como imagina usar pacotes no futuro?
+  1. Qual é o seu nome?
+  1. Com o que você trabalha?
+  1. Qual é o seu pacote favorito?
+  1. Como imagina usar pacotes no futuro?
+
 
 
 ---
@@ -448,28 +450,37 @@ use_`nome_da_licenca`_license()
 ```
 
 ---
+class: inverse, middle, center
 
-.fazer[slide sobre o ciclo que o hadley mostra nas palestras: editar, load all, check]
+## 🔁
+
+Modifique o código
+
+Recarregue com devtools::load_all() 
+
+Explore no console
+
+<!-- Esse slide não tá bom não -->
+
 
 
 ---
 
-.revisar[
 
 ## Parte prática 🖥️
 
-- Vamos criar um pacote, usando a função `usethis::create_package()`. 
+- Crie um pacote, usando a função `usethis::create_package()`. 
 
-- Observar a estrutura do diretório
+- Observe a estrutura do diretório
 
 - Carregue o pacote com `devtools::load_all()`. Cheque se está tudo OK com o seu pacote com `devtools::check()` .
 
 <!-- vai aparecer um warning de que precisa criar uma licença -->
 
-- Adicionar uma licença no pacote, com `usethis::use_***_license()`.
+- Adicione uma licença no pacote, com `usethis::use_***_license()`.
 
-- Alterar o DESCRIPTION: nome da pessoa autora, descrição do pacote.
-]
+- Altere o DESCRIPTION: nome da pessoa autora, descrição do pacote.
+
 
 
 ---
@@ -850,7 +861,7 @@ Ideias para melhorar esse exemplo:
 
 ## Parte prática 🖥️
 
-- Criar um arquivo onde iremos escrever a função para o pacote. Dica : use a função `usethis::use_r("nome_funcao")` !
+- Crie um arquivo onde iremos escrever a função para o pacote. Dica : use a função `usethis::use_r("nome_funcao")` !
 
 - Copie o código disponível [neste arquivo](#) e cole no arquivo criado. .fazer[(precisamos criar o código)]
 
