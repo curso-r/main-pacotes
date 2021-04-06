@@ -354,7 +354,7 @@ class: middle, center, inverse
 ---
 ## Pacotes
 
-Um pacote do R nada mais é do que uma forma específica de organizar seus código, seguindo o protocolo descrito pela R Foundation.
+Um pacote do R é uma forma específica de organizar seus código, seguindo o protocolo descrito pela R Foundation.
 
 &gt; Pacotes são a unidade fundamental de código R reprodutível. &lt;br&gt;
 &gt; Hadley Wickham
@@ -370,6 +370,26 @@ Um pacote do R nada mais é do que uma forma específica de organizar seus códi
 .pull-right[
 &lt;img src="img/021-organizacao-de-projetos/pacote.gif" style="display: block; margin: auto;" /&gt;
 ]
+
+---
+## Motivação
+
+"Por que vamos aprender a fazer um pacote se scripts funcionam bem o suficiente?" e "Por que divulgar meus pacotes em algum serviço open source?"
+
+Porque:
+
+- Compartilhar código é sempre uma boa ideia para que a comunidade se
+beneficie dos avanços individuais das pessoas que fazem parte
+
+- Para sermos pessoas desenvolvedoras melhores, precisamos receber ajuda e
+sugestões de autras desenvolvedoras mais experientes
+
+- É muito mais fácil usar controle de versão e integração contínua se você
+estiver programando um pacote
+
+- Reprodutibilidade, Reprodutibilidade, Reprodutibilidade
+
+&lt;!-- slide da apresentacao https://lente.dev/packages.pdf --&gt;
 
 ---
 ## Vantagens
@@ -398,6 +418,41 @@ Ele ajuda a criar arquivos, projetos, usar o Git, criar repositórios no GitHub 
 &lt;img src="img/021-organizacao-de-projetos/usethis.png" width="15%" style="display: block; margin: auto;" /&gt;
 
 Apresentaremos várias funções do `{usethis}` ao longo deste tópico.
+
+---
+
+## Nomes
+
+Suponha que você criou uma função incrível que você quer compartilhar com o mundo. Ela tem várias funções auxiliares e um comportamento complexo o suficiente para depender de uma documentação... Você precisa criar um pacote.
+
+Mas qual deve ser o seu nome?
+
+&gt; “There are only two hard things in Computer Science: cache invalidation and naming things.” --- Phil Karlton
+
+Os melhores nomes são simples e descritivos. Pense em algo que possa ser procurado facilmente no Google e que, preferencialmente, seja em inglês (a menos que você não ache que pessoas de outro país usarão o seu pacote).
+
+Evite usar letras maiúsculas ou mesmo números pois isso pode confundir os usuários. Você definitavente ganha pontos extras se você conseguir inserir alguma brincadeira com a letra R no nome (`stringr`, `decryptr`, `plyr`, `purrr`, etc.).
+
+---
+
+## Dica para pesquisar nomes
+
+
+```r
+available::available("stockfish")
+# Urban Dictionary can contain potentially offensive results,
+#   should they be included? [Y]es / [N]o:
+# 1: Yes
+# ── stockfish ────────────────────────────
+# Name valid: ✔
+# Available on CRAN: ✖ 
+# Available on Bioconductor: ✔
+# Available on GitHub:  ✔ 
+# Abbreviations: http://www.abbreviations.com/stockfish
+# Wikipedia: https://en.wikipedia.org/wiki/stockfish
+# Wiktionary: https://en.wiktionary.org/wiki/stockfish
+# Sentiment:???
+```
 
 
 ---
@@ -536,6 +591,11 @@ Uma função é responsável por executar uma tarefa pequena, mas muito bem. Qua
 
 A ideia da pasta `R/` é guardar em um local comum tudo aquilo que nós utilizamos como ferramenta interna para nossas análises, bem como aquilo que queremos que outras pessoas possam usar no futuro.
 
+Podemos usar a função `usethis::use_r("nome_da_funcao")` para que um arquivo seja criado para começarmos a escrever uma função.
+
+
+Assim que escrevermos/modificarmos alguma função, podemos carregá-las para testá-las manualmente com a função `devtools::load_all()`
+
 
 ---
 ## Funções
@@ -562,14 +622,7 @@ No mundo ideal, na pasta `R/` do seu projeto haverá uma coleção de arquivos, 
 .footnote[Leia mais [neste capítulo do livro R for Data Science](https://r4ds.had.co.nz/functions.html).]
 
 
----
 
-## Funções
-
-- Funções no R são *nomes* que guardam um **código de R**. A ideia é a seguinte: sempre que você executar uma função, o código que ela guarda será executado e um resultado nos será devolvido.
-
-
-.fazer[falar sobre o usethis::use_r()]
 
 ---
 
@@ -671,15 +724,7 @@ Existem 3 funções principais para isso:
 
 - `usethis::use_pipe()`: Se você usa o pipe nas funções do seu pacote, será necessário usar essa função.
 
----
 
-
-
-## Boas práticas
-
-- NUNCA devemos usar o `library()` dentro de um pacote.
-
-- Não adicionar "metapackages" no Imports (como o tidyverse).
 
 
 ---
@@ -882,8 +927,8 @@ calcular_media_volume(sistema = "Guarapiranga")
 calcular_media_volume(sistema = "Guarapiranga", ano = 2021) %&gt;% DT::datatable()
 ```
 
-<div id="htmlwidget-afe9751a94e02ec5165d" style="width:100%;height:auto;" class="datatables html-widget"></div>
-<script type="application/json" data-for="htmlwidget-afe9751a94e02ec5165d">{"x":{"filter":"none","data":[["1","2","3","4"],["Guarapiranga","Guarapiranga","Guarapiranga","Guarapiranga"],[2021,2021,2021,2021],[1,2,3,4],[65.5387096774193,69.3392857142857,73.8774193548387,71.04]],"container":"<table class=\"display\">\n  <thead>\n    <tr>\n      <th> <\/th>\n      <th>sistema<\/th>\n      <th>ano<\/th>\n      <th>mes<\/th>\n      <th>media_volume_porcentagem<\/th>\n    <\/tr>\n  <\/thead>\n<\/table>","options":{"columnDefs":[{"className":"dt-right","targets":[2,3,4]},{"orderable":false,"targets":0}],"order":[],"autoWidth":false,"orderClasses":false}},"evals":[],"jsHooks":[]}</script>
+<div id="htmlwidget-bef35c5e46ed8fe2fd44" style="width:100%;height:auto;" class="datatables html-widget"></div>
+<script type="application/json" data-for="htmlwidget-bef35c5e46ed8fe2fd44">{"x":{"filter":"none","data":[["1","2","3","4"],["Guarapiranga","Guarapiranga","Guarapiranga","Guarapiranga"],[2021,2021,2021,2021],[1,2,3,4],[65.5387096774193,69.3392857142857,73.8774193548387,70.8666666666667]],"container":"<table class=\"display\">\n  <thead>\n    <tr>\n      <th> <\/th>\n      <th>sistema<\/th>\n      <th>ano<\/th>\n      <th>mes<\/th>\n      <th>media_volume_porcentagem<\/th>\n    <\/tr>\n  <\/thead>\n<\/table>","options":{"columnDefs":[{"className":"dt-right","targets":[2,3,4]},{"orderable":false,"targets":0}],"order":[],"autoWidth":false,"orderClasses":false}},"evals":[],"jsHooks":[]}</script>
 
 
 ]
@@ -907,6 +952,24 @@ Ideias para melhorar esse exemplo:
 
 
 ]
+
+---
+
+## Recomendações
+
+Algumas recomendação sobre como organizar seu código:
+
+- Evite usar . no nome das suas funções (hoje em dia usar _ é muito mais comum)
+
+- Use nomes descritivos para as funções, pois isso facilita a manutenção e o uso do pacote
+
+- Tente se limitar a 80 caracteres por linha porque isso permite que seu código caiba confortavelmente em qualquer tela
+
+- Não use `library()` ou `require()`, pois isso vai causar problemas (use a notação `pacote::função()`)
+
+- Nunca use `source()`, todo o código já será carregado automaticamente
+
+- Não adicionar "metapackages" no Imports (como o tidyverse).
 
 
 ---
@@ -967,7 +1030,7 @@ Para isso, utilize a função `usethis::use_data_raw("meus_dados")`. Ela criará
 
 
 ---
-class: middle, center
+class: middle, center, inverse
 name: documentacao
 
 # Documentação
@@ -976,7 +1039,8 @@ name: documentacao
 ---
 ## Documentação de funções
 
-A documentação de funções deve seguir a estrutura a seguir usando o símbolo `#'`:
+Se quisermos adicionar uma documentação para o nosso pacote (as instruções que aparecem quando vamos usar uma função ou o documento mostrado quando rodamos `?função()`) precisamos usar um comentário especial: `#'`
+
 
 
 ```r
@@ -995,9 +1059,13 @@ fun &lt;- function(a, b) {
 }
 ```
 
-O parâmetro `@export` indica que a função ficará disponível quando rodarmos `library(MeuProjeto)`.
+---
 
-.fazer[falar sobre o atalho do roxygen]
+## Documentação de funções (cont.)
+
+- O parâmetro `@export` indica que a função ficará disponível quando rodarmos `library(MeuProjeto)`. Não se esqueça de exportar todas (e somente) as funções públicas!
+
+- O RStudio disponibiliza um atalho para criar a estrutura da documentação de uma função. No menu superior, clique em `Code` -&gt;  `Insert Roxygen Skeleton`.
 
 - Para deixar a documentação das suas funções acessível (no help do R), use a função `devtools::document()`. Atalhos: Ctrl + Shift + D (Windows e Linux) ou Cmd + Shift + D (macOS).
 
@@ -1014,8 +1082,10 @@ O parâmetro `@export` indica que a função ficará disponível quando rodarmos
 
 .fazer[Acentos, encoding e variáveis globais]
 
+- Prefira manter os arquivos em inglês ou em ASCII (sem acentos) para que seu pacote possa ser submetido no CRAN; se precisar escapar strings, dê uma olhada no add-on `abjutils::escape_unicode()`
 
-`utils::globalVariables(c("variavel1", "variavel2"))`
+
+`- utils::globalVariables(c("variavel1", "variavel2"))`
 
 ---
 ## Comunicação
@@ -1051,24 +1121,44 @@ name: testes-unitarios
 
 .footnote[Leia mais [neste capítulo do livro Zen do R](https://curso-r.github.io/zen-do-r/testes.html).]
 
+---
+
+## Testes
+
+Se quisermos verificar que todo o pacote continua funcionando mesmo depois fazer alguma alteração, precisamos de testes automatizados.
+
+Para isso, basta rodar `usethis::use_testthat()` (apenas uma vez por pacote) e depois `usethis::use_test("nome_do_teste")` (para cada novo arquivo de testes que quiser criar).
+
+Com o pacote testthat podemos criar quantos arquivos de testes quisermos, cada um com um número ilimitado de testes e sub-testes. Quando tivermos todos os testes prontos, basta rodar `devtools::test()`. Atalho: Ctrl + Shift + T (Windows e Linux) ou Cmd + Shift + T (macOS).
 
 ---
 
-.fazer[Escrever :) ]
+## Exemplo de teste
 
-.fazer[O pacote {testthat}  
-`usethis::use_testthat()`
-`usethis::use_test("nome_da_funcao")`
+Considerando a função:
+```r
+tira_media &lt;- function(x, rm_na = TRUE) {
+  purrr::reduce(x, sum, na.rm = rm_na)/conta_itens(x, rm_na)
+}
+```
 
-atalho: Ctrl + Shift + T (Windows e Linux) ou Cmd + Shift + T (macOS).]
+Podemos escrever os seguintes testes:
+```r
+test_that("taking the mean works", {
+            expect_equal(tira_media(c(1, 2, 3, 4, NA, 6)), 3.2)
+            expect_equal(tira_media(c(1, 2, 3, 4, 6)), 3.2)
+          })
+test_that("rm_na works as expected", {
+            expect_output(tira_media(c(1, 2, NA), rm_na = FALSE), NA)
+            expect_equal(tira_media(c(NA, NA, NA)), NaN)
+          })
+```
 
-.fazer[Tipos de testes
+---
 
-`testthat::expect_identical()`
+## Função check
 
-]
-
-Vamos falar sobre o pacote covr?  https://covr.r-lib.org/
+Podemos usar a função `devtools::check()`. Ela carrega todo o código, gera toda a documentação e executa todos os testes, verificando em todo passo se tudo está funcionando como o esperado.
 
 ---
 class: middle, center
@@ -1278,6 +1368,15 @@ Extra. Pull: Baixe o estado atual do projeto
 ---
 ## Regras para colocar um pacote no CRAN
 
+Um pacote é uma coleção de código, dados, documentação e testes que qualquer pessoa pode instalar em sua máquina.
+
+Se quisermos criar apenas um conjunto de funções que provavelmente não serão utilizadas por muitas pessoas, podemos subir esse pacote para o GitHub e mantê-lo lá somente para
+garantir controle de versão.
+
+Mas se quisermos que o máximo número possível de pessoas tenha acesso ao nosso pacote, pode ser que precisemos subi-lo para o CRAN (Comprehensive R Archive Network). Neste caso precisaremos criar teste e documentação (em inglês) para nosso pacote.
+
+Use a função `devtools::submit_cran()` para auxiliar no processo de submissão do pacote para o CRAN.
+
 .fazer[Escrever!]
 
 
@@ -1310,7 +1409,7 @@ class: middle, center, inverse
 
 - A função `devtools::check()` verifica se o pacote está funcionando. Pode apresentar erros, avisos e notas. Leia a mensagem no console :)
 
-....
+
 
 ---
 # Referências  e materiais para estudo
