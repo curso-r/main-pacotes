@@ -592,8 +592,9 @@ Sem os inúmeros pacotes criados pela comunidade, o R provavelmente já estaria 
 
 Por isso, é a primeira coisa que escrevemos nos nossos *scripts* quase sempre é `library(algumPacoteLegal)`.
 
+---
 
-### Quatro pontos
+## Quatro pontos
 
 Quando lidamos com pacotes, a função `library()` não é utilizada, e todas as funções devem ter seus pacotes de origem explicitamente referenciados pelo operador `::`.
 
@@ -603,7 +604,7 @@ Quando lidamos com pacotes, a função `library()` não é utilizada, e todas as
 Para escrever `dplyr::`, por exemplo, basta digitar `d`, `p`, `l` e apertar TAB uma vez. Com os `::`, as sugestões passarão a ser somente de funções daquele pacote.
 
 ---
-## Vatangens dos quatro pontos
+## Vantagens dos quatro pontos
 
 - O código, no total, executa um pouco mais rápido porque são carregadas menos funções no ambiente global (isso é especialmente importante em aplicações interativas feitas em Shiny).
 
@@ -612,7 +613,6 @@ Para escrever `dplyr::`, por exemplo, basta digitar `d`, `p`, `l` e apertar TAB 
 - O uso do `::` é fundamental na criação e organização de pacotes.
 
 ---
-.revisar[
 ## Documentar as dependências
 
 Além de usar o `::` ao usar funções de outros pacotes, é importante também que essas dependências sejam documentadas na seção Imports do arquivo DESCRIPTION.
@@ -625,10 +625,16 @@ Existem 3 funções principais para isso:
 
 - `usethis::use_pipe()`: Se você usa o pipe nas funções do seu pacote, será necessário usar essa função.
 
-Boas práticas:
+---
+
+
+
+## Boas práticas
+
 - NUNCA devemos usar o `library()` dentro de um pacote.
+
 - Não adicionar "metapackages" no Imports (como o tidyverse).
-]
+
 
 ---
 
@@ -857,7 +863,6 @@ Ideias para melhorar esse exemplo:
 
 ---
 
-.revisar[
 
 ## Parte prática 🖥️
 
@@ -871,7 +876,7 @@ Ideias para melhorar esse exemplo:
 
 - Carregue o pacote com `devtools::load_all()`, e confira se está tudo ok com `devtools::check()` !
 
-]
+
 
 
 ---
@@ -914,26 +919,6 @@ Para isso, utilize a função `usethis::use_data_raw("meus_dados")`. Ela criará
 
 
 ---
-
-## Resumo dos passos iniciais
-
-<!-- anotacoes da leitura do rpkgs -->
-
-- Criamos um pacote usando a função `usethis::create_package("~/caminho/ate/o/pacote")`
-
-- No arquivo DESCRIPTION, adicionamos o nome das pessoas autoras, além do título e descrição do pacote.
-
-- Adicionar uma licença
-
-- Versionamos o projeto usando `usethis::use_git()`
-
-- Crie suas funções: a funçao `usethis::use_r("nome_da_funcao")` cria o arquivo para isso
-
-- A funcão `devtools::load_all()` simula o processo de instalação e carregamento do pacote. As funções criadas ficam disponíveis para uso. Atalho:  Ctrl + Shift + L (Windows e Linux) ou Cmd + Shift + L (macOS).
-
-- A função `devtools::check()` verifica se o pacote está funcionando. Pode apresentar erros, avisos e notas. Leia a mensagem no console :)
-
----
 class: middle, center
 name: documentacao
 
@@ -941,7 +926,7 @@ name: documentacao
 
 
 ---
-## Documentação
+## Documentação de funções
 
 A documentação de funções deve seguir a estrutura a seguir usando o símbolo `#'`:
 
@@ -968,9 +953,15 @@ O parâmetro `@export` indica que a função ficará disponível quando rodarmos
 - Para deixar a documentação das suas funções acessível (no help do R), use a função `devtools::document()`. Atalhos: Ctrl + Shift + D (Windows e Linux) ou Cmd + Shift + D (macOS).
 
 ---
-.fazer[falar sobre documentação de funções]
+
+## Documentação de bases de dados
 
 .fazer[falar sobre documentação de base de dados]
+
+---
+
+## Acentos, encoding e variáveis globais
+
 
 .fazer[Acentos, encoding e variáveis globais]
 
@@ -1113,7 +1104,7 @@ O diagrama abaixo exemplifica o fluxo de trabalho de um projeto com versionament
 
 .fazer[lembrete pra mim mesma: algumas funcoes mudaram. revisar. separar o que é setup do que é do fluxo de trabalho]
 
-```{r echo=FALSE, fig.align='center', out.width="70%"}
+```{r echo=FALSE, fig.align='center', out.width="50%"}
 knitr::include_graphics("img/021-organizacao-de-projetos/fluxo_github_rstudio.png")
 ```
 
@@ -1235,15 +1226,52 @@ Extra. Pull: Baixe o estado atual do projeto
 - Nem sempre o comando Pull dá certo. Às vezes, você e a colega de trabalho fizeram mudanças no mesmo arquivo e, quando vão juntar, ocorre um conflito.
 
 ---
-
-.fazer[colocar conteudo sobre Criando um {pkgdown}]
-
-.fazer[Integração contínua com Github Actions]
-
-.fazer[Regras para colocar um pacote no CRAN]
+## Criando um site para o pacote com {pkgdown}
 
 
+.fazer[Escrever!]
 
+---
+## Integração contínua com Github Actions
+
+.fazer[Escrever!]
+
+---
+## Regras para colocar um pacote no CRAN
+
+.fazer[Escrever!]
+
+
+---
+class: middle, center, inverse
+
+
+# Resumo
+
+---
+
+## Resumo
+
+- Criar um pacote usando a função `usethis::create_package("~/caminho/ate/o/pacote")`
+
+- No arquivo DESCRIPTION, adicionar o nome das pessoas autoras, além do título e descrição do pacote.
+
+- Adicionar uma licença com `usethis::use_**_licence()`
+
+- Versionar o projeto usando `usethis::use_git()`
+
+- Criar funções: a função `usethis::use_r("nome_da_funcao")` cria o arquivo para isso
+
+---
+
+## Resumo
+
+
+- A funcão `devtools::load_all()` simula o processo de instalação e carregamento do pacote. As funções criadas ficam disponíveis para uso. Atalho:  Ctrl + Shift + L (Windows e Linux) ou Cmd + Shift + L (macOS).
+
+- A função `devtools::check()` verifica se o pacote está funcionando. Pode apresentar erros, avisos e notas. Leia a mensagem no console :)
+
+....
 
 ---
 # Referências  e materiais para estudo
