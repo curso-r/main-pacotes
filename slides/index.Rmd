@@ -248,24 +248,23 @@ name: preparando-o-ambiente
 ---
 ## Check-list antes de começar a aula
 
-- [R instalado](https://livro.curso-r.com/1-1-instalacao-do-r.html) ✅
+- [R instalado](https://livro.curso-r.com/1-1-instalacao-do-r.html) ✅ +  [RStudio instalado](https://livro.curso-r.com/1-1-instalacao-do-r.html) ✅
 
-- [RStudio instalado](https://livro.curso-r.com/1-1-instalacao-do-r.html) ✅
+- [Ferramentas de desenvolvimento](https://r-pkgs.org/setup.html#setup-tools): ✅ Windows: [RTools instalado](https://livro.curso-r.com/1-3-instalacao-adicionais.html#rtools); Linux: [r-base-dev](https://livro.curso-r.com/1-3-instalacao-adicionais.html#rtools); macOS: Xcode command line tools.
 
-- [Ferramentas de desenvolvimento](https://r-pkgs.org/setup.html#setup-tools): ✅
-  - Windows: [RTools instalado](https://livro.curso-r.com/1-3-instalacao-adicionais.html#rtools) 
-  - Linux: [r-base-dev](https://livro.curso-r.com/1-3-instalacao-adicionais.html#rtools)
-  - macOS: Xcode command line tools
+-  Verificar se as ferramentas de desenvolvimento estão disponíveis: `devtools::has_devel()`
+
+```{r eval=FALSE, include=TRUE}
+> devtools::has_devel()
+# Your system is ready to build packages!
+```
 
 - [Pacotes necessários instalados](https://github.com/curso-r/main-pacotes#pacotes-necess%C3%A1rios)  ✅
 
-- [Git instalado](https://git-scm.com/) ✅
+- [Git instalado](https://git-scm.com/) ✅ +  [Conta no GitHub criada](https://github.com/)  ✅
 
-- [Conta no GitHub criada](https://github.com/)  ✅
 
--  `devtools::has_devel()`
-
-- .revisar[Caio, vc acha uma boa prática usar `use_devtools()`?]
+<!-- Caio, vc acha uma boa prática usar `use_devtools()`? -->
 
 ---
 class: middle, center, inverse
@@ -283,6 +282,7 @@ O primeiro abriga absolutamente todos os objetos criados por uma sessão R, enqu
 Ao reabrir o RStudio, o conteúdo armazenados nestes arquivos será carregado no ambiente de trabalho atual como se nada tivesse acontecido.
 
 .footnote[Leia mais [neste capítulo do livro Zen do R](https://curso-r.github.io/zen-do-r/rdata-rhistory.html).]
+
 ---
 ### Por que desistir do .RData e .Rhistory 
 
@@ -387,7 +387,7 @@ usethis::create_package("~/Documents/Meuprojeto")
 # Authors@R (parsed):
 #     * First Last <first.last@example.com> [aut, cre] (YOUR-ORCID-ID)
 # Description: What the package does (one paragraph).
-# License: `use_mit_license()`, `use_gpl3_license()` or friends to
+# License: use_mit_license(), use_gpl3_license() or friends to
 #     pick a license
 # Encoding: UTF-8
 # LazyData: true
@@ -422,28 +422,30 @@ Essa é a estrutura criada quando usamos a função `usethis::create_package()`:
 
 - `R/`: aqui ficam as funções desenvolvidas em R.
 
-- `LICENSE`: especifica os termos de uso e distribuição do seu pacote.
-
-- `.Rbuildignore`: .revisar[Lista arquivos  que são necessários ter no diretório, mas que não devem ser incluídos ao compilar o pacote R a partir do código-fonte.]
+- `.Rbuildignore`:  Lista arquivos que não devem ser incluídos ao compilar o pacote R a partir do código-fonte. 
 <!-- usethis::use_build_ignore("..") ajuda a adicionar arquivos no .Rbuildignore-->
 
-- `NAMESPACE`: .revisar[Não devemos editar este arquivo manualmente. O NAMESPACE declara: 
-  - as funções que o pacote exporta para uso externo; 
-  - e as funções externas que seu pacote importa de outros pacotes.]
+- `NAMESPACE`: Não devemos editar este arquivo manualmente. O NAMESPACE declara: as funções que o pacote exporta para uso externo e as funções externas que seu pacote importa de outros pacotes.
+
 
 ---
 
-## Estrutura do pacote: outros diretórios e arquivos
+## Licença de uso
 
-.fazer[Acho legal falar de outros tipos diretorios mais comuns, como o inst/]
+- `LICENSE`: especifica os termos de uso e distribuição do seu pacote.
 
-- `.gitignore`: Lista arquivos que deverão ser ignorados ao versionar o pacote com Git. 
+- O pacote `{usethis}` possui algumas funcões para nos ajudar com isso. Por exemplo:
 
-.ideias[Cuidado aqui. Verificar se explicamos o que é git antes.]
+```{r eval=FALSE, include=TRUE}
+usethis::use_cc0_license()
+usethis::use_mit_license()
+usethis::use_mit_license()
+```
 
----
-
-.fazer[Acho legal falar sobre como adicionar uma licença no pacote. `usethis::use_mit_license("Seu nome aqui")]
+No geral, as funções tem essa estrutura:
+```r
+use_`nome_da_licenca`_license()
+```
 
 ---
 
@@ -456,17 +458,17 @@ Essa é a estrutura criada quando usamos a função `usethis::create_package()`:
 
 ## Parte prática 🖥️
 
-- Criar um pacote
+- Vamos criar um pacote, usando a função `usethis::create_package()`. 
 
 - Observar a estrutura do diretório
 
-- `devtools::load_all()` +  `devtools::check()` 
+- Carregue o pacote com `devtools::load_all()`. Cheque se está tudo OK com o seu pacote com `devtools::check()` .
 
 <!-- vai aparecer um warning de que precisa criar uma licença -->
 
-- Adicionar uma licença no pacote
+- Adicionar uma licença no pacote, com `usethis::use_***_license()`.
 
-- Alterar o description: nome da pessoa autora, descrição do pacote.
+- Alterar o DESCRIPTION: nome da pessoa autora, descrição do pacote.
 ]
 
 
@@ -625,7 +627,7 @@ Boas práticas:
 
 - Exemplo: Importar a base mananciais, e calcular a média do volume de água armazenado (em %) para o sistema Cantareira, em abril de 2021.
 
-```{r message=FALSE, warning=FALSE}
+```{r message=FALSE, warning=FALSE, eval=FALSE}
 library(tidyverse)
 library(lubridate)
 url_mananciais <- "https://github.com/beatrizmilz/mananciais/raw/master/inst/extdata/mananciais.csv"
@@ -643,7 +645,7 @@ mananciais %>%
 .panelset[
 .panel[.panel-name[Código original]
 
-```{r message=FALSE, warning=FALSE}
+```{r message=FALSE, warning=FALSE, eval=FALSE}
 library(tidyverse)
 library(lubridate)
 url_mananciais <- "https://github.com/beatrizmilz/mananciais/raw/master/inst/extdata/mananciais.csv"
@@ -814,7 +816,7 @@ calcular_media_volume <- function(sistema, ano = 2000:2021, mes = 1:12) {
 } 
 ```
 
-```{r echo=TRUE, message=FALSE, warning=FALSE,}
+```{r echo=TRUE, message=FALSE, warning=FALSE}
 calcular_media_volume(sistema = "Guarapiranga", ano = 2021) %>% DT::datatable()
 ```
 
@@ -1040,7 +1042,8 @@ class: middle, center, inverse
 
 - `r colorido("Git é um software que você instala no computador.")`
 
-<br>
+- Arquivo `.gitignore`: Lista arquivos que deverão ser ignorados ao versionar o pacote com Git. 
+
 
 ```{r echo=FALSE, out.width="30%", fig.align='center'}
 knitr::include_graphics("img/021-organizacao-de-projetos/git.png")
@@ -1068,17 +1071,29 @@ knitr::include_graphics("img/021-organizacao-de-projetos/github.png")
 ---
 ## Pacotes e GitHub
 
+
+
+.pull-left[
+
 No nosso caso, pacote e repositório serão termos equivalentes.
 
 `r colorido("Pacotes do R e repositórios do GitHub são melhores amigos.")`
 
-```{r echo=FALSE, out.width="40%", fig.align='center'}
-knitr::include_graphics("img/021-organizacao-de-projetos/hug.gif")
-```
+
 
 <br>
 
 O grande cupido dessa amizade é o `{usethis}`.
+]
+
+.pull-right[
+
+```{r echo=FALSE, out.width="90%", fig.align='center'}
+knitr::include_graphics("img/021-organizacao-de-projetos/hug.gif")
+```
+
+]
+
 
 ---
 ## Fluxo de trabalho
