@@ -1084,7 +1084,7 @@ name: disponibilizando-o-pacote
 
 ---
 class: middle, center, inverse
-# Git e Github
+# Git e GitHub
 
 ---
 ## Git
@@ -1192,11 +1192,17 @@ usethis::use_git_config(
 - Ao conectar com o GitHub, você será instruída(o) a criar um *Personal Access Token* (PAT).
 
 
-- O PAT serve para autenticar ao github, podendo ser utilizado como senha de acesso ou internamente para automatizar tarefas (como criar um repositório).
+- O PAT serve para autenticar ao GitHub, podendo ser utilizado como senha de acesso ou internamente para automatizar tarefas (como criar um repositório).
 
-- Para acessar seu PAT, rode `usethis::github_token()`. 
+- Para criar um novo PAT, use a função `usethis::create_github_token()`. Uma janela do navegador será aberta, e você deve autenticar no GitHub (se necessário), criar o novo token, e copiá-lo. 
 
-- Se quiser editá-lo, rode `usethis::edit_r_environ()` e lembre-se de reiniciar sua sessão do R.
+- Use a função `usethis::edit_r_environ()` para abrir o arquivo `.Renviron` para salvar seu token. Use essa estrutura, substituindo os 0 pelo código copiado na etapa anterior:
+
+```
+GITHUB_PAT="0000000000000000000000000000000000000000"
+```
+
+- Lembre-se de reiniciar sua sessão do R!
 
 ---
 
@@ -1283,7 +1289,7 @@ knitr::include_graphics("img/021-organizacao-de-projetos/passo_5_pull.gif")
 2. Adicionar Git
 3. Adicionar GitHub
 4. Commit: Edite e "Commite" as mudanças no código
-5. Push: Suba os commits para o Github
+5. Push: Suba os commits para o GitHub
 Extra. Pull: Baixe o estado atual do projeto
 
 .ideia[Onde podemos falar do usethis::use_readme_rmd() + usethis::build_readme() ?]
@@ -1298,11 +1304,32 @@ Extra. Pull: Baixe o estado atual do projeto
 ---
 ## Criando um site para o pacote com {pkgdown}
 
+O pacote pkgdown permite criar um site para o pacote. Para criar, use a função a seguir uma vez, para configurar o pacote para usar o pkgdown:
 
-.fazer[Escrever!]
+```r
+usethis::use_pkgdown()
+```
+Para atualizar o site, use a função:
+
+```r
+pkgdown::build_site()
+```
+---
+
+## Criando um site para o pacote com {pkgdown} (cont.)
+
+Conteúdo do site será gerado a partir dos documentos já existentes no pacote: 
+
+- O conteúdo do site estará no diretório `docs/`. 
+
+- O arquivo `README.md` será usado para criar a página principal do site;
+
+- A documentação das funções serão usadas para criar a seção 'references'
+
+- As vignettes serão usadas para criar a seção 'articles'
 
 ---
-## Integração contínua com Github Actions
+## Integração contínua com GitHub Actions
 
 .fazer[Escrever!]
 
