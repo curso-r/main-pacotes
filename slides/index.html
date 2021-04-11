@@ -4,27 +4,7 @@
     <title>Pacotes 📦</title>
     <meta charset="utf-8" />
     <meta name="author" content="" />
-    <script src="libs/header-attrs-2.7.6/header-attrs.js"></script>
-    <link href="libs/remark-css-0.0.1/default.css" rel="stylesheet" />
-    <link href="libs/remark-css-0.0.1/default-fonts.css" rel="stylesheet" />
-    <script src="libs/clipboard-2.0.6/clipboard.min.js"></script>
-    <link href="libs/xaringanExtra-clipboard-0.2.6/xaringanExtra-clipboard.css" rel="stylesheet" />
-    <script src="libs/xaringanExtra-clipboard-0.2.6/xaringanExtra-clipboard.js"></script>
-    <script>window.xaringanExtraClipboard(null, {"button":"Copy Code","success":"Copied!","error":"Press Ctrl+C to Copy"})</script>
-    <script src="libs/mark.js-8.11.1/mark.min.js"></script>
-    <link href="libs/xaringanExtra-search-0.0.1/search.css" rel="stylesheet" />
-    <script src="libs/xaringanExtra-search-0.0.1/search.js"></script>
-    <script>window.addEventListener('load', function() { window.xeSearch = new RemarkSearch({"position":"top-right","caseSensitive":false,"showIcon":true,"autoSearch":true}) })</script>
-    <link href="libs/tile-view-0.2.6/tile-view.css" rel="stylesheet" />
-    <script src="libs/tile-view-0.2.6/tile-view.js"></script>
-    <link href="libs/shareon-1.4.1/shareon.min.css" rel="stylesheet" />
-    <script src="libs/shareon-1.4.1/shareon.min.js"></script>
-    <link href="libs/xaringanExtra-shareagain-0.2.6/shareagain.css" rel="stylesheet" />
-    <script src="libs/xaringanExtra-shareagain-0.2.6/shareagain.js"></script>
-    <link href="libs/xaringanExtra-extra-styles-0.2.6/xaringanExtra-extra-styles.css" rel="stylesheet" />
-    <script src="libs/xaringanExtra_fit-screen-0.2.6/fit-screen.js"></script>
-    <link href="libs/panelset-0.2.6/panelset.css" rel="stylesheet" />
-    <script src="libs/panelset-0.2.6/panelset.js"></script>
+    <script src="libs/header-attrs-2.7/header-attrs.js"></script>
     <script src="libs/htmlwidgets-1.5.3/htmlwidgets.js"></script>
     <script src="libs/jquery-3.5.1/jquery.min.js"></script>
     <link href="libs/datatables-css-0.0.0/datatables-crosstalk.css" rel="stylesheet" />
@@ -34,59 +14,35 @@
     <script src="libs/dt-core-1.10.20/js/jquery.dataTables.min.js"></script>
     <link href="libs/crosstalk-1.1.1/css/crosstalk.css" rel="stylesheet" />
     <script src="libs/crosstalk-1.1.1/js/crosstalk.min.js"></script>
-    <link rel="stylesheet" href="css/custom-intro.css" type="text/css" />
+    <link rel="stylesheet" href="css/xaringan-themer.css" type="text/css" />
   </head>
   <body>
     <textarea id="source">
 class: center, middle, inverse, title-slide
 
 # Pacotes 📦
-### <img src = 'https://d33wubrfki0l68.cloudfront.net/9b0699f18268059bdd2e5c21538a29eade7cbd2b/67e5c/img/logo/cursor1-5.png' width = '20%'>
+### <img src = 'https://d33wubrfki0l68.cloudfront.net/9b0699f18268059bdd2e5c21538a29eade7cbd2b/67e5c/img/logo/cursor1-5.png' width = '30%'>
 
 ---
 
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 # Sumário
 
-1. [Sobre a Curso-R](#sobre-curso-r)
+1. Sobre a Curso-R
 
-1. [Sobre o curso](#sobre-o-curso)
+1. Sobre o curso
 
-1. [Preparando o ambiente de desenvolvimento](#preparando-o-ambiente)
+1. Preparando o ambiente de desenvolvimento
 
-1. [Fundamentos de desenvolvimento de pacotes em R](#fundamentos-pacote)
+1. Fundamentos de desenvolvimento de pacotes em R
 
-1. [Documentação](#documentacao)
+1. Documentação
 
-1. [Testes unitários e consistência de código](#testes-unitarios)
+1. Testes unitários e consistência de código
 
-1. [Disponibilizando seu pacote](#disponibilizando-o-pacote)
+1. Disponibilizando seu pacote
 
 ---
 class: middle, center
@@ -98,7 +54,7 @@ name: sobre-curso-r
 
 class: middle, center
 
-## A empresa
+# A empresa
 
 .pull-left[
 &lt;img src="https://d33wubrfki0l68.cloudfront.net/295643c6243701ae6a9bac3fb8ad467ff0ce3c84/d1785/img/logo/cursor1-41.png" style="display: block; margin: auto;" /&gt;
@@ -118,7 +74,7 @@ class: middle, center
 
 ---
 
-## Ministrantes
+# Ministrantes
 
 .pull-left[
 ### Caio Lente
@@ -141,7 +97,7 @@ Doutoranda em Ciência Ambiental (PROCAM/IEE/USP) na Universidade de São Paulo.
 
 ---
 
-## Linha do tempo
+# Linha do tempo
 
 
 
@@ -150,7 +106,7 @@ Doutoranda em Ciência Ambiental (PROCAM/IEE/USP) na Universidade de São Paulo.
 
 ---
 
-## Nossos cursos
+# Nossos cursos
 
 
 .pull-left[
@@ -214,7 +170,7 @@ name: sobre-o-curso
 # Sobre o curso
 
 ---
-## Nesse curso vamos falar de... 📦
+# Nesse curso vamos falar de... 📦
 
 
 - **Fundamentos de desenvolvimento de pacotes em R**
@@ -235,14 +191,14 @@ name: sobre-o-curso
 
 ---
 
-## Informações gerais
+# Informações gerais
 
 - As aulas vão das 9h às 13, com uma pausa de 10 min em torno das 11:00
 - As aulas serão gravadas e disponibilizadas no Google Classroom
 - Podem mandar dúvidas no chat do Zoom ou abrir o microfone para perguntar
 - Teremos bastante exercícios para resolver durante o workshop, então se prepare!
 
-## Informações de vocês
+# Informações de vocês
 
 - Nós gostaríamos de saber sobre vocês (escreva no chat ✍️😀):
 
@@ -255,7 +211,7 @@ name: sobre-o-curso
 
 ---
 
-## Tirando dúvidas
+# Tirando dúvidas
 
 - **Não existe dúvida idiota**.
  
@@ -267,7 +223,7 @@ name: sobre-o-curso
 - [Veja aqui dicas de como fazer uma boa pergunta](https://discourse.curso-r.com/t/como-escrever-uma-boa-pergunta/542).
 
 ---
-## Por que usar o discourse?
+# Por que usar o discourse?
 
 - Muito melhor para escrever textos que possuem códigos. Com ele, podemos usar o pacote `{reprex}`!
 
@@ -285,7 +241,7 @@ name: preparando-o-ambiente
 # Preparando o ambiente de desenvolvimento !
 
 ---
-## Check-list antes de começar a aula
+# Check-list antes de começar a aula
 
 - [R instalado](https://livro.curso-r.com/1-1-instalacao-do-r.html) ✅ +  [RStudio instalado](https://livro.curso-r.com/1-1-instalacao-do-r.html) ✅
 
@@ -308,7 +264,7 @@ name: preparando-o-ambiente
 
 ---
 class: middle, center, inverse
-## .RData e .Rhistory
+# .RData e .Rhistory
 
 ---
 ### Os arquivos .RData e .Rhistory 
@@ -326,15 +282,15 @@ Ao reabrir o RStudio, o conteúdo armazenados nestes arquivos será carregado no
 ---
 ### Por que desistir do .RData e .Rhistory 
 
-- Se todos os resultados parciais de uma análise estiverem disponíveis a qualquer momento, <span style="color:#6495ed; font-weight: bold;">diminui o incentivo para a escrita de código reprodutível</span>.
+- Se todos os resultados parciais de uma análise estiverem disponíveis a qualquer momento, diminui o incentivo para a escrita de código reprodutível.
 
-- Se todo o histórico de comandos for acessível, <span style="color:#6495ed; font-weight: bold;">acaba a necessidade de experimentos controlados</span>.
+- Se todo o histórico de comandos for acessível, acaba a necessidade de experimentos controlados.
 
-- Ao dependermos ativamente do `.Rdata`, <span style="color:#6495ed; font-weight: bold;">se acidentalmente sobrescrevemos um objeto</span> relevante e o código para recriá-lo não estiver mais acessível, <span style="color:#6495ed; font-weight: bold;">não haverá nenhuma forma confiável de recuperá-lo</span>.
+- Ao dependermos ativamente do `.Rdata`, se acidentalmente sobrescrevemos um objeto relevante e o código para recriá-lo não estiver mais acessível, não haverá nenhuma forma confiável de recuperá-lo.
 
-- A menos que pretendamos sentar com colegas para explicar como utilizar os objetos do `.RData` e do `.Rhistory`, <span style="color:#6495ed; font-weight: bold;">não pode-se esperar que outra pessoa seja capaz de reproduzir uma análise</span>.
+- A menos que pretendamos sentar com colegas para explicar como utilizar os objetos do `.RData` e do `.Rhistory`, não pode-se esperar que outra pessoa seja capaz de reproduzir uma análise.
 
-- O R trata todos os objetos guardados na memória igualmente. Isso significa que ele também irá armazenar nos arquivos ocultos todas as bases de dados da sessão. Assim, <span style="color:#6495ed; font-weight: bold;">o</span> `.RData` <span style="color:#6495ed; font-weight: bold;">pode ser um arquivo de múltiplos gigabytes</span>.
+- O R trata todos os objetos guardados na memória igualmente. Isso significa que ele também irá armazenar nos arquivos ocultos todas as bases de dados da sessão. Assim, o `.RData` pode ser um arquivo de múltiplos gigabytes.
 
 
 ---
@@ -348,7 +304,7 @@ class: middle, center, inverse
 # Pacotes
 
 ---
-## Pacotes
+# Pacotes
 
 Um pacote do R é uma forma específica de organizar seus código, seguindo o protocolo descrito pela R Foundation.
 
@@ -364,11 +320,11 @@ Um pacote do R é uma forma específica de organizar seus código, seguindo o pr
 ]
 
 .pull-right[
-&lt;img src="img/021-organizacao-de-projetos/pacote.gif" style="display: block; margin: auto;" /&gt;
+&lt;img src="img/pacote.gif" style="display: block; margin: auto;" /&gt;
 ]
 
 ---
-## Motivação
+# Motivação
 
 "Por que vamos aprender a fazer um pacote se scripts funcionam bem o suficiente?" e "Por que divulgar meus pacotes em algum serviço open source?"
 
@@ -388,7 +344,7 @@ estiver programando um pacote
 &lt;!-- slide da apresentacao https://lente.dev/packages.pdf --&gt;
 
 ---
-## Vantagens
+# Vantagens
 
 - Padroniza a organização dos códigos
 
@@ -405,19 +361,19 @@ estiver programando um pacote
 &gt; Fonte: [Wickham &amp; Bryan - Livro R Packages](https://r-pkgs.org/intro.html)
 
 ---
-## Simplificando tudo: usethis
+# Simplificando tudo: usethis
 
 O pacote `{usethis}` ajuda com todo o fluxo de desenvolvimento em R.
 
 Ele ajuda a criar arquivos, projetos, usar o Git, criar repositórios no GitHub e muito mais.
 
-&lt;img src="img/021-organizacao-de-projetos/usethis.png" width="15%" style="display: block; margin: auto;" /&gt;
+&lt;img src="img/usethis.png" width="15%" style="display: block; margin: auto;" /&gt;
 
 Apresentaremos várias funções do `{usethis}` ao longo deste tópico.
 
 ---
 
-## Nomes
+# Nomes
 
 Suponha que você criou uma função incrível que você quer compartilhar com o mundo. Ela tem várias funções auxiliares e um comportamento complexo o suficiente para depender de uma documentação... Você precisa criar um pacote.
 
@@ -431,7 +387,7 @@ Evite usar letras maiúsculas ou mesmo números pois isso pode confundir os usu�
 
 ---
 
-## Dica para pesquisar nomes
+# Dica para pesquisar nomes
 
 
 ```r
@@ -452,7 +408,7 @@ available::available("stockfish")
 
 
 ---
-## Criando um pacote
+# Criando um pacote
 
 Para criar um pacote, usamos a função `usethis::create_package()`.
 
@@ -495,7 +451,7 @@ usethis::create_package("~/Documents/Meuprojeto")
 
 
 ---
-## Diretório de trabalho
+# Diretório de trabalho
 
 O arquivo `NomeDoPacote.Rproj` indica para o RStudio que aquele diretório será a raiz de um projeto e que, sempre que o projeto estiver aberto, será utilizado por padrão como o diretório de trabalho.
 
@@ -503,7 +459,7 @@ Fixar o diretório de trabalho como a pasta raiz do projeto, ao lado da regra de
 
 ---
 
-## Estrutura básica do pacote
+# Estrutura básica do pacote
 
 Essa é a estrutura criada quando usamos a função `usethis::create_package()`:
 
@@ -521,7 +477,7 @@ Essa é a estrutura criada quando usamos a função `usethis::create_package()`:
 
 ---
 
-## Licença de uso
+# Licença de uso
 
 - `LICENSE`: especifica os termos de uso e distribuição do seu pacote.
 
@@ -542,7 +498,7 @@ use_`nome_da_licenca`_license()
 ---
 class: inverse, middle, center
 
-## 🔁
+# 🔁
 
 Modifique o código
 
@@ -557,7 +513,7 @@ Explore no console
 ---
 
 
-## Parte prática 🖥️
+# Parte prática 🖥️
 
 - Crie um pacote, usando a função `usethis::create_package()`. 
 
@@ -579,7 +535,7 @@ class: middle, center, inverse
 # Funções
 
 ---
-## A pasta R
+# A pasta R
 
 Dentro de um pacote, a pasta `R/` só pode ter funções.
 
@@ -600,14 +556,14 @@ Assim que escrevermos/modificarmos alguma função, podemos carregá-las para te
 
 &lt;!-- Um arquivo para ler os dados, outro para limpar os nomes das colunas, mais um para fazer joins… Cada um deles com incontáveis blocos de código que rapidamente se transformam em uma [macarronada](https://pt.wikipedia.org/wiki/C%C3%B3digo_espaguete). --&gt;
 
-&lt;!-- <span style="color:#6495ed; font-weight: bold;">O primeiro passo para sair dessa situação é transformar tudo em funções</span>. --&gt;
+&lt;!-- O primeiro passo para sair dessa situação é transformar tudo em funções")`. --&gt;
 
 &lt;!-- Funções têm argumentos e saídas, enquanto código solto pode modificar globais e criar resultados tardios que são impossíveis de acompanhar sem conhecer profundamente a tarefa sendo realizada. --&gt;
 
 &lt;!-- No mundo ideal, na pasta `R/` do seu projeto haverá uma coleção de arquivos, cada um com uma coleção de funções relacionadas e bem documentadas, e apenas alguns arquivos que utilizam essas funções para realizar a análise em si.  --&gt;
 
 ---
-## Vantagens de usar funções
+# Vantagens de usar funções
 
 - Um código bem encapsulado reduz a necessidade de objetos intermediários ( `base_tratada`, `base_filtrada` etc.) pois para gerar um deles basta a aplicação de uma função.
 
@@ -621,7 +577,7 @@ Assim que escrevermos/modificarmos alguma função, podemos carregá-las para te
 
 
 ---
-## Criando a sua própria função
+# Criando a sua própria função
 
 Quando estamos desenvolvendo pacotes, iremos criar funções para executar as tarefas necessárias.
 
@@ -640,7 +596,7 @@ Repare que `function` é um nome reservado no R, isto é, você não pode criar 
 
 
 ---
-## Dependências
+# Dependências
 
 Sem os inúmeros pacotes criados pela comunidade, o R provavelmente já estaria no porão da Ciência de Dados. 
 
@@ -648,7 +604,7 @@ Por isso, é a primeira coisa que escrevemos nos nossos *scripts* quase sempre �
 
 ---
 
-## Quatro pontos
+# Quatro pontos
 
 Quando lidamos com pacotes, a função `library()` não é utilizada, e todas as funções devem ter seus pacotes de origem explicitamente referenciados pelo operador `::`.
 
@@ -658,7 +614,7 @@ Quando lidamos com pacotes, a função `library()` não é utilizada, e todas as
 Para escrever `dplyr::`, por exemplo, basta digitar `d`, `p`, `l` e apertar TAB uma vez. Com os `::`, as sugestões passarão a ser somente de funções daquele pacote.
 
 ---
-## Vantagens dos quatro pontos
+# Vantagens dos quatro pontos
 
 - O código, no total, executa um pouco mais rápido porque são carregadas menos funções no ambiente global (isso é especialmente importante em aplicações interativas feitas em Shiny).
 
@@ -667,7 +623,7 @@ Para escrever `dplyr::`, por exemplo, basta digitar `d`, `p`, `l` e apertar TAB 
 - O uso do `::` é fundamental na criação e organização de pacotes.
 
 ---
-## Documentar as dependências
+# Documentar as dependências
 
 Além de usar o `::` ao usar funções de outros pacotes, é importante também que essas dependências sejam documentadas na seção Imports do arquivo DESCRIPTION.
 
@@ -684,7 +640,7 @@ Existem 3 funções principais para isso:
 
 ---
 
-## Discussão em sala
+# Discussão em sala
 
 - Como podemos transformar o código a seguir em uma função que faz parte de um pacote?
 
@@ -882,8 +838,8 @@ calcular_media_volume(sistema = "Guarapiranga")
 calcular_media_volume(sistema = "Guarapiranga", ano = 2021) %&gt;% DT::datatable()
 ```
 
-<div id="htmlwidget-78e152c8933267ab6221" style="width:100%;height:auto;" class="datatables html-widget"></div>
-<script type="application/json" data-for="htmlwidget-78e152c8933267ab6221">{"x":{"filter":"none","data":[["1","2","3","4"],["Guarapiranga","Guarapiranga","Guarapiranga","Guarapiranga"],[2021,2021,2021,2021],[1,2,3,4],[65.5387096774193,69.3392857142857,73.8774193548387,70.8666666666667]],"container":"<table class=\"display\">\n  <thead>\n    <tr>\n      <th> <\/th>\n      <th>sistema<\/th>\n      <th>ano<\/th>\n      <th>mes<\/th>\n      <th>media_volume_porcentagem<\/th>\n    <\/tr>\n  <\/thead>\n<\/table>","options":{"columnDefs":[{"className":"dt-right","targets":[2,3,4]},{"orderable":false,"targets":0}],"order":[],"autoWidth":false,"orderClasses":false}},"evals":[],"jsHooks":[]}</script>
+<div id="htmlwidget-e55b43d7d716fb831838" style="width:100%;height:auto;" class="datatables html-widget"></div>
+<script type="application/json" data-for="htmlwidget-e55b43d7d716fb831838">{"x":{"filter":"none","data":[["1","2","3","4"],["Guarapiranga","Guarapiranga","Guarapiranga","Guarapiranga"],[2021,2021,2021,2021],[1,2,3,4],[65.5387096774193,69.3392857142857,73.8774193548387,70.5181818181818]],"container":"<table class=\"display\">\n  <thead>\n    <tr>\n      <th> <\/th>\n      <th>sistema<\/th>\n      <th>ano<\/th>\n      <th>mes<\/th>\n      <th>media_volume_porcentagem<\/th>\n    <\/tr>\n  <\/thead>\n<\/table>","options":{"columnDefs":[{"className":"dt-right","targets":[2,3,4]},{"orderable":false,"targets":0}],"order":[],"autoWidth":false,"orderClasses":false}},"evals":[],"jsHooks":[]}</script>
 
 
 ]
@@ -910,7 +866,7 @@ Ideias para melhorar esse exemplo:
 
 ---
 
-## Recomendações
+# Recomendações
 
 Algumas recomendação sobre como organizar seu código:
 
@@ -930,7 +886,7 @@ Algumas recomendação sobre como organizar seu código:
 ---
 
 
-## Parte prática 🖥️
+# Parte prática 🖥️
 
 - Crie um arquivo onde iremos escrever a função para o pacote. Dica : use a função `usethis::use_r("nome_funcao")` !
 
@@ -951,7 +907,7 @@ class: middle, center, inverse
 
 
 ---
-## Dados
+# Dados
 
 Se você quiser inserir dados ao seu pacote, você pode utilizar a função `usethis::use_data(meus_dados)`. 
 
@@ -960,14 +916,14 @@ Ela criará uma pasta `data/` na raiz do seu pacote, caso ela não exista ainda,
 Arquivos `.rda` são extremamente estáveis, compactos e podem ser carregados rapidamente pelo R, tornando este formato o principal meio de guardar dados de um pacote.
 
 ---
-## Manipulando dados crus
+# Manipulando dados crus
 
 Se a base que você quiser colocar no pacote for o resultado de um processo de manipulação de uma base crua, você pode salvar o código desse processo na pasta `data-raw`. 
 
 Para isso, utilize a função `usethis::use_data_raw("meus_dados")`. Ela criará uma pasta `data-raw/` na raiz do seu pacote, caso ela não exista ainda, e um arquivo `meus_dados.R` onde você colocará o código de manipulação da base crua.
 
 ---
-## Qual a diferença entre R/ e data-raw/?
+# Qual a diferença entre R/ e data-raw/?
 
 `data-raw`
 
@@ -992,7 +948,7 @@ name: documentacao
 
 
 ---
-## Documentação de funções
+# Documentação de funções
 
 Se quisermos adicionar uma documentação para o nosso pacote (as instruções que aparecem quando vamos usar uma função ou o documento mostrado quando rodamos `?função()`) precisamos usar um comentário especial: `#'`
 
@@ -1016,7 +972,7 @@ fun &lt;- function(a, b) {
 
 ---
 
-## Documentação de funções (cont.)
+# Documentação de funções (cont.)
 
 - O parâmetro `@export` indica que a função ficará disponível quando rodarmos `library(MeuProjeto)`. Não se esqueça de exportar todas (e somente) as funções públicas!
 
@@ -1026,13 +982,13 @@ fun &lt;- function(a, b) {
 
 ---
 
-## Documentação de bases de dados
+# Documentação de bases de dados
 
 .fazer[falar sobre documentação de base de dados]
 
 ---
 
-## Acentos, encoding e variáveis globais
+# Acentos, encoding e variáveis globais
 
 
 .fazer[Acentos, encoding e variáveis globais]
@@ -1043,7 +999,7 @@ fun &lt;- function(a, b) {
 `- utils::globalVariables(c("variavel1", "variavel2"))`
 
 ---
-## Comunicação
+# Comunicação
 
 ### Vignettes
 
@@ -1060,7 +1016,7 @@ Veremos também como criar um site do pacote criado com o `{pkgdown}`.
 ---
 
 
-## Boas práticas no desenvolvimento
+# Boas práticas no desenvolvimento
 
 - Não rode as funções diretamente. Utilize sempre a função `devtools::load_all()`. Ela carrega todas as funções da pasta `R/` e as bases salvas na pasta `data/`. Isso diminuirá a chance de elas estarem sendo afetadas por valores externos que estão no seu *Environment*.
 
@@ -1082,7 +1038,7 @@ name: testes-unitarios
 
 ---
 
-## Testes
+# Testes
 
 Se quisermos verificar que todo o pacote continua funcionando mesmo depois fazer alguma alteração, precisamos de testes automatizados.
 
@@ -1092,7 +1048,7 @@ Com o pacote testthat podemos criar quantos arquivos de testes quisermos, cada u
 
 ---
 
-## Exemplo de teste
+# Exemplo de teste
 
 Considerando a função:
 ```r
@@ -1115,7 +1071,7 @@ test_that("rm_na works as expected", {
 
 ---
 
-## Função check
+# Função check
 
 Podemos usar a função `devtools::check()`. Ela carrega todo o código, gera toda a documentação e executa todos os testes, verificando em todo passo se tudo está funcionando como o esperado.
 
@@ -1130,7 +1086,7 @@ class: middle, center, inverse
 # Git e GitHub
 
 ---
-## Git
+# Git
 
 - Git é um **sistema de versionamento**, criado por Linus Torvalds, autor do Linux.
 
@@ -1140,15 +1096,15 @@ class: middle, center, inverse
 
 - Torna-se importante à medida que seu trabalho é __colaborativo__.
 
-- <span style="color:#6495ed; font-weight: bold;">Git é um software que você instala no computador.</span>
+- Git é um software que você instala no computador.
 
 - Arquivo `.gitignore`: Lista arquivos que deverão ser ignorados ao versionar o pacote com Git. 
 
 
-&lt;img src="img/021-organizacao-de-projetos/git.png" width="30%" style="display: block; margin: auto;" /&gt;
+&lt;img src="img/git.png" width="30%" style="display: block; margin: auto;" /&gt;
 
 ---
-## GitHub
+# GitHub
 
 - GitHub é um site onde você coloca e compartilha repositórios Git.
 
@@ -1158,21 +1114,21 @@ class: middle, center, inverse
 
 - Existem alternativas, como [GitLab](https://about.gitlab.com/) e [BitBucket](https://bitbucket.org/product).
 
-- <span style="color:#6495ed; font-weight: bold;">GitHub é um site que você acessa na internet.</span>
+- GitHub é um site que você acessa na internet.
 
 &lt;br&gt;
 
-&lt;img src="img/021-organizacao-de-projetos/github.png" width="40%" style="display: block; margin: auto;" /&gt;
+&lt;img src="img/github.png" width="40%" style="display: block; margin: auto;" /&gt;
 
 ---
-## Pacotes e GitHub
+# Pacotes e GitHub
 
 
 
 .pull-left[
 
 
-<span style="color:#6495ed; font-weight: bold;">Pacotes do R e repositórios do GitHub são melhores amigos.</span>
+Pacotes do R e repositórios do GitHub são melhores amigos.
 
 
 
@@ -1183,23 +1139,23 @@ O grande cupido dessa amizade é o `{usethis}`.
 
 .pull-right[
 
-&lt;img src="img/021-organizacao-de-projetos/hug.gif" width="90%" style="display: block; margin: auto;" /&gt;
+&lt;img src="img/hug.gif" width="90%" style="display: block; margin: auto;" /&gt;
 
 ]
 
 
 ---
-## Fluxo de trabalho
+# Fluxo de trabalho
 
 O diagrama abaixo exemplifica o fluxo de trabalho de um projeto com versionamento.
 
 
-&lt;img src="img/021-organizacao-de-projetos/fluxo_github_rstudio.png" width="50%" style="display: block; margin: auto;" /&gt;
+&lt;img src="img/fluxo_github_rstudio.png" width="50%" style="display: block; margin: auto;" /&gt;
 
 
 ---
 
-## Configure o Git e o GitHub no seu RStudio
+# Configure o Git e o GitHub no seu RStudio
 
 Antes de começarmos a versionar o código do nosso pacote, vamos configurar o Git e o GitHub no RStudio. 
 
@@ -1242,9 +1198,9 @@ GITHUB_PAT="0000000000000000000000000000000000000000"
 
 ---
 
-## Usar o Git para versionar seu pacote
+# Usar o Git para versionar seu pacote
 
-## Passo 1: crie e configure seu pacote
+# Passo 1: crie e configure seu pacote
 
 
 ```r
@@ -1262,7 +1218,7 @@ Lembrando que nomes de pacotes
 Boa prática: Não é aconselhável usar pontos no nome de pacotes. ([fonte](https://r-pkgs.org/workflows101.html#formal-requirements))
 
 ---
-## Passo 2: Versione com o Git
+# Passo 2: Versione com o Git
 
 
 ```r
@@ -1276,7 +1232,7 @@ apareceu) você adiciona controle de versão.
 
 
 ---
-## Passo 3: Adicione o GitHub
+# Passo 3: Adicione o GitHub
 
 
 ```r
@@ -1290,9 +1246,9 @@ usethis::use_github()
 
 
 ---
-## Passo 4: Stage &amp; Commit
+# Passo 4: Stage &amp; Commit
 
-&lt;img src="img/021-organizacao-de-projetos/passo_3_commit_1.gif" width="50%" style="display: block; margin: auto;" /&gt;
+&lt;img src="img/passo_3_commit_1.gif" width="50%" style="display: block; margin: auto;" /&gt;
 
 - Nesta etapa, você estará descrevendo as modificações que fez nos arquivos selecionados.
 
@@ -1300,23 +1256,23 @@ usethis::use_github()
 
 ---
 
-## Passo 5: Push
+# Passo 5: Push
 
-&lt;img src="img/021-organizacao-de-projetos/passo_4_push.gif" width="50%" style="display: block; margin: auto;" /&gt;
+&lt;img src="img/passo_4_push.gif" width="50%" style="display: block; margin: auto;" /&gt;
 
 - *Push* (ou *dar push*) significa atualizar o seu repositório remoto (GitHub) com os arquivos que você *commitou* no passo anterior.
 
 ---
 
-## Passo Extra: Pull
+# Passo Extra: Pull
 
-&lt;img src="img/021-organizacao-de-projetos/passo_5_pull.gif" width="50%" style="display: block; margin: auto;" /&gt;
+&lt;img src="img/passo_5_pull.gif" width="50%" style="display: block; margin: auto;" /&gt;
 
 - *Pull* é a ação inversa do *Push*: você trará a versão mais recente dos arquivos do seu repositório remoto (GitHub) para a sua máquina (caso você tenha subido uma versão de um outro computador ou uma outra pessoa tenha subido uma atualização).
 
 ---
 
-## Resumo
+# Resumo
 
 1. Repositório: Criar projeto/pacote
 2. Adicionar Git
@@ -1328,14 +1284,14 @@ Extra. Pull: Baixe o estado atual do projeto
 .ideia[Onde podemos falar do usethis::use_readme_rmd() + usethis::build_readme() ?]
 
 ---
-## Cuidados
+# Cuidados
 
 - Se uma base de dados tem mais do que 50Mb de tamanho, ela não deveria estar no seu repositório.
 
 - Nem sempre o comando Pull dá certo. Às vezes, você e a colega de trabalho fizeram mudanças no mesmo arquivo e, quando vão juntar, ocorre um conflito.
 
 ---
-## Criando um site para o pacote com {pkgdown}
+# Criando um site para o pacote com {pkgdown}
 
 O pacote pkgdown permite criar um site para o pacote. Para criar, use a função a seguir uma vez, para configurar o pacote para usar o pkgdown:
 
@@ -1349,7 +1305,7 @@ pkgdown::build_site()
 ```
 ---
 
-## Criando um site para o pacote com {pkgdown} (cont.)
+# Criando um site para o pacote com {pkgdown} (cont.)
 
 Conteúdo do site será gerado a partir dos documentos já existentes no pacote: 
 
@@ -1362,12 +1318,12 @@ Conteúdo do site será gerado a partir dos documentos já existentes no pacote:
 - As vignettes serão usadas para criar a seção 'articles'
 
 ---
-## Integração contínua com GitHub Actions
+# Integração contínua com GitHub Actions
 
 .fazer[Escrever!]
 
 ---
-## Regras para colocar um pacote no CRAN
+# Regras para colocar um pacote no CRAN
 
 Um pacote é uma coleção de código, dados, documentação e testes que qualquer pessoa pode instalar em sua máquina.
 
@@ -1389,7 +1345,7 @@ class: middle, center, inverse
 
 ---
 
-## Resumo
+# Resumo
 
 - Criar um pacote usando a função `usethis::create_package("~/caminho/ate/o/pacote")`
 
@@ -1403,7 +1359,7 @@ class: middle, center, inverse
 
 ---
 
-## Resumo
+# Resumo
 
 
 - A funcão `devtools::load_all()` simula o processo de instalação e carregamento do pacote. As funções criadas ficam disponíveis para uso. Atalho:  Ctrl + Shift + L (Windows e Linux) ou Cmd + Shift + L (macOS).
@@ -1428,11 +1384,10 @@ class: middle, center, inverse
 <style data-target="print-only">@media screen {.remark-slide-container{display:block;}.remark-slide-scaler{box-shadow:none;}}</style>
 <script src="https://remarkjs.com/downloads/remark-latest.min.js"></script>
 <script>var slideshow = remark.create({
+"ratio": "16:9",
 "highlightStyle": "github",
-"highlightSpans": true,
 "highlightLines": true,
-"countIncrementalSlides": false,
-"ratio": "16:9"
+"countIncrementalSlides": false
 });
 if (window.HTMLWidgets) slideshow.on('afterShowSlide', function (slide) {
   window.dispatchEvent(new Event('resize'));
