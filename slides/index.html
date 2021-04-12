@@ -460,6 +460,12 @@ usethis::use_gpl3_license()
 - GPLv3: essa licença exige que o código-fonte dos derivados seja _open source_ sob a mesma licença. Direitos autorais devem ser preservados.
 
 ---
+
+# Função check
+
+Podemos usar a função `devtools::check()`. Ela carrega todo o código, gera toda a documentação e executa todos os testes, verificando em todo passo se tudo está funcionando como o esperado.
+
+---
 # Testando o pacote na prática
 
 1. Crie o pacote usando a função `usethis::create_package()`
@@ -910,10 +916,23 @@ utils::globalVariables(c("variavel1", "variavel2"))
 
 &lt;!-- Acho que tem mais coisa aqui, mas isso tudo já é bem bom --&gt;
 
+---
 
+# Documentação na prática
 
+Passo 7:
 
+7.1 - Execute e observe o resultado de `devtools::check()`. Lá terão indicações do que devemos fazer
 
+7.2 - Crie uma lista de variáveis globais e adicione os elementos que aparecem no check em "Undefined global functions or variables"  
+
+7.3 - Documente a base de dados
+
+7.4 - Documente as funções do pacote
+
+7.5 - Execute e observe novamente o resultado de `devtools::check()`. O objetivo é obter:
+
+.center[`0 errors ✓ | 0 warnings ✓ | 0 notes ✓`]
 
 
 ---
@@ -933,7 +952,7 @@ Se quisermos verificar que todo o pacote continua funcionando mesmo depois fazer
 
 Para isso, basta rodar `usethis::use_testthat()` (apenas uma vez por pacote) e depois `usethis::use_test("nome_do_teste")` (para cada novo arquivo de testes que quiser criar).
 
-Com o pacote testthat podemos criar quantos arquivos de testes quisermos, cada um com um número ilimitado de testes e sub-testes. Quando tivermos todos os testes prontos, basta rodar `devtools::test()`. Atalho: Ctrl + Shift + T (Windows e Linux) ou Cmd + Shift + T (macOS).
+Com o pacote testthat podemos criar quantos arquivos de testes quisermos, cada um com um número ilimitado de testes e sub-testes. Quando tivermos todos os testes prontos, basta rodar `devtools::test()`. Atalho: **Ctrl + Shift + T**.
 
 ---
 
@@ -959,14 +978,23 @@ test_that("rm_na works as expected", {
 ```
 
 ---
+# Testes na prática
 
-# Função check
+Passo 8:
 
-Podemos usar a função `devtools::check()`. Ela carrega todo o código, gera toda a documentação e executa todos os testes, verificando em todo passo se tudo está funcionando como o esperado.
+8.1 - Use a função `usethis::use_testthat()` para preparar o pacote 
+
+8.2 - Abra o arquivo da função que deseja escrever testes, e use a função  `usethis::use_test()` para criar o arquivo onde o teste será escrito
+
+8.3 - Desenvolva um teste para a função
+
+8.4 - Execute e observe novamente o resultado de `devtools::check()`. O objetivo é obter:
+
+.center[`0 errors ✓ | 0 warnings ✓ | 0 notes ✓`]
+
 
 ---
 class: middle, center
-name: disponibilizando-o-pacote
 
 # Disponibilizando seu pacote
 
@@ -1311,7 +1339,7 @@ class: middle, center, inverse
 # Resumo
 
 
-- A funcão `devtools::load_all()` simula o processo de instalação e carregamento do pacote. As funções criadas ficam disponíveis para uso. Atalho:  Ctrl + Shift + L (Windows e Linux) ou Cmd + Shift + L (macOS).
+- A funcão `devtools::load_all()` simula o processo de instalação e carregamento do pacote. As funções criadas ficam disponíveis para uso. Atalho:  **Ctrl + Shift + L**.
 
 - A função `devtools::check()` verifica se o pacote está funcionando. Pode apresentar erros, avisos e notas. Leia a mensagem no console :)
 
