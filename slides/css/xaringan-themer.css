@@ -51,6 +51,7 @@ h1, h2, h3 {
 .remark-inline-code {
   font-size: 1em;
   color: #022038;
+  background-color: #f0f0f0;
 }
 .remark-slide-number {
   color: #022038;

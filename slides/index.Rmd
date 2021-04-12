@@ -928,22 +928,6 @@ name: disponibilizando-o-pacote
 
 # Disponibilizando seu pacote
 
----
-# Comunicação
-
-<!-- Troquei esse slide de lugar, mas acho que tem que ficar mais pra frente, junto com pkgdown -->
-
-### Vignettes
-
-É muito comum a construção de *vignettes* para documentar o pacote. Elas são documentos em HTML melhor formatados do que a tradicional documentação do R.
-
-Você pode usar a função `usethis::use_vignette()` para criar *vignettes*.
-
-### Outros
-
-Se você precisar construir sites, relatórios, dashboards estáticos (flexdashboard) dentro do seu pacote, você pode criar uma pasta chamada `docs/` na raiz do seu projeto para guardar esses arquivos.
-
-Veremos também como criar um site do pacote criado com o `{pkgdown}`.
 
 ---
 class: middle, center, inverse
@@ -1155,14 +1139,53 @@ knitr::include_graphics("img/passo_5_pull.gif")
 5. Push: Suba os commits para o GitHub
 Extra. Pull: Baixe o estado atual do projeto
 
-.ideia[Onde podemos falar do usethis::use_readme_rmd() + usethis::build_readme() ?]
-
 ---
 # Cuidados
 
 - Se uma base de dados tem mais do que 50Mb de tamanho, ela não deveria estar no seu repositório.
 
 - Nem sempre o comando Pull dá certo. Às vezes, você e a colega de trabalho fizeram mudanças no mesmo arquivo e, quando vão juntar, ocorre um conflito.
+
+---
+# Comunicação
+
+
+### Vignettes
+
+É muito comum a construção de *vignettes* para documentar o pacote. Elas são documentos em HTML melhor formatados do que a tradicional documentação do R.
+
+Você pode usar a função `usethis::use_vignette()` para criar *vignettes*.
+
+### Outros
+
+Se você precisar construir sites, relatórios, dashboards estáticos (flexdashboard) dentro do seu pacote, você pode criar uma pasta chamada `docs/` na raiz do seu projeto para guardar esses arquivos.
+
+Veremos também como criar um site do pacote criado com o `{pkgdown}`.
+
+---
+
+.pull-left[
+# O arquivo README.md 
+
+O arquivo `README.md` é importante pois contém informações como: logo (opcional!), introdução (o que ele faz?), instruções de instalação, exemplos de uso, etc.
+  
+  
+A função `usethis::use_readme_rmd()` cria um arquivo `README.Rmd`. Esse arquivo já possui uma estrutura para facilitar o preenchimento das informações. 
+
+
+O arquivo gerado é um **RMarkdown** (`.Rmd`), e portanto precisamos converter para **Markdown** (`.md`). Para isso podemos usar a função `usethis::build_readme()`.
+
+<!-- Citamos aqui o botão knit? -->
+]
+
+.pull-right[
+```{r echo=FALSE, out.width="90%"}
+knitr::include_graphics("img/readme-chess.png")
+```
+
+]
+
+
 
 ---
 # Criando um site para o pacote com {pkgdown}
@@ -1190,6 +1213,24 @@ Conteúdo do site será gerado a partir dos documentos já existentes no pacote:
 - A documentação das funções serão usadas para criar a seção 'references'
 
 - As vignettes serão usadas para criar a seção 'articles'
+
+---
+
+# Criando um site para o pacote com {pkgdown} (cont.)
+
+- Os passos anteriores geram o conteúdo do site no diretório `docs/`, mas para que o site do pacote fique disponível na internet para que outras pessoas consultem é necessário:
+
+  - O pacote estar vinculado a um repositório no GitHub (falamos disso na seção passada)
+
+  - No repositório do pacote, clique em **Settings**, e no menu lateral escolha **Pages**
+    
+  - Em **Source**, selecione a sua branch principal (provavelmente chama de **main** ou **master**), escolha o diretório `docs/` e clique em **save**
+    
+```{r echo=FALSE, out.width="50%"}
+knitr::include_graphics("img/githubpages.png")
+```
+  
+- O endereço do site será `https://seu-username.github.io/nome-repositorio/`  
 
 ---
 # Integração contínua com GitHub Actions
