@@ -8,7 +8,7 @@ library(tidyverse)
 
 ano <- 2018
 
-"dados/partidas_brasileirao.csv" %>% 
+"https://git.io/JOqUN" %>% 
 read_csv2() %>%
   group_by(temporada) %>%
   filter(quem_ganhou != "Empate", temporada %in% ano) %>%
@@ -46,7 +46,7 @@ melhor_time_temporada()
 library(tidyverse)
 time <- "Cruzeiro"
 
-"dados/partidas_brasileirao.csv" %>% 
+"https://git.io/JOqUN" %>% 
   read_csv2() %>%
   group_by(temporada, quem_ganhou) %>%
   filter(quem_ganhou != "Empate", quem_ganhou %in% time) %>%
