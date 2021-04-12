@@ -743,7 +743,7 @@ Algumas recomendação sobre como organizar seu código:
 
 - Crie um arquivo onde iremos escrever a função para o pacote. Dica: use a função `usethis::use_r()`!
 
-- Copie o código disponível em [https://git.io/JOtMI](https://git.io/JOtMI) e cole no arquivo criado.
+- Copie o código disponível em [git.io/JOtMI](https://git.io/JOtMI) e cole no arquivo criado.
 
 - Adapte o código e o transforme em uma função. Não esqueça das dependências
 
@@ -767,27 +767,28 @@ Passo 6: adicionando bases de dados ao pacote. Ao executar o comando abaixo no C
 
 
 ```r
-mananciais &lt;- readr::read_csv2("https://git.io/JOLeb")
-usethis::use_data(mananciais)
+partidas_brasileirao &lt;- readr::read_csv2("https://git.io/JOqUN")
+usethis::use_data(partidas_brasileirao)
 ```
 
 ```
 ✓ Setting active project to '/home/clente/Documents/meupacote'
 ✓ Adding 'R' to Depends field in DESCRIPTION
-✓ Saving 'mananciais' to 'data/mananciais.rda'
+✓ Saving 'partidas_brasileirao' to 'data/partidas_brasileirao.rda'
 ● Document your data (see 'https://r-pkgs.org/data.html')
 ```
 
 
 ```r
-calcular_media_volume &lt;- function(sistema, ano = 2000:2021, mes = 1:12) {
-  mananciais %&gt;%
-    dplyr::mutate(ano = lubridate::year(data), mes = lubridate::month(data)) %&gt;%
-    dplyr::group_by(sistema, ano, mes) %&gt;%
-    dplyr::summarise(media_volume_porcentagem = base::mean(volume_porcentagem)) %&gt;%
-    dplyr::ungroup() %&gt;% 
-    dplyr::filter(ano %in% {{ano}}, mes %in% {{mes}}, sistema == {{sistema}})
-} 
+encontrar_pior_ano_time &lt;- function(time){
+  partidas_brasileirao %&gt;%
+  dplyr::group_by(temporada, quem_ganhou) %&gt;%
+  dplyr::filter(quem_ganhou != "Empate", quem_ganhou %in% time) %&gt;%
+  dplyr::count(quem_ganhou, sort = TRUE, name = "n_vitorias") %&gt;%
+  dplyr::ungroup() %&gt;%
+  dplyr::filter(n_vitorias == min(n_vitorias)) %&gt;% 
+  dplyr::rename("time" = quem_ganhou)
+}
 ```
 
 ---

@@ -52,7 +52,8 @@ time <- "Cruzeiro"
   filter(quem_ganhou != "Empate", quem_ganhou %in% time) %>%
   count(quem_ganhou, sort = TRUE, name = "n_vitorias") %>%
   ungroup() %>%
-  filter(n_vitorias == min(n_vitorias))
+  filter(n_vitorias == min(n_vitorias)) %>% 
+  rename("time" = quem_ganhou)
 
 
 # Experimente se a função está funcionando:
