@@ -254,3 +254,7 @@ table.dataTable.hover tbody tr:hover, table.dataTable.display tbody tr:hover {
 .fazer{
   background-color: #ff7f7f;
 }
+
+.letramenor{
+  font-size: 0.6em;
+}

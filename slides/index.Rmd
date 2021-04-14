@@ -333,6 +333,16 @@ knitr::include_graphics("img/usethis.png")
 ```
 
 ---
+class: middle, center
+
+# Resumo do pacote usethis
+
+```{r echo=FALSE, out.width="70%"}
+knitr::include_graphics("https://raw.githubusercontent.com/allisonhorst/stats-illustrations/master/rstats-artwork/usethis.png")
+```
+
+
+---
 # Nomes
 
 Suponha que você criou uma função incrível que você quer compartilhar com o mundo. Ela tem várias funções auxiliares e um comportamento complexo o suficiente para depender de uma documentação... Você precisa criar um pacote.
@@ -1266,7 +1276,120 @@ knitr::include_graphics("img/githubpages.png")
 ---
 # Integração contínua com GitHub Actions
 
-.fazer[Escrever!]
+> GitHub Actions ajuda você a **automatizar tarefas** dentro de seu ciclo de vida de desenvolvimento de software. ([fonte](https://docs.github.com/pt/actions/learn-github-actions/introduction-to-github-actions))
+
+
+.pull-left[
+
+
+Alguns exemplos: 
+
+- Vários pacotes usam para fazer executar o check e testes: [{readr}](https://github.com/tidyverse/readr/tree/master/.github/workflows), [{dplyr}](https://github.com/tidyverse/dplyr/tree/master/.github/workflows), [{usethis}](https://github.com/r-lib/usethis/tree/master/.github/workflows), e muitos outros
+
+- Pacote [{brasileirao}](https://github.com/williamorim/brasileirao) - atualiza diariamente a base de dados
+
+- Pacote [{goal500}](https://github.com/jtrecenti/goal500) - atualiza a base e o README, uma vez por semana
+
+- Pacote [{mananciais}](https://beatrizmilz.github.io/mananciais/) - atualiza diariamente a base de dados 
+
+- Página [Materiais sobre R](https://materiais-estudo-r.netlify.app/) - atualiza o site sempre que há mudança na base de dados
+
+
+
+]
+
+.pull-right[
+
+<br><br>
+
+```{r echo=FALSE}
+knitr::include_graphics("https://avatars.githubusercontent.com/u/44036562?s=200&v=4")
+```
+
+]
+
+---
+# Integração contínua com GitHub Actions
+
+Para utilizar o GitHub Actions, usamos arquivos `.yaml` que armazenam informações os fluxos de trabalho.
+
+- **Eventos**: Um evento é uma atividade que aciona um fluxo de trabalho. Por exemplo:
+  - Quando o repositório recebe uma alteração (`on: push`)
+  - Quando um Pull Request é criado (em outras palavras, alguém está enviando uma contribuição para o repositório) (`on: pull_request`)
+  - Eventos programados. Ex: a cada hora, todos os dias, uma vez por semana, uma vez por mês, etc. O site [CronTab](https://crontab.guru/) é muito útil para isso.
+  
+- **Trabalho**: Um evento aciona automaticamente o fluxo de trabalho, que contém um trabalho. Em seguida, o trabalho usa etapas para controlar a ordem em que as ações são executadas. Exemplo de ações executadas:
+  - Instalar pacotes
+  - Executar testes
+  - Executar um script `.R`
+  - Rotinas de Git
+
+
+---
+
+# Exemplo de workflow GHA 
+
+.footnote[Fonte: [Repositório  actions](https://github.com/r-lib/actions/tree/master/examples#quickstart-ci-workflow)]
+
+.letramenor[
+````yaml
+on:
+  push:
+    branches:
+      - main
+      - master
+  pull_request:
+    branches:
+      - main
+      - master
+
+name: R-CMD-check
+
+jobs:
+  R-CMD-check:
+    runs-on: macOS-latest
+    env:
+      GITHUB_PAT: ${{ secrets.GITHUB_TOKEN }}
+    steps:
+      - uses: actions/checkout@v2
+      - uses: r-lib/actions/setup-r@v1
+      - name: Install dependencies
+        run: |
+          install.packages(c("remotes", "rcmdcheck"))
+          remotes::install_deps(dependencies = TRUE)
+        shell: Rscript {0}
+      - name: Check
+        run: |
+          options(crayon.enabled = TRUE)
+          rcmdcheck::rcmdcheck(args = "--no-manual", error_on = "error")
+        shell: Rscript {0}
+````
+]
+
+---
+# Integração contínua com GitHub Actions
+
+- Recomendação: partir de um arquivo de workflow já existente, e alterar o que for necessário. 
+
+  - [Neste repositório](https://github.com/r-lib/actions/tree/master/examples#readme), estão disponíveis alguns exemplos de workflows de GitHub Actions que podemos usar com pacotes em R
+
+- Os arquivos `.yaml` devem estar em um diretório específico do pacote:  `pacote/.github/workflows/nome-do-workflow.yaml`
+
+- O pacote usethis também pode nos ajudar nisso. O código a seguir cria o arquivo `.yaml` apresentado no último slide, usado para fazer uma checagem simples no pacote:
+
+```{r eval=FALSE}
+usethis::use_github_action("check-release")
+```
+
+---
+# Exemplo de workflow 
+
+```{r echo=FALSE, out.width="60%"}
+knitr::include_graphics("img/action.png")
+```
+
+.footnote[[Veja os logs do Exemplo!](https://github.com/beatrizmilz/materiais_estudo_R/runs/2328985236?check_suite_focus=true)]
+
 
 ---
 # Regras para colocar um pacote no CRAN
