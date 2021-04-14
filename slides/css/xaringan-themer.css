@@ -244,17 +244,15 @@ table.dataTable.hover tbody tr:hover, table.dataTable.display tbody tr:hover {
   text-transform: uppercase;
 }
 
-/* Anotações temporárias */
-.ideias{
-  background-color: #ffff00;
-}
-.revisar{
-  background-color: #669966;
-}
-.fazer{
-  background-color: #ff7f7f;
-}
-
+/* Alterações */
 .letramenor{
   font-size: 0.6em;
 }
+
+/* Anotações temporárias */
+
+.fazer{
+  background-color: #ffff00;
+}
+
+
