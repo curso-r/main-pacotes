@@ -497,7 +497,7 @@ Dentro de um pacote, a pasta `R/` só pode ter arquivos R com funções.
 
 - A ideia da pasta `R/` é guardar em um local comum tudo aquilo que nós utilizamos como ferramenta interna para nossas análises, bem como aquilo que queremos que outras pessoas possam usar no futuro.
 
-- Podemos usar `usethis::use_r("nome_da_funcao")` para que um arquivo seja criado antes começarmos a escrever uma função.
+- Podemos usar `usethis::use_r("nome-do-arquivo")` para que um arquivo seja criado antes começarmos a escrever uma função.
 
 - Assim que escrevermos/modificarmos alguma função, podemos carregá-las e testá-las manualmente com `devtools::load_all()`
 
@@ -755,7 +755,7 @@ Algumas recomendação sobre como organizar seu código:
 ---
 # Criando uma função na prática
 
-- Crie um arquivo onde iremos escrever a função para o pacote. Dica: use a função `usethis::use_r()`!
+- Crie um arquivo onde iremos escrever a função para o pacote. Dica: use a função `usethis::use_r("nome-do-arquivo")`!
 
 - Copie o código disponível em [git.io/JOtMI](https://git.io/JOtMI) e cole no arquivo criado.
 
@@ -764,6 +764,17 @@ Algumas recomendação sobre como organizar seu código:
 - Verifique que o arquivo onde sua função foi escrita está no diretório `R/` e que as dependências estão descritas no arquivo `DESCRIPTION`
 
 - Carregue o pacote com `devtools::load_all()`, e confira se está tudo ok com `devtools::check()`!
+
+
+**Exercícios para casa**
+
+Adapte os códigos dos arquivos a seguir, e os transforme em funções no seu pacote:
+
+- [Exercício](https://git.io/JOcAs) - https://git.io/JOcAs
+
+- [Desafio](https://git.io/JOcAR) - https://git.io/JOcAR
+
+
 
 .footnote[Fonte: dados do [pacote brasileirão](https://blog.curso-r.com/posts/2021-03-02-brasileirao/)]
 
