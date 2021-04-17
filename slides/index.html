@@ -4,7 +4,7 @@
     <title>Pacotes 📦</title>
     <meta charset="utf-8" />
     <meta name="author" content="" />
-    <script src="libs/header-attrs-2.7/header-attrs.js"></script>
+    <script src="libs/header-attrs-2.7.8/header-attrs.js"></script>
     <link rel="stylesheet" href="css/xaringan-themer.css" type="text/css" />
   </head>
   <body>
@@ -260,7 +260,7 @@ Um pacote do R é uma forma específica de organizar seus código, seguindo o pr
 
 &gt; _Pacotes são a unidade fundamental de código R reprodutível._
 &gt; 
-&gt; — Hadley Wickham
+&gt; — Wickham &amp; Bryan
 
 .pull-left[
 - Pacotes incluem: 
@@ -473,7 +473,7 @@ usethis::use_gpl3_license()
 
 Podemos usar a função `devtools::check()`. Ela carrega todo o código, gera toda a documentação e executa todos os testes, verificando em todo passo se tudo está funcionando como o esperado.
 
-1. Crie o pacote usando a função `usethis::create_package()`
+1. Crie o pacote usando a função `usethis::create_package("caminho_onde_o_pacote_sera_criado/nomedopacote")` 
 
 1. Observe a estrutura do diretório
 
@@ -666,20 +666,21 @@ Passo 4: pensar em quais podem ser os argumentos da nossa função. E se eu quis
 
 
 ```r
-calcular_media_volume &lt;- function(sistema, ano, mes) {
+calcular_media_volume &lt;- function(filtro_sistema, filtro_ano, filtro_mes) {
   "https://git.io/JOLeb" %&gt;%
     readr::read_csv2() %&gt;%
     dplyr::mutate(ano = lubridate::year(data), mes = lubridate::month(data)) %&gt;%
     dplyr::group_by(sistema, ano, mes) %&gt;%
     dplyr::summarise(media_volume_porcentagem = base::mean(volume_porcentagem)) %&gt;%
     dplyr::ungroup() %&gt;%
-    dplyr::filter(ano == {{ ano }}, mes == {{ mes }}, sistema == {{ sistema }})
+    dplyr::filter(ano == filtro_ano, mes == filtro_mes, sistema == filtro_sistema)
 }
 ```
 
 
 ```r
-calcular_media_volume(sistema = "Guarapiranga", ano = 2021, mes = 3)
+calcular_media_volume(filtro_sistema = "Guarapiranga",
+                      filtro_ano = 2021, filtro_mes = 3)
 ```
 
 ```
@@ -692,18 +693,22 @@ calcular_media_volume(sistema = "Guarapiranga", ano = 2021, mes = 3)
 ---
 # Discussão em sala
 
-Passo 5: argumentos padrão. E se eu quiser que a função possibilite calcular a média para todos os meses do ano? E se eu quiser que a função possibilite calcular a média para todos os anos da base?
+Passo 5: argumentos padrão. E se eu quiser que a função funcione caso o ano e/ou o mês não seja informado como argumento? 
 
 
 ```r
-calcular_media_volume &lt;- function(sistema, ano = 2000:2021, mes = 1:12) {
+calcular_media_volume &lt;- function(filtro_sistema,
+                                  filtro_ano = 2021,
+                                  filtro_mes = 4) {
   "https://git.io/JOLeb" %&gt;%
     readr::read_csv2() %&gt;%
     dplyr::mutate(ano = lubridate::year(data), mes = lubridate::month(data)) %&gt;%
     dplyr::group_by(sistema, ano, mes) %&gt;%
     dplyr::summarise(media_volume_porcentagem = base::mean(volume_porcentagem)) %&gt;%
     dplyr::ungroup() %&gt;%
-    dplyr::filter(ano %in% {{ ano }}, mes %in% {{ mes }}, sistema == {{ sistema }})
+    dplyr::filter(ano %in% filtro_ano,
+                  mes %in% filtro_mes,
+                  sistema %in% filtro_sistema)
 }
 ```
 
@@ -712,24 +717,14 @@ calcular_media_volume &lt;- function(sistema, ano = 2000:2021, mes = 1:12) {
 
 
 ```r
-calcular_media_volume(sistema = "Guarapiranga")
+calcular_media_volume(filtro_sistema = "Guarapiranga")
 ```
 
 ```
-#&gt; # A tibble: 256 x 4
-#&gt;    sistema        ano   mes media_volume_porcentagem
-#&gt;    &lt;chr&gt;        &lt;dbl&gt; &lt;dbl&gt;                    &lt;dbl&gt;
-#&gt;  1 Guarapiranga  2000     1                     42.1
-#&gt;  2 Guarapiranga  2000     2                     50.1
-#&gt;  3 Guarapiranga  2000     3                     60.0
-#&gt;  4 Guarapiranga  2000     4                     60.3
-#&gt;  5 Guarapiranga  2000     5                     47.9
-#&gt;  6 Guarapiranga  2000     6                     36.6
-#&gt;  7 Guarapiranga  2000     7                     27.5
-#&gt;  8 Guarapiranga  2000     8                     21.3
-#&gt;  9 Guarapiranga  2000     9                     26.0
-#&gt; 10 Guarapiranga  2000    10                     28.4
-#&gt; # … with 246 more rows
+#&gt; # A tibble: 1 x 4
+#&gt;   sistema        ano   mes media_volume_porcentagem
+#&gt;   &lt;chr&gt;        &lt;dbl&gt; &lt;dbl&gt;                    &lt;dbl&gt;
+#&gt; 1 Guarapiranga  2021     4                     70.1
 ```
 
 ---
