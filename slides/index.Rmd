@@ -720,7 +720,7 @@ Algumas recomendação sobre como organizar seu código:
 
 - Crie um arquivo onde iremos escrever a função para o pacote. Dica: use a função `usethis::use_r("nome-do-arquivo")`!
 
-- Copie o código disponível em [git.io/JOtMI](https://git.io/JOtMI) e cole no arquivo criado.
+- Copie o código disponível em [git.io/JO8NV](https://git.io/JO8NV) e cole no arquivo criado.
 
 - Adapte o código e o transforme em uma função. Não esqueça das dependências
 
@@ -730,9 +730,9 @@ Algumas recomendação sobre como organizar seu código:
 
 ### Exercícios para casa
 
-- [Exercício](https://git.io/JOcAs) - https://git.io/JOcAs
+- [Exercício: git.io/JO8Nr](https://git.io/JO8Nr)
 
-- [Desafio](https://git.io/JOcAR) - https://git.io/JOcAR
+- [Desafio: git.io/JO8NP](https://git.io/JO8NP)
 
 
 
