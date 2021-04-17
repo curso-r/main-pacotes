@@ -475,12 +475,9 @@ usethis::use_gpl3_license()
 
 ---
 
-# Função check
+# Testando o pacote na prática
 
 Podemos usar a função `devtools::check()`. Ela carrega todo o código, gera toda a documentação e executa todos os testes, verificando em todo passo se tudo está funcionando como o esperado.
-
----
-# Testando o pacote na prática
 
 1. Crie o pacote usando a função `usethis::create_package()`
 
@@ -533,8 +530,8 @@ Um exemplo: vamos criar uma função que soma dois números.
 
 ```{r}
 minha_soma <- function(x, y) { # minha_soma é uma função de x e y
-  soma <- x + y                # soma é igual a x + y
-  soma                         # resultado retornado
+  soma <- x + y # soma é igual a x + y
+  soma # resultado retornado
 }
 
 minha_soma(2, 2)
@@ -572,10 +569,10 @@ library(lubridate)
 
 "https://git.io/JOLeb" %>%
   read_csv2() %>%
-  mutate(ano = year(data), mes = month(data)) %>% 
-  group_by(sistema, ano, mes) %>% 
-  summarise(media_volume_porcentagem = mean(volume_porcentagem)) %>% 
-  filter(ano == 2021, mes == 4, sistema == "Cantareira") 
+  mutate(ano = year(data), mes = month(data)) %>%
+  group_by(sistema, ano, mes) %>%
+  summarise(media_volume_porcentagem = mean(volume_porcentagem)) %>%
+  filter(ano == 2021, mes == 4, sistema == "Cantareira")
 ```
 
 .footnote[Fonte: [pacote](https://github.com/beatrizmilz/mananciais/raw/master/inst/extdata/mananciais.csv) `{mananciais}` por Beatriz Milz]
@@ -591,11 +588,11 @@ library(lubridate)
 
 "https://git.io/JOLeb" %>%
   read_csv2() %>%
-  mutate(ano = year(data), mes = month(data)) %>% 
-  group_by(sistema, ano, mes) %>% 
-  summarise(media_volume_porcentagem = mean(volume_porcentagem)) %>% 
+  mutate(ano = year(data), mes = month(data)) %>%
+  group_by(sistema, ano, mes) %>%
+  summarise(media_volume_porcentagem = mean(volume_porcentagem)) %>%
   ungroup() %>%
-  filter(ano == 2021, mes == 4, sistema == "Cantareira") 
+  filter(ano == 2021, mes == 4, sistema == "Cantareira")
 ```
 
 ---
@@ -610,10 +607,10 @@ library(lubridate)
 "https://git.io/JOLeb" %>%
   readr::read_csv2() %>%
   dplyr::mutate(ano = lubridate::year(data), mes = lubridate::month(data)) %>%
-  dplyr::group_by(sistema, ano, mes) %>% 
-  dplyr::summarise(media_volume_porcentagem = mean(volume_porcentagem)) %>% 
-  dplyr::ungroup() %>% 
-  dplyr::filter(ano == 2021, mes == 4, sistema == "Cantareira") 
+  dplyr::group_by(sistema, ano, mes) %>%
+  dplyr::summarise(media_volume_porcentagem = mean(volume_porcentagem)) %>%
+  dplyr::ungroup() %>%
+  dplyr::filter(ano == 2021, mes == 4, sistema == "Cantareira")
 ```
 
 ---
@@ -651,7 +648,7 @@ calcular_media_volume <- function() {
     dplyr::mutate(ano = lubridate::year(data), mes = lubridate::month(data)) %>%
     dplyr::group_by(sistema, ano, mes) %>%
     dplyr::summarise(media_volume_porcentagem = base::mean(volume_porcentagem)) %>%
-    dplyr::ungroup() %>% 
+    dplyr::ungroup() %>%
     dplyr::filter(ano == 2021, mes == 4, sistema == "Cantareira")
 }
 ```
@@ -668,9 +665,9 @@ calcular_media_volume <- function(sistema, ano, mes) {
     dplyr::mutate(ano = lubridate::year(data), mes = lubridate::month(data)) %>%
     dplyr::group_by(sistema, ano, mes) %>%
     dplyr::summarise(media_volume_porcentagem = base::mean(volume_porcentagem)) %>%
-    dplyr::ungroup() %>% 
-    dplyr::filter(ano == {{ano}}, mes == {{mes}}, sistema == {{sistema}}) 
-} 
+    dplyr::ungroup() %>%
+    dplyr::filter(ano == {{ ano }}, mes == {{ mes }}, sistema == {{ sistema }})
+}
 ```
 
 ```{r message=FALSE, warning=FALSE}
@@ -689,9 +686,9 @@ calcular_media_volume <- function(sistema, ano = 2000:2021, mes = 1:12) {
     dplyr::mutate(ano = lubridate::year(data), mes = lubridate::month(data)) %>%
     dplyr::group_by(sistema, ano, mes) %>%
     dplyr::summarise(media_volume_porcentagem = base::mean(volume_porcentagem)) %>%
-    dplyr::ungroup() %>% 
-    dplyr::filter(ano %in% {{ano}}, mes %in% {{mes}}, sistema == {{sistema}})
-} 
+    dplyr::ungroup() %>%
+    dplyr::filter(ano %in% {{ ano }}, mes %in% {{ mes }}, sistema == {{ sistema }})
+}
 ```
 
 ---
@@ -731,10 +728,7 @@ Algumas recomendação sobre como organizar seu código:
 
 - Carregue o pacote com `devtools::load_all()`, e confira se está tudo ok com `devtools::check()`!
 
-
-**Exercícios para casa**
-
-Adapte os códigos dos arquivos a seguir, e os transforme em funções no seu pacote:
+### Exercícios para casa
 
 - [Exercício](https://git.io/JOcAs) - https://git.io/JOcAs
 
@@ -771,14 +765,14 @@ usethis::use_data(partidas_brasileirao)
 ```
 
 ```{r eval=FALSE}
-encontrar_pior_ano_time <- function(time){
+encontrar_pior_ano_time <- function(time) {
   partidas_brasileirao %>%
-  dplyr::group_by(temporada, quem_ganhou) %>%
-  dplyr::filter(quem_ganhou != "Empate", quem_ganhou %in% time) %>%
-  dplyr::count(quem_ganhou, sort = TRUE, name = "n_vitorias") %>%
-  dplyr::ungroup() %>%
-  dplyr::filter(n_vitorias == min(n_vitorias)) %>% 
-  dplyr::rename("time" = quem_ganhou)
+    dplyr::group_by(temporada, quem_ganhou) %>%
+    dplyr::filter(quem_ganhou != "Empate", quem_ganhou %in% time) %>%
+    dplyr::count(quem_ganhou, sort = TRUE, name = "n_vitorias") %>%
+    dplyr::ungroup() %>%
+    dplyr::filter(n_vitorias == min(n_vitorias)) %>%
+    dplyr::rename("time" = quem_ganhou)
 }
 ```
 
@@ -819,14 +813,14 @@ Se quisermos adicionar documentação ao nosso pacote (as instruções que apare
 #' Título da função
 #'
 #' Descrição da função
-#' 
+#'
 #' @param a primeiro parâmetro
 #' @param b segundo parâmetro
-#' 
+#'
 #' @return descrição do resultado
-#' 
+#'
 #' @export
-fun <- function(a, b) { 
+fun <- function(a, b) {
   a + b
 }
 ```
@@ -904,18 +898,17 @@ utils::globalVariables(c("variavel1", "variavel2"))
 
 Passo 7: Pratique o que aprendemos sobre documentação de pacotes!
 
-7.1 - Execute e observe o resultado de `devtools::check()`. Lá terão indicações do que devemos fazer
+1. Execute e observe o resultado de `devtools::check()`. Lá terão indicações do que devemos fazer
 
-7.2 - Crie uma lista de variáveis globais e adicione os elementos que aparecem no check em "Undefined global functions or variables"  
+1. Crie uma lista de variáveis globais e adicione os elementos que aparecem no check em _Undefined global functions or variables_
 
-7.3 - Documente a base de dados
+1. Documente a base de dados
 
-7.4 - Documente as funções do pacote
+1. Documente as funções do pacote
 
-7.5 - Execute e observe novamente o resultado de `devtools::check()`. O objetivo é obter:
+1. Execute e observe novamente o resultado de `devtools::check()`. O objetivo é obter:
 
 .center[`0 errors ✓ | 0 warnings ✓ | 0 notes ✓`]
-
 
 ---
 class: middle, center, inverse
@@ -1075,7 +1068,7 @@ Esse processo precisa ser feito apenas uma vez!
 
 ```{r eval=FALSE}
 usethis::use_git_config(
-  user.name = "SEU NOME NO GITHUB", 
+  user.name = "SEU NOME NO GITHUB",
   user.email = "seu_email_no@github.com"
 )
 ```
