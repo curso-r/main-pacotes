@@ -265,7 +265,7 @@ Um pacote do R é uma forma específica de organizar seus código, seguindo o pr
 
 > _Pacotes são a unidade fundamental de código R reprodutível._
 > 
-> — Hadley Wickham
+> — Wickham & Bryan
 
 .pull-left[
 - Pacotes incluem: 
