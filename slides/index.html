@@ -724,7 +724,7 @@ calcular_media_volume(filtro_sistema = "Guarapiranga")
 #&gt; # A tibble: 1 x 4
 #&gt;   sistema        ano   mes media_volume_porcentagem
 #&gt;   &lt;chr&gt;        &lt;dbl&gt; &lt;dbl&gt;                    &lt;dbl&gt;
-#&gt; 1 Guarapiranga  2021     4                     70.1
+#&gt; 1 Guarapiranga  2021     4                     70.0
 ```
 
 ---
@@ -1250,23 +1250,36 @@ O arquivo gerado é um **RMarkdown** (`.Rmd`), e portanto precisamos converter p
 .pull-right[
 &lt;img src="img/readme-chess.png" width="90%" style="display: block; margin: auto;" /&gt;
 
+.footnote[Fonte da imagem: [README do pacote {chess}](https://github.com/curso-r/chess)]
+
 ]
 
 
 
+
+
+
 ---
+
 # Criando um site para o pacote com {pkgdown}
+
+.pull-left[
+
 
 O pacote pkgdown permite criar um site para o pacote. Para criar, use a função a seguir uma vez, para configurar o pacote para usar o pkgdown:
 
 ```r
 usethis::use_pkgdown()
 ```
-Para atualizar o site, use a função:
+]
 
-```r
-pkgdown::build_site()
-```
+.pull-right[
+&lt;img src="img/pkgdownchess.png" width="90%" style="display: block; margin: auto;" /&gt;
+
+.footnote[Fonte da imagem: [Site do pacote {chess}](https://github.com/curso-r/chess)]
+
+]
+
 ---
 
 # Criando um site para o pacote com {pkgdown} (cont.)
@@ -1280,6 +1293,12 @@ Conteúdo do site será gerado a partir dos documentos já existentes no pacote:
 - A documentação das funções serão usadas para criar a seção 'references'
 
 - As vignettes serão usadas para criar a seção 'articles'
+
+O site não é atualizado automaticamente. Caso mude algo nos itens descritos acima, você deve atualizar o site usando a função:
+
+```r
+pkgdown::build_site()
+```
 
 ---
 
@@ -1426,24 +1445,24 @@ Mas se quisermos que o máximo número possível de pessoas tenha acesso ao noss
 
 Use a função `devtools::submit_cran()` para auxiliar no processo de submissão do pacote para o CRAN.
 
-.fazer[Em breve]
 
----
-# Versionamento
-
-.fazer[Em breve]
+&lt;!-- --- --&gt;
+&lt;!-- # Versionamento --&gt;
+&lt;!-- comentei essa parte pois nao vi na ementa do site.  --&gt;
+&lt;!-- .fazer[Em breve] --&gt;
 
 ---
 class: middle, center, inverse
 
 
 # Resumo
+## Pontos principais
 
 ---
 
-# Resumo
+# Resumo - Etapas iniciais
 
-- Criar um pacote usando a função `usethis::create_package("~/caminho/ate/o/pacote")`
+- Criar um pacote usando a função `usethis::create_package("~/caminho/ate/o/nomepacote")`
 
 - No arquivo DESCRIPTION, adicionar o nome das pessoas autoras, além do título e descrição do pacote.
 
@@ -1451,16 +1470,49 @@ class: middle, center, inverse
 
 - Versionar o projeto usando `usethis::use_git()`
 
-- Criar funções: a função `usethis::use_r("nome_da_funcao")` cria o arquivo para isso
+- Crie um repositório no GitHub onde esse pacote será versionado utilizando `usethis::use_github()`
+
+- Para preparar o pacote para receber testes, use `usethis::use_testthat()` 
+
+- Para criar o arquivo README, use a função `usethis::use_readme_rmd()`
+
+- Para criar um site para o pacote, use a função `usethis::use_pkgdown()`
 
 ---
 
-# Resumo
+# Resumo - Funções para repetir com frequência
 
 
-- A funcão `devtools::load_all()` simula o processo de instalação e carregamento do pacote. As funções criadas ficam disponíveis para uso. Atalho:  **Ctrl + Shift + L**.
+- `devtools::document()` - Atualiza a documentação e o arquivo NAMESPACE
 
-- A função `devtools::check()` verifica se o pacote está funcionando. Pode apresentar erros, avisos e notas. Leia a mensagem no console :)
+- `devtools::load_all()` simula o processo de instalação e carregamento do pacote. As funções criadas ficam disponíveis para uso
+
+- `devtools::check()` verifica se o pacote está funcionando. Pode apresentar erros, avisos e notas. Leia as mensagens no console :)
+
+
+- Quando necessário:
+
+  - `usethis::build_readme()` - Atualizar o `README.md`
+
+  - `pkgdown::build_site()` - Atualizar o site do pacote
+
+---
+
+# Resumo - Desenvolvendo funções
+
+- Criar funções: a função `usethis::use_r("nome-do-arquivo")` cria o arquivo onde as funções devem ser escritas
+
+- Declare as dependências usando:
+
+  - pipe `%&gt;%`: `usethis::use_pipe()` +  `devtools::document()` + `devtools::load_all()`
+  
+  - Pacotes instalados via CRAN: `usethis::use_package("nome_do_pacote")`
+  
+  - Pacotes instalados via GitHub: `usethis::use_dev_package("nome_do_pacote")`
+  
+- Documente suas funções no arquivo `.R`
+
+- Crie o arquivo de testes usando `usethis::use_test("nome-do-arquivo")` e escreva testes para as funções presentes nesse arquivo
 
 
 
