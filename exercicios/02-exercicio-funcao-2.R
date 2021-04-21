@@ -1,4 +1,3 @@
-
 # Melhor time da temporada ------------------------------------------------
 
 # Transforme o código abaixo em uma função!
@@ -6,6 +5,7 @@
 # Objetivo: função que retorna qual é o time com mais vitórias na temporada. A
 # função deve ser chamada 'melhor_time_temporada()' e ter o argumento 'ano'.
 
+# Código original ----------------------------------------------
 library(tidyverse)
 
 ano <- 2018
@@ -17,6 +17,12 @@ ano <- 2018
   count(quem_ganhou, sort = TRUE, name = "n_vitorias") %>%
   filter(n_vitorias == max(n_vitorias)) %>%
   arrange(temporada)
+
+# Escreva abaixo sua função -------------------------------------------
+
+
+
+
 
 # Verificação -------------------------------------------------------------
 

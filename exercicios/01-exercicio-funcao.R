@@ -1,4 +1,3 @@
-
 # Ano em que o time teve menos vitórias -----------------------------------
 
 # Transforme o código abaixo em uma função!
@@ -6,6 +5,9 @@
 # Objetivo: função que retorna qual é a temporada em que o time teve menos
 # vitórias. A função deve ser chamada 'encontrar_pior_ano_time()' e ter o
 # argumento 'time'.
+
+
+# Código original ----------------------------------------------
 
 library(tidyverse)
 
@@ -19,6 +21,12 @@ time <- "Cruzeiro"
   ungroup() %>%
   filter(n_vitorias == min(n_vitorias)) %>%
   rename("time" = quem_ganhou)
+
+# Escreva abaixo sua função -------------------------------------------
+
+
+
+
 
 # Verificação -------------------------------------------------------------
 
