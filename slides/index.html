@@ -4,7 +4,7 @@
     <title>Pacotes 📦</title>
     <meta charset="utf-8" />
     <meta name="author" content="" />
-    <script src="libs/header-attrs-2.7.8/header-attrs.js"></script>
+    <script src="libs/header-attrs-2.7/header-attrs.js"></script>
     <link rel="stylesheet" href="css/xaringan-themer.css" type="text/css" />
   </head>
   <body>
@@ -724,7 +724,7 @@ calcular_media_volume(filtro_sistema = "Guarapiranga")
 #&gt; # A tibble: 1 x 4
 #&gt;   sistema        ano   mes media_volume_porcentagem
 #&gt;   &lt;chr&gt;        &lt;dbl&gt; &lt;dbl&gt;                    &lt;dbl&gt;
-#&gt; 1 Guarapiranga  2021     4                     70.0
+#&gt; 1 Guarapiranga  2021     4                     70.1
 ```
 
 ---
@@ -991,22 +991,15 @@ test_that("rm_na works as expected", {
 
 Passo 8: Pratique o que aprendemos sobre testes!
 
-8.1 - Use a função `usethis::use_testthat()` para preparar o pacote 
+1. Use a função `usethis::use_testthat()` para preparar o pacote 
 
-8.2 - Abra o arquivo da função que deseja escrever testes, e use a função  `usethis::use_test()` para criar o arquivo onde o teste será escrito
+1. Abra o arquivo da função que deseja escrever testes, e use a função  `usethis::use_test()` para criar o arquivo onde o teste será escrito
 
-8.3 - Desenvolva um teste para a função
+1. Desenvolva um teste para a função
 
-8.4 - Execute e observe novamente o resultado de `devtools::check()`. O objetivo é obter:
+1. Execute e observe novamente o resultado de `devtools::check()`. O objetivo é obter:
 
 .center[`0 errors ✓ | 0 warnings ✓ | 0 notes ✓`]
-
-
----
-class: middle, center
-
-# Disponibilizando seu pacote
-
 
 ---
 class: middle, center, inverse
@@ -1027,6 +1020,7 @@ class: middle, center, inverse
 
 - Arquivo `.gitignore`: Lista arquivos que deverão ser ignorados ao versionar o pacote com Git. 
 
+&lt;br&gt;
 
 &lt;img src="img/git.png" width="30%" style="display: block; margin: auto;" /&gt;
 
@@ -1077,20 +1071,15 @@ O grande cupido dessa amizade é o `{usethis}`.
 O diagrama abaixo exemplifica o fluxo de trabalho de um projeto com versionamento.
 
 
-&lt;img src="img/fluxo_github_rstudio.png" width="50%" style="display: block; margin: auto;" /&gt;
-
-
----
-
-# Configure o Git e o GitHub no seu RStudio
-
-Antes de começarmos a versionar o código do nosso pacote, vamos configurar o Git e o GitHub no RStudio. 
-
-Esse processo precisa ser feito apenas uma vez!
+&lt;img src="img/fluxo_github_rstudio.png" width="70%" style="display: block; margin: auto;" /&gt;
 
 ---
 
 # Configure seu usuário do Git
+
+Antes de começarmos a versionar o código do nosso pacote, vamos configurar o Git e o GitHub no RStudio. 
+
+Esse processo precisa ser feito apenas uma vez!
 
 
 ```r
@@ -1110,7 +1099,6 @@ usethis::use_git_config(
 
 - Ao conectar com o GitHub, você será instruída(o) a criar um *Personal Access Token* (PAT).
 
-
 - O PAT serve para autenticar ao GitHub, podendo ser utilizado como senha de acesso ou internamente para automatizar tarefas (como criar um repositório).
 
 - Para criar um novo PAT, use a função `usethis::create_github_token()`. Uma janela do navegador será aberta, e você deve autenticar no GitHub (se necessário), criar o novo token, e copiá-lo. 
@@ -1124,28 +1112,7 @@ GITHUB_PAT="0000000000000000000000000000000000000000"
 - Lembre-se de reiniciar sua sessão do R!
 
 ---
-
-# Usar o Git para versionar seu pacote
-
-# Passo 1: crie e configure seu pacote
-
-
-```r
-usethis::create_package("meuPacote")
-```
-
-Lembrando que nomes de pacotes
-
-- Só podem ter letras, números e ponto
-
-- Devem começar com uma letra
-
-- Não podem acabar com ponto
-
-Boa prática: Não é aconselhável usar pontos no nome de pacotes. ([fonte](https://r-pkgs.org/workflows101.html#formal-requirements))
-
----
-# Passo 2: Versione com o Git
+# Versione com o Git e o GitHub
 
 
 ```r
@@ -1158,10 +1125,6 @@ apareceu) você adiciona controle de versão.
 - Você receberá algumas instruções para seguir, mas está tudo certo.
 
 
----
-# Passo 3: Adicione o GitHub
-
-
 ```r
 usethis::use_github()
 ```
@@ -1170,10 +1133,8 @@ usethis::use_github()
 
 - Mais uma vez, você receberá algumas instruções, mas lembre-se apenas de selecionar o método de autenticação `https`.
 
-
-
 ---
-# Passo 4: Stage &amp; Commit
+# Stage &amp; Commit
 
 &lt;img src="img/passo_3_commit_1.gif" width="50%" style="display: block; margin: auto;" /&gt;
 
@@ -1183,7 +1144,7 @@ usethis::use_github()
 
 ---
 
-# Passo 5: Push
+# Push
 
 &lt;img src="img/passo_4_push.gif" width="50%" style="display: block; margin: auto;" /&gt;
 
@@ -1191,7 +1152,7 @@ usethis::use_github()
 
 ---
 
-# Passo Extra: Pull
+# Extra: Pull
 
 &lt;img src="img/passo_5_pull.gif" width="50%" style="display: block; margin: auto;" /&gt;
 
@@ -1202,14 +1163,18 @@ usethis::use_github()
 # Resumo
 
 1. Repositório: Criar projeto/pacote
-2. Adicionar Git
-3. Adicionar GitHub
-4. Commit: Edite e "Commite" as mudanças no código
-5. Push: Suba os commits para o GitHub
-Extra. Pull: Baixe o estado atual do projeto
 
----
-# Cuidados
+2. Adicionar Git
+
+3. Adicionar GitHub
+
+4. Commit: Edite e "Commite" as mudanças no código
+
+5. Push: Suba os commits para o GitHub
+
+6. Pull (extra): Baixe o estado atual do projeto
+
+### Cuidados
 
 - Se uma base de dados tem mais do que 50Mb de tamanho, ela não deveria estar no seu repositório.
 
@@ -1355,15 +1320,18 @@ Alguns exemplos:
 Para utilizar o GitHub Actions, usamos arquivos `.yaml` que armazenam informações os fluxos de trabalho.
 
 - **Eventos**: Um evento é uma atividade que aciona um fluxo de trabalho. Por exemplo:
+  
   - Quando o repositório recebe uma alteração (`on: push`)
+  
   - Quando um Pull Request é criado (em outras palavras, alguém está enviando uma contribuição para o repositório) (`on: pull_request`)
+  
   - Eventos programados. Ex: a cada hora, todos os dias, uma vez por semana, uma vez por mês, etc. O site [CronTab](https://crontab.guru/) é muito útil para isso.
   
 - **Trabalho**: Um evento aciona automaticamente o fluxo de trabalho, que contém um trabalho. Em seguida, o trabalho usa etapas para controlar a ordem em que as ações são executadas. Exemplo de ações executadas:
-  - Instalar pacotes
+  
   - Executar testes
+  
   - Executar um script `.R`
-  - Rotinas de Git
 
 
 ---
@@ -1443,28 +1411,21 @@ garantir controle de versão.
 
 Mas se quisermos que o máximo número possível de pessoas tenha acesso ao nosso pacote, pode ser que precisemos subi-lo para o CRAN (Comprehensive R Archive Network). Neste caso precisaremos criar teste e documentação (em inglês) para nosso pacote.
 
-Use a função `devtools::submit_cran()` para auxiliar no processo de submissão do pacote para o CRAN.
-
-
-&lt;!-- --- --&gt;
-&lt;!-- # Versionamento --&gt;
-&lt;!-- comentei essa parte pois nao vi na ementa do site.  --&gt;
-&lt;!-- .fazer[Em breve] --&gt;
+Use as funções `devtools::submit_cran()` e `usethis::use_release_issue()` para auxiliar no processo de submissão do pacote para o CRAN.
 
 ---
 class: middle, center, inverse
 
 
 # Resumo
-## Pontos principais
 
 ---
 
-# Resumo - Etapas iniciais
+# Etapas iniciais
 
 - Criar um pacote usando a função `usethis::create_package("~/caminho/ate/o/nomepacote")`
 
-- No arquivo DESCRIPTION, adicionar o nome das pessoas autoras, além do título e descrição do pacote.
+- No arquivo DESCRIPTION, adicionar o nome de quem criou o pacote, além do título e descrição do pacote.
 
 - Adicionar uma licença com `usethis::use_**_licence()`
 
@@ -1480,31 +1441,31 @@ class: middle, center, inverse
 
 ---
 
-# Resumo - Funções para repetir com frequência
+# Funções para repetir com frequência
 
 
-- `devtools::document()` - Atualiza a documentação e o arquivo NAMESPACE
+- `devtools::document()`: atualiza a documentação e o arquivo NAMESPACE
 
-- `devtools::load_all()` simula o processo de instalação e carregamento do pacote. As funções criadas ficam disponíveis para uso
+- `devtools::load_all()`: simula o processo de instalação e carregamento do pacote. As funções criadas ficam disponíveis para uso
 
-- `devtools::check()` verifica se o pacote está funcionando. Pode apresentar erros, avisos e notas. Leia as mensagens no console :)
+- `devtools::check()`: verifica se o pacote está funcionando. Pode apresentar erros, avisos e notas. Leia as mensagens no console :)
 
 
 - Quando necessário:
 
-  - `usethis::build_readme()` - Atualizar o `README.md`
+  - `usethis::build_readme()`: atualizar o `README.md`
 
-  - `pkgdown::build_site()` - Atualizar o site do pacote
+  - `pkgdown::build_site()`: atualizar o site do pacote
 
 ---
 
-# Resumo - Desenvolvendo funções
+# Desenvolvendo funções
 
 - Criar funções: a função `usethis::use_r("nome-do-arquivo")` cria o arquivo onde as funções devem ser escritas
 
 - Declare as dependências usando:
 
-  - pipe `%&gt;%`: `usethis::use_pipe()` +  `devtools::document()` + `devtools::load_all()`
+  - pipe `%&gt;%`: `usethis::use_pipe()` + `devtools::document()` + `devtools::load_all()`
   
   - Pacotes instalados via CRAN: `usethis::use_package("nome_do_pacote")`
   
