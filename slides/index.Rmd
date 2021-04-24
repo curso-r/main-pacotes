@@ -634,6 +634,7 @@ usethis::use_package("dplyr")
 
 # Também usamos o pipe!
 usethis::use_pipe()
+devtools::document() # Após usar o use_pipe(), atualize a documentação
 ```
 
 ---
