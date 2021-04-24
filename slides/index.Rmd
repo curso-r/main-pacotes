@@ -1090,6 +1090,28 @@ GITHUB_PAT="0000000000000000000000000000000000000000"
 - Lembre-se de reiniciar sua sessão do R!
 
 ---
+
+# Checando se a configuração deu certo
+
+Utilize a função `usethis::git_sitrep()` e leia o resultado que aparece no console. A mensagem abaixo foi cortada para mostrar os trechos de interesse!
+
+
+```{r eval=FALSE}
+usethis::git_sitrep()
+#> Git config (global)
+#> ● Name: 'SEU NOME DEVE APARECER AQUI'
+#> ● Email: 'SEU EMAIL DEVE APARECER AQUI'
+
+#> GitHub
+#> ● Default GitHub host: 'https://github.com'
+#> ● Personal access token for 'https://github.com': '<discovered>'
+#> ● GitHub user: 'SEU NOME DE USUÁRIO(A) DEVE APARECER AQUI'
+#> ● Token scopes: 'gist, repo, user, workflow'
+#> ● Email(s): 'SEU EMAIL DEVE APARECER AQUI'
+```
+
+
+---
 # Versione com o Git e o GitHub
 
 ```{r, eval=FALSE}

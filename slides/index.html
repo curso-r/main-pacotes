@@ -4,7 +4,7 @@
     <title>Pacotes 📦</title>
     <meta charset="utf-8" />
     <meta name="author" content="" />
-    <script src="libs/header-attrs-2.7/header-attrs.js"></script>
+    <script src="libs/header-attrs-2.7.8/header-attrs.js"></script>
     <link rel="stylesheet" href="css/xaringan-themer.css" type="text/css" />
   </head>
   <body>
@@ -1110,6 +1110,29 @@ GITHUB_PAT="0000000000000000000000000000000000000000"
 ```
 
 - Lembre-se de reiniciar sua sessão do R!
+
+---
+
+# Checando se a configuração deu certo
+
+Utilize a função `usethis::git_sitrep()` e leia o resultado que aparece no console. A mensagem abaixo foi cortada para mostrar os trechos de interesse!
+
+
+
+```r
+usethis::git_sitrep()
+#&gt; Git config (global)
+#&gt; ● Name: 'SEU NOME DEVE APARECER AQUI'
+#&gt; ● Email: 'SEU EMAIL DEVE APARECER AQUI'
+
+#&gt; GitHub
+#&gt; ● Default GitHub host: 'https://github.com'
+#&gt; ● Personal access token for 'https://github.com': '&lt;discovered&gt;'
+#&gt; ● GitHub user: 'SEU NOME DE USUÁRIO(A) DEVE APARECER AQUI'
+#&gt; ● Token scopes: 'gist, repo, user, workflow'
+#&gt; ● Email(s): 'SEU EMAIL DEVE APARECER AQUI'
+```
+
 
 ---
 # Versione com o Git e o GitHub
