@@ -1025,13 +1025,15 @@ knitr::include_graphics("img/github.png")
 .pull-left[
 
 
-Pacotes do R e repositórios do GitHub são melhores amigos.
+Pacotes do R e repositórios do GitHub são melhores amigos
 
 
 
 <br>
 
-O grande cupido dessa amizade é o `{usethis}`.
+O grande cupido dessa amizade é o `{usethis}` <br>
+
+Após deixar o pacote no GitHub, outras pessoas poderão instalá-lo usando a função `remotes::install_github("org/repo")`
 ]
 
 .pull-right[
