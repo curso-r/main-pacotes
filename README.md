@@ -13,8 +13,8 @@ abaixo**.
 
 | Turma          | Material                                   | Github                                      |
 |:---------------|:-------------------------------------------|:--------------------------------------------|
-| agosto de 2021 | <https://curso-r.github.io/202108-pacotes> | <https://github.com/curso-r/202108-pacotes> |
-| abril de 2021  | <https://curso-r.github.io/202104-pacotes> | <https://github.com/curso-r/202104-pacotes> |
+| Agosto de 2021 | <https://curso-r.github.io/202108-pacotes> | <https://github.com/curso-r/202108-pacotes> |
+| Abril de 2021  | <https://curso-r.github.io/202104-pacotes> | <https://github.com/curso-r/202104-pacotes> |
 
 **Atenção**: o material de cursos que ainda não começaram pode não
 existir ainda.
@@ -63,7 +63,7 @@ existir ainda.
 
 ## Pré-requisitos
 
--   Instalar o R e o RStudio:
+-   Instalar o R e o RStudio (e **atualizar**):
 
     -   [Guia de instalação do
         R](https://livro.curso-r.com/1-1-instalacao-do-r.html)
@@ -76,6 +76,25 @@ existir ainda.
     -   Guia de instalação - Em breve
 
 -   Criar uma conta no [GitHub](https://github.com/)
+
+-   Instalar as [Ferramentas de
+    desenvolvimento](https://r-pkgs.org/setup.html#setup-tools):
+
+    -   Windows: [RTools
+        instalado](https://livro.curso-r.com/1-3-instalacao-adicionais.html#rtools)
+
+    -   Linux:
+        [r-base-dev](https://livro.curso-r.com/1-3-instalacao-adicionais.html#rtools)
+
+    -   MacOS: Xcode command line tools
+
+Para verificar se as ferramentas de desenvolvimento estão instaladas,
+utilize a função:
+
+``` r
+devtools::has_devel()
+#> Your system is ready to build packages!
+```
 
 ## Pacotes necessários
 
