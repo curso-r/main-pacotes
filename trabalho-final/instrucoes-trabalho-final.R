@@ -56,12 +56,14 @@ minha_fct_drop <- function(f, only) {
 # O script abaixo contém duas funções, já prontas. 
 # Uma das funções é para buscar a base de marmitas veganas,
 # e a outra é para sortear uma marmita para comprar!
+# Você deve criar um pacote e:
 # Disponibilize a base obtida na primeira função dentro do pacote.
 # Não esqueça de deixar todos os pacotes de dependência listados
 # no arquivo DESCRIPTION.
 # Crie testes para as duas funções.
 # Documente as duas funções.
 # Tente fazer o CHECK passar.
+# Desafio: deixe o seu pacote em um repositório no GitHub.
 
 ##  Função 1:  obter a base de Marmitas --------------------
 buscar_marmitas_veganas <- function() {
