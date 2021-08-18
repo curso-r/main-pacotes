@@ -75,8 +75,8 @@ knitr::kable(CursoRutils:::listar_turmas_recentes("pacotes"))
   
   - [Guia de instalação do RStudio](https://livro.curso-r.com/1-2-instalacao-do-rstudio.html)
 
-- Instalar o [Git](https://git-scm.com/)
-  - Guia de instalação  - Em breve
+- Instalar o [Git](https://git-scm.com/) (saiba mais [aqui](https://livro.curso-r.com/1-3-instalacao-adicionais.html#git))
+
 
 - Criar uma conta no [GitHub](https://github.com/)
 
@@ -113,6 +113,6 @@ install.packages(pacotes)
 ```
 
 ```{r eval=FALSE, include=FALSE}
-materiais <- readr::read_lines("material.txt")
-zip::zip("material_do_curso.zip", materiais)
+# materiais <- readr::read_lines("material.txt")
+# zip::zip("material_do_curso.zip", materiais)
 ```

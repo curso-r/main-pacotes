@@ -11,10 +11,11 @@ Para informações sobre o curso e inscrição, acesse:
 **Acesse o material completo do curso escolhendo uma das turmas
 abaixo**.
 
-| Turma          | Material                                   | Github                                      |
-|:---------------|:-------------------------------------------|:--------------------------------------------|
-| Agosto de 2021 | <https://curso-r.github.io/202108-pacotes> | <https://github.com/curso-r/202108-pacotes> |
-| Abril de 2021  | <https://curso-r.github.io/202104-pacotes> | <https://github.com/curso-r/202104-pacotes> |
+| Turma            | Material                                   | Github                                      |
+|:-----------------|:-------------------------------------------|:--------------------------------------------|
+| Dezembro de 2021 | <https://curso-r.github.io/202112-pacotes> | <https://github.com/curso-r/202112-pacotes> |
+| Agosto de 2021   | <https://curso-r.github.io/202108-pacotes> | <https://github.com/curso-r/202108-pacotes> |
+| Abril de 2021    | <https://curso-r.github.io/202104-pacotes> | <https://github.com/curso-r/202104-pacotes> |
 
 **Atenção**: o material de cursos que ainda não começaram pode não
 existir ainda.
@@ -71,9 +72,8 @@ existir ainda.
     -   [Guia de instalação do
         RStudio](https://livro.curso-r.com/1-2-instalacao-do-rstudio.html)
 
--   Instalar o [Git](https://git-scm.com/)
-
-    -   Guia de instalação - Em breve
+-   Instalar o [Git](https://git-scm.com/) (saiba mais
+    [aqui](https://livro.curso-r.com/1-3-instalacao-adicionais.html#git))
 
 -   Criar uma conta no [GitHub](https://github.com/)
 
