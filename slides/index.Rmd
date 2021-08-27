@@ -351,7 +351,7 @@ Mas qual deve ser o seu nome?
 
 Os melhores nomes são simples e descritivos. Pense em algo que possa ser procurado facilmente no Google e que, preferencialmente, seja em inglês (a menos que você não ache que pessoas de outro país usarão o seu pacote).
 
-Evite usar letras maiúsculas ou mesmo números pois isso pode confundir os usuários. Você definitavente ganha pontos extras se conseguir inserir alguma brincadeira com a letra R no nome (`stringr`, `decryptr`, `plyr`, `purrr`, etc.).
+Evite usar letras maiúsculas ou mesmo números pois isso pode confundir os usuários. Você definitivamente ganha pontos extras se conseguir inserir alguma brincadeira com a letra R no nome (`stringr`, `decryptr`, `plyr`, `purrr`, etc.).
 
 ---
 # Dica para pesquisar nomes
@@ -468,6 +468,9 @@ usethis::use_gpl3_license()
 ```
 
 - GPLv3: essa licença exige que o código-fonte dos derivados seja _open source_ sob a mesma licença. Direitos autorais devem ser preservados.
+
+
+- O help é útil: `?usethis::use_mit_license`, e também o site [Choose a License](https://choosealicense.com/licenses/).
 
 ---
 
