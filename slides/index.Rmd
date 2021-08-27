@@ -917,63 +917,6 @@ Passo 7: Pratique o que aprendemos sobre documentação de pacotes!
 
 ---
 class: middle, center, inverse
-name: testes-unitarios
-
-# Testes unitários e consistência de código
-
-
-.footnote[Leia mais [neste capítulo do livro Zen do R](https://curso-r.github.io/zen-do-r/testes.html).]
-
----
-
-# Testes
-
-Se quisermos verificar que todo o pacote continua funcionando mesmo depois fazer alguma alteração, precisamos de testes automatizados.
-
-Para isso, basta rodar `usethis::use_testthat()` (apenas uma vez por pacote) e depois `usethis::use_test("nome_do_teste")` (para cada novo arquivo de testes que quiser criar).
-
-Com o pacote testthat podemos criar quantos arquivos de testes quisermos, cada um com um número ilimitado de testes e sub-testes. Quando tivermos todos os testes prontos, basta rodar `devtools::test()`. Atalho: **Ctrl + Shift + T**.
-
----
-
-# Exemplo de teste
-
-Considerando a função:
-```r
-tira_media <- function(x, rm_na = TRUE) {
-  purrr::reduce(x, sum, na.rm = rm_na)/conta_itens(x, rm_na)
-}
-```
-
-Podemos escrever os seguintes testes:
-```r
-test_that("taking the mean works", {
-            expect_equal(tira_media(c(1, 2, 3, 4, NA, 6)), 3.2)
-            expect_equal(tira_media(c(1, 2, 3, 4, 6)), 3.2)
-          })
-test_that("rm_na works as expected", {
-            expect_output(tira_media(c(1, 2, NA), rm_na = FALSE), NA)
-            expect_equal(tira_media(c(NA, NA, NA)), NaN)
-          })
-```
-
----
-# Testes na prática
-
-Passo 8: Pratique o que aprendemos sobre testes!
-
-1. Use a função `usethis::use_testthat()` para preparar o pacote 
-
-1. Abra o arquivo da função que deseja escrever testes, e use a função  `usethis::use_test()` para criar o arquivo onde o teste será escrito
-
-1. Desenvolva um teste para a função
-
-1. Execute e observe novamente o resultado de `devtools::check()`. O objetivo é obter:
-
-.center[`0 errors ✓ | 0 warnings ✓ | 0 notes ✓`]
-
----
-class: middle, center, inverse
 # Git e GitHub
 
 ---
@@ -1187,6 +1130,12 @@ knitr::include_graphics("img/passo_5_pull.gif")
 - Nem sempre o comando Pull dá certo. Às vezes, você e a colega de trabalho fizeram mudanças no mesmo arquivo e, quando vão juntar, ocorre um conflito.
 
 ---
+class: middle, center, inverse
+name: testes-unitarios
+
+# Comunicação
+
+---
 # Comunicação
 
 
@@ -1226,10 +1175,6 @@ knitr::include_graphics("img/readme-chess.png")
 .footnote[Fonte da imagem: [README do pacote {chess}](https://github.com/curso-r/chess)]
 
 ]
-
-
-
-
 
 
 ---
@@ -1294,10 +1239,100 @@ knitr::include_graphics("img/githubpages.png")
 - O endereço do site será `https://seu-username.github.io/nome-repositorio/`  
 
 ---
-# Integração contínua com GitHub Actions
+class: middle, center, inverse
+name: testes-unitarios
 
-> GitHub Actions ajuda você a **automatizar tarefas** dentro de seu ciclo de vida de desenvolvimento de software. ([fonte](https://docs.github.com/pt/actions/learn-github-actions/introduction-to-github-actions))
+# Testes unitários
 
+
+.footnote[Leia mais [neste capítulo do livro Zen do R](https://curso-r.github.io/zen-do-r/testes.html).]
+
+---
+
+# Testes
+
+Se quisermos verificar que todo o pacote continua funcionando mesmo depois fazer alguma alteração, precisamos de testes automatizados.
+
+Para isso, basta rodar `usethis::use_testthat()` (apenas uma vez por pacote) e depois `usethis::use_test("nome_do_teste")` (para cada novo arquivo de testes que quiser criar).
+
+Com o pacote testthat podemos criar quantos arquivos de testes quisermos, cada um com um número ilimitado de testes e sub-testes. Quando tivermos todos os testes prontos, basta rodar `devtools::test()`. Atalho: **Ctrl + Shift + T**.
+
+---
+# Expectativas
+
+- Um arquivo de testes tem duas estruturas principais: **testes** e
+**expectativas**
+
+  - Um teste, declarado com `test_that()`, indica um bloco de testes cujo
+  objetivo é garantir que uma funcionalidade foi implementada corretamente
+
+  - Uma expectativa, declarada com `expect_*()`, realiza uma verificação dentro
+  do teste, comparando o valor retornado pela expressão com alguma referência
+
+- Um teste precisa ser independente dos outros (inclusive do mesmo arquivo!) e
+ter um objetivo definido, declarado através de sua **descrição**
+
+  - A independência dos testes é importante porque eles serão executados em
+  paralelo, mesmo que digam respeito à mesma função e estejam no mesmo arquivo
+
+- Alguns tipos importantes de expectativas: `equal`, `error`, `true`,
+`length`, `lt`, `lte`, `gt`, `gte`, `message`, `null`, `output`, `snapshot`,
+`warning`
+
+---
+# Exemplo de teste
+
+Considerando a função:
+```r
+tira_media <- function(x, rm_na = TRUE) {
+  purrr::reduce(x, sum, na.rm = rm_na)/conta_itens(x, rm_na)
+}
+```
+
+Podemos escrever os seguintes testes:
+```r
+test_that("taking the mean works", {
+  expect_equal(tira_media(c(1, 2, 3, 4, NA, 6)), 3.2)
+  expect_equal(tira_media(c(1, 2, 3, 4, 6)), 3.2)
+})
+test_that("rm_na works as expected", {
+  expect_output(tira_media(c(1, 2, NA), rm_na = FALSE), NA)
+  expect_equal(tira_media(c(NA, NA, NA)), NaN)
+})
+```
+
+---
+# Testes na prática
+
+Passo 8: Pratique o que aprendemos sobre testes!
+
+1. Use a função `usethis::use_testthat()` para preparar o pacote 
+
+1. Abra o arquivo da função que deseja escrever testes, e use a função  `usethis::use_test()` para criar o arquivo onde o teste será escrito
+
+1. Desenvolva um teste para a função
+
+1. Execute e observe novamente o resultado de `devtools::check()`. O objetivo é obter:
+
+.center[`0 errors ✓ | 0 warnings ✓ | 0 notes ✓`]
+
+---
+class: middle, center, inverse
+name: ci
+
+# Integração contínua
+
+---
+# Integração contínua
+
+- Dado um certo código e um método consistente de testá-lo, faz todo sentido
+**automatizar** o processo
+
+- Integração contínua normalmente envolve garantir que a versão mais
+recente do software está atendendo os padrões de qualidade
+
+- Hoje vamos falar sobre o **GitHub Actions** porque ele se conecta facilmente
+com o GitHub
 
 .pull-left[
 
@@ -1305,10 +1340,6 @@ knitr::include_graphics("img/githubpages.png")
 Alguns exemplos: 
 
 - Vários pacotes usam para fazer executar o check e testes: [{readr}](https://github.com/tidyverse/readr/tree/master/.github/workflows), [{dplyr}](https://github.com/tidyverse/dplyr/tree/master/.github/workflows), [{usethis}](https://github.com/r-lib/usethis/tree/master/.github/workflows), e muitos outros
-
-- Pacote [{brasileirao}](https://github.com/williamorim/brasileirao) - atualiza diariamente a base de dados
-
-- Pacote [{goal500}](https://github.com/jtrecenti/goal500) - atualiza a base e o README, uma vez por semana
 
 - Pacote [{mananciais}](https://beatrizmilz.github.io/mananciais/) - atualiza diariamente a base de dados 
 
@@ -1329,6 +1360,67 @@ knitr::include_graphics("https://avatars.githubusercontent.com/u/44036562?s=200&
 ]
 
 ---
+# GitHub Actions
+
+> GitHub Actions ajuda a automatizar tarefas dentro de seu ciclo de vida de
+desenvolvimento de software https://docs.github.com/pt/actions
+
+- Um **workflow** não passa de um processo bem-definido que será executado no
+repositório ao qual ele pertence
+
+- Ele é definido a partir de um arquivo YAML dentro da pasta `.github/workflows`
+
+  - É comum definir workflows para testagem de pacotes, geração de documentação, 
+  atualização de dados, etc.
+  
+- O workflow é, essencialmente, um duende mágico que baixa o nosso repositório
+em um **servidor do GitHub** e executa os comandos especificados
+
+  - O plano gratuito já funciona para bastante coisa, mas cuidado com os
+  **custos** das máquinas MacOS
+
+---
+# Estrutura
+
+- Um workflow tem alguns componentes importantes:
+
+  - **Event**: gatilhos que ativam o workflow, podendo ser desde um push ao
+  repositório até uma hora do dia
+  
+  - **Job**: sequências completas de comandos que podem ser executadas
+  paralelamente entre si
+  
+  - **Step**: uma tarefa dentro de um job, composta por ações
+      
+      - **Use**: passos importados de outro repositório (úteis para setup)
+  
+  - **Action**: o átomo do workflow, um comando a ser executado pelo "duende
+  mágico"
+  
+- Também é comum definir **env**, variáveis de ambiente para o workflow
+
+---
+# Exemplo de workflow
+
+```yaml
+on: [push]                                              # Event
+jobs:
+  R-CMD-check:                                          # Job
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2                       # Use
+      - uses: r-lib/actions/setup-r@v1                  # Use
+      - name: Install dependencies                      # Step
+        run: |                                          # Action
+          install.packages(c("remotes", "rcmdcheck"))
+          remotes::install_deps(dependencies = TRUE)
+        shell: Rscript {0}
+      - name: Check                                     # Step
+        run: rcmdcheck::rcmdcheck(args = "--no-manual") # Action
+        shell: Rscript {0}
+```
+
+---
 # Integração contínua com GitHub Actions
 
 Para utilizar o GitHub Actions, usamos arquivos `.yaml` que armazenam informações os fluxos de trabalho.
@@ -1347,50 +1439,8 @@ Para utilizar o GitHub Actions, usamos arquivos `.yaml` que armazenam informaç�
   
   - Executar um script `.R`
 
-
 ---
-
-# Exemplo de workflow GHA 
-
-.footnote[Fonte: [Repositório  actions](https://github.com/r-lib/actions/tree/master/examples#quickstart-ci-workflow)]
-
-.letramenor[
-````yaml
-on:
-  push:
-    branches:
-      - main
-      - master
-  pull_request:
-    branches:
-      - main
-      - master
-
-name: R-CMD-check
-
-jobs:
-  R-CMD-check:
-    runs-on: macOS-latest
-    env:
-      GITHUB_PAT: ${{ secrets.GITHUB_TOKEN }}
-    steps:
-      - uses: actions/checkout@v2
-      - uses: r-lib/actions/setup-r@v1
-      - name: Install dependencies
-        run: |
-          install.packages(c("remotes", "rcmdcheck"))
-          remotes::install_deps(dependencies = TRUE)
-        shell: Rscript {0}
-      - name: Check
-        run: |
-          options(crayon.enabled = TRUE)
-          rcmdcheck::rcmdcheck(args = "--no-manual", error_on = "error")
-        shell: Rscript {0}
-````
-]
-
----
-# Integração contínua com GitHub Actions
+# Integração contínua com GitHub Actions (cont.)
 
 - Recomendação: partir de um arquivo de workflow já existente, e alterar o que for necessário. 
 
@@ -1398,7 +1448,7 @@ jobs:
 
 - Os arquivos `.yaml` devem estar em um diretório específico do pacote:  `pacote/.github/workflows/nome-do-workflow.yaml`
 
-- O pacote usethis também pode nos ajudar nisso. O código a seguir cria o arquivo `.yaml` apresentado no último slide, usado para fazer uma checagem simples no pacote:
+- O pacote {usethis} também pode nos ajudar nisso. O código a seguir cria o arquivo `.yaml` apresentado no último slide, usado para fazer uma checagem simples no pacote:
 
 ```{r eval=FALSE}
 usethis::use_github_action("check-release")
