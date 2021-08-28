@@ -40,7 +40,7 @@ minha_sample_n <- function(tbl, size, replace = FALSE, weight = NULL) {
 }
 
 # tidyr::full_seq()
-minha_fct_drop <- function(f, only) {
+minha_full_seq <- function(f, only) {
   
   rng <- range(x, na.rm = TRUE)
   if (period - ((rng[2] - rng[1]) %% period) <= tol) {
