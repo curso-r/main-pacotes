@@ -1,4 +1,6 @@
-test_that("encontrar_pior_ano_time() works", {
+library(testthat)
+
+test_that("encontrar_pior_ano_time() funciona", {
 
   # Tibble
   expect_s3_class(encontrar_pior_ano_time(), "tbl")
