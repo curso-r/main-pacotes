@@ -1136,22 +1136,6 @@ name: testes-unitarios
 # Comunicação
 
 ---
-# Comunicação
-
-
-### Vignettes
-
-É muito comum a construção de *vignettes* para documentar o pacote. Elas são documentos em HTML melhor formatados do que a tradicional documentação do R.
-
-Você pode usar a função `usethis::use_vignette()` para criar *vignettes*.
-
-### Outros
-
-Se você precisar construir sites, relatórios, dashboards estáticos (flexdashboard) dentro do seu pacote, você pode criar uma pasta chamada `docs/` na raiz do seu projeto para guardar esses arquivos.
-
-Veremos também como criar um site do pacote criado com o `{pkgdown}`.
-
----
 
 .pull-left[
 # O arquivo README.md 
@@ -1175,6 +1159,44 @@ knitr::include_graphics("img/readme-chess.png")
 .footnote[Fonte da imagem: [README do pacote {chess}](https://github.com/curso-r/chess)]
 
 ]
+
+---
+.pull-left[
+
+
+
+# Vignettes
+
+É muito comum a construção de *vignettes* para documentar o pacote. Elas são documentos em HTML melhor formatados do que a tradicional documentação do R.
+
+Você pode usar a função `usethis::use_vignette()` para criar *vignettes*.
+
+<br> 
+Atenção: Caso você use alguma distribuição Linux e retornar a seguinte mensagem no `devtools::check()`, você precisa instalar o [qpdf](https://sourceforge.net/projects/qpdf/).
+
+
+```
+> ‘qpdf’ is needed for checks on size
+ reduction of PDFs
+```
+
+<!-- ### Outros -->
+
+<!-- Se você precisar construir sites, relatórios, dashboards estáticos (flexdashboard) dentro do seu pacote, você pode criar uma pasta chamada `docs/` na raiz do seu projeto para guardar esses arquivos. -->
+
+<!-- Veremos também como criar um site do pacote criado com o `{pkgdown}`. -->
+
+]
+
+.pull-right[
+```{r echo=FALSE, out.width="90%"}
+knitr::include_graphics("img/vignette-chess.png")
+```
+
+.footnote[Fonte da imagem: [Exemplo de vignette do pacote {chess}](https://github.com/curso-r/chess)]
+
+]
+
 
 
 ---

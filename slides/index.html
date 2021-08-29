@@ -1155,22 +1155,6 @@ name: testes-unitarios
 # Comunicação
 
 ---
-# Comunicação
-
-
-### Vignettes
-
-É muito comum a construção de *vignettes* para documentar o pacote. Elas são documentos em HTML melhor formatados do que a tradicional documentação do R.
-
-Você pode usar a função `usethis::use_vignette()` para criar *vignettes*.
-
-### Outros
-
-Se você precisar construir sites, relatórios, dashboards estáticos (flexdashboard) dentro do seu pacote, você pode criar uma pasta chamada `docs/` na raiz do seu projeto para guardar esses arquivos.
-
-Veremos também como criar um site do pacote criado com o `{pkgdown}`.
-
----
 
 .pull-left[
 # O arquivo README.md 
@@ -1192,6 +1176,42 @@ O arquivo gerado é um **RMarkdown** (`.Rmd`), e portanto precisamos converter p
 .footnote[Fonte da imagem: [README do pacote {chess}](https://github.com/curso-r/chess)]
 
 ]
+
+---
+.pull-left[
+
+
+
+# Vignettes
+
+É muito comum a construção de *vignettes* para documentar o pacote. Elas são documentos em HTML melhor formatados do que a tradicional documentação do R.
+
+Você pode usar a função `usethis::use_vignette()` para criar *vignettes*.
+
+&lt;br&gt; 
+Atenção: Caso você use alguma distribuição Linux e retornar a seguinte mensagem no `devtools::check()`, você precisa instalar o [qpdf](https://sourceforge.net/projects/qpdf/).
+
+
+```
+&gt; ‘qpdf’ is needed for checks on size
+ reduction of PDFs
+```
+
+&lt;!-- ### Outros --&gt;
+
+&lt;!-- Se você precisar construir sites, relatórios, dashboards estáticos (flexdashboard) dentro do seu pacote, você pode criar uma pasta chamada `docs/` na raiz do seu projeto para guardar esses arquivos. --&gt;
+
+&lt;!-- Veremos também como criar um site do pacote criado com o `{pkgdown}`. --&gt;
+
+]
+
+.pull-right[
+&lt;img src="img/vignette-chess.png" width="90%" style="display: block; margin: auto;" /&gt;
+
+.footnote[Fonte da imagem: [Exemplo de vignette do pacote {chess}](https://github.com/curso-r/chess)]
+
+]
+
 
 
 ---
