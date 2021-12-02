@@ -147,7 +147,7 @@ sortear_marmita(tipo = "Doce")
 # Essa função decide para nós :)
 
 sortear_combo_marmitas <- function(n_marmitas = 12){
-  marmitas_veganas |> 
+  marmitas_veganas %>%
     dplyr::sample_n(n_marmitas, replace = TRUE)
 }
 
