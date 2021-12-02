@@ -4,7 +4,7 @@
     <title>Pacotes 📦</title>
     <meta charset="utf-8" />
     <meta name="author" content="" />
-    <script src="libs/header-attrs-2.9/header-attrs.js"></script>
+    <script src="libs/header-attrs-2.11/header-attrs.js"></script>
     <link rel="stylesheet" href="css/xaringan-themer.css" type="text/css" />
   </head>
   <body>
@@ -1018,6 +1018,45 @@ O diagrama abaixo exemplifica o fluxo de trabalho de um projeto com versionament
 
 &lt;img src="img/fluxo_github_rstudio.png" width="70%" style="display: block; margin: auto;" /&gt;
 
+
+
+---
+
+# Configurando o Git e GitHub no RStudio
+
+.pull-left[
+####  Usando HTTP
+
+
+
+- ⬜ Ter o pacote `usethis` instalado 
+
+- ⬜ Se apresentar para o `git` 
+
+- ⬜ Abrir o arquivo `.Renviron` 
+
+- ⬜ Criar um GitHub Token/PAT
+
+- ⬜ Armazenar o GitHub Token/PAT 
+
+- ⬜ Reiniciar o RStudio
+]
+
+.pull-right[
+#### Usando SSH
+
+
+
+- ⬜ Ter o pacote `usethis` instalado 
+
+- ⬜ Se apresentar para o `git`
+
+- ⬜ Seguir este tutorial para configurar as chaves `SSH`: https://happygitwithr.com/ssh-keys.html 
+
+Obs: Se você utiliza Linux, recomendamos usar `ssh`.
+
+]
+
 ---
 
 # Configure seu usuário do Git
@@ -1040,7 +1079,7 @@ usethis::use_git_config(
 
 ---
 
-# Configure o Personal Access Token
+# Configure o Personal Access Token 
 
 - Ao conectar com o GitHub, você será instruída(o) a criar um *Personal Access Token* (PAT).
 
@@ -1048,19 +1087,88 @@ usethis::use_git_config(
 
 - Para criar um novo PAT, use a função `usethis::create_github_token()`. Uma janela do navegador será aberta, e você deve autenticar no GitHub (se necessário), criar o novo token, e copiá-lo. 
 
-- Use a função `usethis::edit_r_environ()` para abrir o arquivo `.Renviron` para salvar seu token. Use essa estrutura, substituindo os 0 pelo código copiado na etapa anterior:
 
+```r
+usethis::create_github_token()
 ```
+
+
+---
+
+# Armazenar o Personal Access Token 
+
+#### Método 1 - `gitcreds::gitcreds_set()`
+
+
+.pull-left[
+
+```r
+gitcreds::gitcreds_set()
+# -&gt; Your current credentials for 'https://github.com':
+#   protocol: https
+#   host    : github.com
+#   username: beatrizmilz
+#   password: &lt;-- hidden --&gt;
+#     
+# -&gt; What would you like to do? 
+# 1: Keep these credentials
+# 2: Replace these credentials
+# 3: See the password / token
+```
+]
+
+
+.pull-right[
+Siga as instruções e cole o PAT quando for solicitado as credenciais.
+
+
+```r
+# -&gt; Adding new credentials...
+# -&gt; Removing credetials from cache...
+# -&gt; Done.
+```
+]
+
+
+
+
+---
+
+# Armazenar o Personal Access Token 
+
+#### Método 2 - Armazenar manualmente no `.Renviron`
+
+- Use a função `usethis::edit_r_environ()` para abrir o arquivo `.Renviron` para salvar seu token. 
+
+
+```r
+usethis::edit_r_environ()
+# ● Modify 'C:/Users/beatr/Documents/.Renviron'
+# ● Restart R for changes to take effect
+```
+
+- Crie uma nova linha na forma `GITHUB_PAT=SEU_TOKEN`, adicione o token, **pule uma linha** e salve o arquivo. Se certifique que o arquivo termina com uma linha vazia!
+
+
+Use essa estrutura, substituindo os 0 pelo código copiado na etapa anterior:
+
+
+```r
 GITHUB_PAT="0000000000000000000000000000000000000000"
 ```
 
-- Lembre-se de reiniciar sua sessão do R!
+
+
 
 ---
 
 # Checando se a configuração deu certo
 
-Utilize a função `usethis::git_sitrep()` e leia o resultado que aparece no console. A mensagem abaixo foi cortada para mostrar os trechos de interesse!
+
+- Lembre-se de reiniciar sua sessão do R!
+  - **Reinicie o R usando o RStudio**:  CTRL + SHIFT + F10
+
+- Utilize a função `usethis::git_sitrep()` e leia o resultado que aparece no console. A mensagem abaixo foi cortada para mostrar os trechos de interesse!
 
 
 
@@ -1072,7 +1180,7 @@ usethis::git_sitrep()
 
 #&gt; GitHub
 #&gt; ● Default GitHub host: 'https://github.com'
-#&gt; ● Personal access token for 'https://github.com': '&lt;discovered&gt;'
+#&gt; ● Personal access token for 'https://github.com': '&lt;discovered&gt;' ***IMPORTANTE ESTAR COMO DISCOVERED***
 #&gt; ● GitHub user: 'SEU NOME DE USUÁRIO(A) DEVE APARECER AQUI'
 #&gt; ● Token scopes: 'gist, repo, user, workflow'
 #&gt; ● Email(s): 'SEU EMAIL DEVE APARECER AQUI'
@@ -1463,6 +1571,8 @@ Para utilizar o GitHub Actions, usamos arquivos `.yaml` que armazenam informaç�
   - Quando um Pull Request é criado (em outras palavras, alguém está enviando uma contribuição para o repositório) (`on: pull_request`)
   
   - Eventos programados. Ex: a cada hora, todos os dias, uma vez por semana, uma vez por mês, etc. O site [CronTab](https://crontab.guru/) é muito útil para isso.
+  
+  - Quando acionado "manualmente", ou via API (`on: workflow_dispatch`)
   
 - **Trabalho**: Um evento aciona automaticamente o fluxo de trabalho, que contém um trabalho. Em seguida, o trabalho usa etapas para controlar a ordem em que as ações são executadas. Exemplo de ações executadas:
   
