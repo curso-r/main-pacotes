@@ -7265,3 +7265,383 @@ temporada;data;time_casa;gols;time_visitante;gols_casa;gols_visitante;quem_ganho
 2020;2021-02-25;Athletico PR;2x0;Sport;2;0;Athletico PR
 2020;2021-02-25;Ceará;2x1;Botafogo;2;1;Ceará
 2020;2021-02-25;Atlético GO;3x1;Coritiba;3;1;Atlético GO
+2021;2021-05-29;Cuiabá;2x2;Juventude;2;2;Empate
+2021;2021-05-29;Bahia;3x0;Santos;3;0;Bahia
+2021;2021-05-29;São Paulo;0x0;Fluminense;0;0;Empate
+2021;2021-05-30;Atlético MG;1x2;Fortaleza;1;2;Fortaleza
+2021;2021-05-30;Flamengo;1x0;Palmeiras;1;0;Flamengo
+2021;2021-05-30;Ceará;3x2;Grêmio;3;2;Ceará
+2021;2021-05-30;Corinthians;0x1;Atlético GO;0;1;Atlético GO
+2021;2021-05-30;Chapecoense;0x3;Bragantino;0;3;Bragantino
+2021;2021-05-30;Athletico PR;1x0;América MG;1;0;Athletico PR
+2021;2021-05-30;Internacional;2x2;Sport;2;2;Empate
+2021;2021-06-05;Atlético GO;2x0;São Paulo;2;0;Atlético GO
+2021;2021-06-05;Santos;3x1;Ceará;3;1;Santos
+2021;2021-06-05;Bragantino;3x3;Bahia;3;3;Empate
+2021;2021-06-06;Fluminense;1x0;Cuiabá;1;0;Fluminense
+2021;2021-06-06;América MG;0x1;Corinthians;0;1;Corinthians
+2021;2021-06-06;Fortaleza;5x1;Internacional;5;1;Fortaleza
+2021;2021-06-06;Palmeiras;3x1;Chapecoense;3;1;Palmeiras
+2021;2021-06-06;Juventude;0x3;Athletico PR;0;3;Athletico PR
+2021;2021-06-06;Sport;0x1;Atlético MG;0;1;Atlético MG
+2021;2021-11-23;Grêmio;2x2;Flamengo;2;2;Empate
+2021;2021-06-12;Palmeiras;1x1;Corinthians;1;1;Empate
+2021;2021-06-12;Santos;0x0;Juventude;0;0;Empate
+2021;2021-06-13;Flamengo;2x0;América MG;2;0;Flamengo
+2021;2021-06-13;Atlético MG;1x0;São Paulo;1;0;Atlético MG
+2021;2021-06-13;Grêmio;0x1;Athletico PR;0;1;Athletico PR
+2021;2021-06-13;Bahia;0x1;Internacional;0;1;Internacional
+2021;2021-06-13;Fortaleza;1x0;Sport;1;0;Fortaleza
+2021;2021-06-13;Bragantino;2x2;Fluminense;2;2;Empate
+2021;2021-06-13;Chapecoense;0x0;Ceará;0;0;Empate
+2021;2021-07-21;Cuiabá;2x1;Atlético GO;2;1;Cuiabá
+2021;2021-06-16;São Paulo;1x1;Chapecoense;1;1;Empate
+2021;2021-06-16;Internacional;0x1;Atlético MG;0;1;Atlético MG
+2021;2021-06-16;Corinthians;1x2;Bragantino;1;2;Bragantino
+2021;2021-06-16;Juventude;0x3;Palmeiras;0;3;Palmeiras
+2021;2021-06-17;Ceará;1x2;Bahia;1;2;Bahia
+2021;2021-06-17;América MG;0x0;Cuiabá;0;0;Empate
+2021;2021-06-17;Fluminense;1x0;Santos;1;0;Fluminense
+2021;2021-06-17;Sport;1x0;Grêmio;1;0;Sport
+2021;2021-06-17;Atlético GO;0x0;Fortaleza;0;0;Empate
+2021;2021-11-02;Athletico PR;2x2;Flamengo;2;2;Empate
+2021;2021-06-19;Flamengo;2x3;Bragantino;2;3;Bragantino
+2021;2021-06-20;Palmeiras;2x1;América MG;2;1;Palmeiras
+2021;2021-06-20;Internacional;1x1;Ceará;1;1;Empate
+2021;2021-06-20;Bahia;0x0;Corinthians;0;0;Empate
+2021;2021-06-20;Santos;2x0;São Paulo;2;0;Santos
+2021;2021-06-20;Fortaleza;1x1;Fluminense;1;1;Empate
+2021;2021-06-20;Athletico PR;2x1;Atlético GO;2;1;Athletico PR
+2021;2021-06-20;Juventude;1x0;Sport;1;0;Juventude
+2021;2021-06-21;Atlético MG;1x1;Chapecoense;1;1;Empate
+2021;2021-08-18;Cuiabá;0x1;Grêmio;0;1;Grêmio
+2021;2021-06-23;Flamengo;2x1;Fortaleza;2;1;Flamengo
+2021;2021-06-23;São Paulo;2x2;Cuiabá;2;2;Empate
+2021;2021-06-23;Bragantino;3x1;Palmeiras;3;1;Bragantino
+2021;2021-06-23;Atlético GO;1x0;Fluminense;1;0;Atlético GO
+2021;2021-06-24;América MG;1x1;Juventude;1;1;Empate
+2021;2021-06-24;Corinthians;2x1;Sport;2;1;Corinthians
+2021;2021-06-24;Ceará;2x1;Atlético MG;2;1;Ceará
+2021;2021-06-24;Chapecoense;1x2;Internacional;1;2;Internacional
+2021;2021-06-24;Grêmio;2x2;Santos;2;2;Empate
+2021;2021-06-24;Bahia;2x1;Athletico PR;2;1;Bahia
+2021;2021-06-27;Juventude;1x0;Flamengo;1;0;Juventude
+2021;2021-06-27;Fluminense;1x1;Corinthians;1;1;Empate
+2021;2021-06-27;Palmeiras;3x2;Bahia;3;2;Palmeiras
+2021;2021-06-27;Grêmio;0x0;Fortaleza;0;0;Empate
+2021;2021-06-27;Athletico PR;2x2;Chapecoense;2;2;Empate
+2021;2021-06-27;Santos;2x0;Atlético MG;2;0;Santos
+2021;2021-06-27;América MG;1x1;Internacional;1;1;Empate
+2021;2021-06-27;Ceará;1x1;São Paulo;1;1;Empate
+2021;2021-06-27;Sport;0x0;Cuiabá;0;0;Empate
+2021;2021-06-28;Atlético GO;0x1;Bragantino;0;1;Bragantino
+2021;2021-06-30;Fluminense;1x4;Athletico PR;1;4;Athletico PR
+2021;2021-06-30;Fortaleza;3x2;Chapecoense;3;2;Fortaleza
+2021;2021-06-30;Internacional;1x2;Palmeiras;1;2;Palmeiras
+2021;2021-06-30;Bahia;3x4;América MG;3;4;América MG
+2021;2021-06-30;Santos;0x0;Sport;0;0;Empate
+2021;2021-06-30;Corinthians;0x0;São Paulo;0;0;Empate
+2021;2021-06-30;Juventude;2x0;Grêmio;2;0;Juventude
+2021;2021-07-01;Bragantino;0x0;Ceará;0;0;Empate
+2021;2021-07-01;Atlético MG;4x1;Atlético GO;4;1;Atlético MG
+2021;2021-07-01;Cuiabá;0x2;Flamengo;0;2;Flamengo
+2021;2021-07-03;América MG;2x0;Santos;2;0;América MG
+2021;2021-07-03;Athletico PR;2x1;Fortaleza;2;1;Athletico PR
+2021;2021-07-03;Corinthians;1x1;Internacional;1;1;Empate
+2021;2021-07-04;Chapecoense;0x2;Bahia;0;2;Bahia
+2021;2021-07-04;Flamengo;0x1;Fluminense;0;1;Fluminense
+2021;2021-07-04;Sport;0x1;Palmeiras;0;1;Palmeiras
+2021;2021-07-04;São Paulo;1x2;Bragantino;1;2;Bragantino
+2021;2021-07-04;Ceará;2x0;Juventude;2;0;Ceará
+2021;2021-07-04;Cuiabá;0x1;Atlético MG;0;1;Atlético MG
+2021;2021-07-04;Grêmio;0x1;Atlético GO;0;1;Atlético GO
+2021;2021-07-06;Santos;2x1;Athletico PR;2;1;Santos
+2021;2021-07-07;Fortaleza;4x0;América MG;4;0;Fortaleza
+2021;2021-07-07;Bahia;1x0;Juventude;1;0;Bahia
+2021;2021-07-07;Bragantino;1x1;Cuiabá;1;1;Empate
+2021;2021-07-07;Palmeiras;2x0;Grêmio;2;0;Palmeiras
+2021;2021-07-07;Atlético MG;2x1;Flamengo;2;1;Atlético MG
+2021;2021-07-07;Atlético GO;1x1;Sport;1;1;Empate
+2021;2021-07-07;Fluminense;0x0;Ceará;0;0;Empate
+2021;2021-07-07;Internacional;0x2;São Paulo;0;2;São Paulo
+2021;2021-07-08;Chapecoense;0x1;Corinthians;0;1;Corinthians
+2021;2021-07-10;Palmeiras;3x2;Santos;3;2;Palmeiras
+2021;2021-07-10;Grêmio;0x0;Internacional;0;0;Empate
+2021;2021-07-10;Athletico PR;2x2;Bragantino;2;2;Empate
+2021;2021-07-10;São Paulo;1x0;Bahia;1;0;São Paulo
+2021;2021-07-10;América MG;0x1;Atlético MG;0;1;Atlético MG
+2021;2021-07-10;Sport;1x2;Fluminense;1;2;Fluminense
+2021;2021-07-11;Juventude;1x1;Atlético GO;1;1;Empate
+2021;2021-07-11;Flamengo;2x1;Chapecoense;2;1;Flamengo
+2021;2021-07-11;Cuiabá;2x2;Ceará;2;2;Empate
+2021;2021-07-11;Fortaleza;1x0;Corinthians;1;0;Fortaleza
+2021;2021-07-17;São Paulo;0x1;Fortaleza;0;1;Fortaleza
+2021;2021-07-17;Ceará;1x0;Athletico PR;1;0;Ceará
+2021;2021-07-17;Corinthians;1x2;Atlético MG;1;2;Atlético MG
+2021;2021-07-17;Fluminense;0x1;Grêmio;0;1;Grêmio
+2021;2021-07-18;Chapecoense;2x3;Cuiabá;2;3;Cuiabá
+2021;2021-07-18;Atlético GO;0x3;Palmeiras;0;3;Palmeiras
+2021;2021-07-18;Bahia;0x5;Flamengo;0;5;Flamengo
+2021;2021-07-18;Internacional;1x0;Juventude;1;0;Internacional
+2021;2021-07-18;Bragantino;2x2;Santos;2;2;Empate
+2021;2021-07-19;América MG;0x1;Sport;0;1;Sport
+2021;2021-07-24;Grêmio;1x1;América MG;1;1;Empate
+2021;2021-07-24;Palmeiras;1x0;Fluminense;1;0;Palmeiras
+2021;2021-07-25;Atlético MG;3x0;Bahia;3;0;Atlético MG
+2021;2021-07-25;Fortaleza;1x0;Bragantino;1;0;Fortaleza
+2021;2021-07-25;Flamengo;5x1;São Paulo;5;1;Flamengo
+2021;2021-07-25;Santos;0x1;Atlético GO;0;1;Atlético GO
+2021;2021-07-25;Athletico PR;2x1;Internacional;2;1;Athletico PR
+2021;2021-07-25;Sport;0x0;Ceará;0;0;Empate
+2021;2021-07-26;Juventude;1x0;Chapecoense;1;0;Juventude
+2021;2021-07-26;Cuiabá;1x2;Corinthians;1;2;Corinthians
+2021;2021-07-31;São Paulo;0x0;Palmeiras;0;0;Empate
+2021;2021-07-31;Internacional;0x0;Cuiabá;0;0;Empate
+2021;2021-07-31;Bragantino;1x0;Grêmio;1;0;Bragantino
+2021;2021-08-01;Corinthians;1x3;Flamengo;1;3;Flamengo
+2021;2021-08-01;Atlético MG;2x0;Athletico PR;2;0;Atlético MG
+2021;2021-08-01;Bahia;0x1;Sport;0;1;Sport
+2021;2021-08-01;Chapecoense;0x1;Santos;0;1;Santos
+2021;2021-08-01;Ceará;3x1;Fortaleza;3;1;Ceará
+2021;2021-08-01;Atlético GO;1x1;América MG;1;1;Empate
+2021;2021-09-02;Fluminense;1x1;Juventude;1;1;Empate
+2021;2021-08-06;Sport;0x0;Bragantino;0;0;Empate
+2021;2021-08-07;Athletico PR;1x2;São Paulo;1;2;São Paulo
+2021;2021-08-07;Palmeiras;2x3;Fortaleza;2;3;Fortaleza
+2021;2021-08-07;Cuiabá;1x1;Bahia;1;1;Empate
+2021;2021-08-08;Santos;0x0;Corinthians;0;0;Empate
+2021;2021-08-08;América MG;1x0;Fluminense;1;0;América MG
+2021;2021-08-08;Juventude;1x2;Atlético MG;1;2;Atlético MG
+2021;2021-08-08;Flamengo;0x4;Internacional;0;4;Internacional
+2021;2021-08-08;Ceará;0x0;Atlético GO;0;0;Empate
+2021;2021-08-09;Grêmio;2x1;Chapecoense;2;1;Grêmio
+2021;2021-08-14;Bragantino;1x2;Juventude;1;2;Juventude
+2021;2021-08-14;Atlético MG;2x0;Palmeiras;2;0;Atlético MG
+2021;2021-08-14;São Paulo;2x1;Grêmio;2;1;São Paulo
+2021;2021-08-15;Flamengo;2x0;Sport;2;0;Flamengo
+2021;2021-08-15;Corinthians;3x1;Ceará;3;1;Corinthians
+2021;2021-08-15;Fortaleza;1x1;Santos;1;1;Empate
+2021;2021-08-15;Bahia;1x2;Atlético GO;1;2;Atlético GO
+2021;2021-08-15;Cuiabá;1x0;Athletico PR;1;0;Cuiabá
+2021;2021-08-15;Internacional;4x2;Fluminense;4;2;Internacional
+2021;2021-08-16;Chapecoense;1x1;América MG;1;1;Empate
+2021;2021-08-21;Atlético GO;1x1;Chapecoense;1;1;Empate
+2021;2021-08-21;Grêmio;2x0;Bahia;2;0;Grêmio
+2021;2021-08-21;Juventude;1x1;Fortaleza;1;1;Empate
+2021;2021-08-22;Palmeiras;0x2;Cuiabá;0;2;Cuiabá
+2021;2021-08-22;Ceará;1x1;Flamengo;1;1;Empate
+2021;2021-08-22;Athletico PR;0x1;Corinthians;0;1;Corinthians
+2021;2021-08-22;Santos;2x2;Internacional;2;2;Empate
+2021;2021-08-22;Sport;0x1;São Paulo;0;1;São Paulo
+2021;2021-08-23;Fluminense;1x1;Atlético MG;1;1;Empate
+2021;2021-08-23;América MG;0x2;Bragantino;0;2;Bragantino
+2021;2021-08-28;Sport;0x0;Chapecoense;0;0;Empate
+2021;2021-08-28;Santos;0x4;Flamengo;0;4;Flamengo
+2021;2021-08-28;Palmeiras;2x1;Athletico PR;2;1;Palmeiras
+2021;2021-08-28;Grêmio;0x1;Corinthians;0;1;Corinthians
+2021;2021-08-29;América MG;2x0;Ceará;2;0;América MG
+2021;2021-08-29;Juventude;1x1;São Paulo;1;1;Empate
+2021;2021-08-29;Atlético GO;0x0;Internacional;0;0;Empate
+2021;2021-08-29;Bragantino;1x1;Atlético MG;1;1;Empate
+2021;2021-08-30;Fluminense;2x0;Bahia;2;0;Fluminense
+2021;2021-08-30;Fortaleza;0x0;Cuiabá;0;0;Empate
+2021;2021-09-04;Bahia;4x2;Fortaleza;4;2;Bahia
+2021;2021-09-04;Cuiabá;2x1;Santos;2;1;Cuiabá
+2021;2021-09-05;Athletico PR;0x0;Sport;0;0;Empate
+2021;2021-09-07;Corinthians;1x1;Juventude;1;1;Empate
+2021;2021-09-07;Chapecoense;1x2;Fluminense;1;2;Fluminense
+2021;2021-09-22;São Paulo;0x0;América MG;0;0;Empate
+2021;2021-10-20;Ceará;1x2;Palmeiras;1;2;Palmeiras
+2021;2021-10-21;Internacional;1x1;Bragantino;1;1;Empate
+2021;2021-11-03;Atlético MG;2x1;Grêmio;2;1;Atlético MG
+2021;2021-11-05;Flamengo;2x0;Atlético GO;2;0;Flamengo
+2021;2021-09-11;América MG;2x0;Athletico PR;2;0;América MG
+2021;2021-09-11;Juventude;1x2;Cuiabá;1;2;Cuiabá
+2021;2021-09-11;Bragantino;1x2;Chapecoense;1;2;Chapecoense
+2021;2021-09-11;Santos;0x0;Bahia;0;0;Empate
+2021;2021-09-12;Grêmio;2x0;Ceará;2;0;Grêmio
+2021;2021-09-12;Palmeiras;1x3;Flamengo;1;3;Flamengo
+2021;2021-09-12;Fortaleza;0x2;Atlético MG;0;2;Atlético MG
+2021;2021-09-12;Atlético GO;1x1;Corinthians;1;1;Empate
+2021;2021-09-12;Fluminense;2x1;São Paulo;2;1;Fluminense
+2021;2021-09-13;Sport;0x1;Internacional;0;1;Internacional
+2021;2021-09-18;Chapecoense;0x2;Palmeiras;0;2;Palmeiras
+2021;2021-09-18;Athletico PR;2x1;Juventude;2;1;Athletico PR
+2021;2021-09-18;Atlético MG;3x0;Sport;3;0;Atlético MG
+2021;2021-09-18;Ceará;0x0;Santos;0;0;Empate
+2021;2021-09-18;Bahia;1x1;Bragantino;1;1;Empate
+2021;2021-09-19;Internacional;1x0;Fortaleza;1;0;Internacional
+2021;2021-09-19;São Paulo;2x1;Atlético GO;2;1;São Paulo
+2021;2021-09-19;Corinthians;1x1;América MG;1;1;Empate
+2021;2021-09-19;Flamengo;0x1;Grêmio;0;1;Grêmio
+2021;2021-09-20;Cuiabá;2x2;Fluminense;2;2;Empate
+2021;2021-09-25;Ceará;1x0;Chapecoense;1;0;Ceará
+2021;2021-09-25;Corinthians;2x1;Palmeiras;2;1;Corinthians
+2021;2021-09-25;São Paulo;0x0;Atlético MG;0;0;Empate
+2021;2021-09-26;América MG;1x1;Flamengo;1;1;Empate
+2021;2021-09-26;Fluminense;2x1;Bragantino;2;1;Fluminense
+2021;2021-09-26;Internacional;2x0;Bahia;2;0;Internacional
+2021;2021-09-26;Juventude;3x0;Santos;3;0;Juventude
+2021;2021-09-26;Sport;0x1;Fortaleza;0;1;Fortaleza
+2021;2021-09-26;Athletico PR;4x2;Grêmio;4;2;Athletico PR
+2021;2021-09-26;Atlético GO;0x0;Cuiabá;0;0;Empate
+2021;2021-10-02;Fortaleza;0x3;Atlético GO;0;3;Atlético GO
+2021;2021-10-02;Cuiabá;0x2;América MG;0;2;América MG
+2021;2021-10-02;Bragantino;2x2;Corinthians;2;2;Empate
+2021;2021-10-02;Atlético MG;1x0;Internacional;1;0;Atlético MG
+2021;2021-10-03;Flamengo;3x0;Athletico PR;3;0;Flamengo
+2021;2021-10-03;Chapecoense;1x1;São Paulo;1;1;Empate
+2021;2021-10-03;Palmeiras;1x1;Juventude;1;1;Empate
+2021;2021-10-03;Grêmio;1x2;Sport;1;2;Sport
+2021;2021-10-27;Santos;2x0;Fluminense;2;0;Santos
+2021;2021-10-27;Bahia;1x1;Ceará;1;1;Empate
+2021;2021-10-05;Corinthians;3x1;Bahia;3;1;Corinthians
+2021;2021-10-06;Ceará;0x0;Internacional;0;0;Empate
+2021;2021-10-06;Sport;3x1;Juventude;3;1;Sport
+2021;2021-10-06;Chapecoense;2x2;Atlético MG;2;2;Empate
+2021;2021-10-06;Atlético GO;0x2;Athletico PR;0;2;Athletico PR
+2021;2021-10-06;Bragantino;1x1;Flamengo;1;1;Empate
+2021;2021-10-06;Fluminense;0x2;Fortaleza;0;2;Fortaleza
+2021;2021-10-06;América MG;2x1;Palmeiras;2;1;América MG
+2021;2021-10-06;Grêmio;2x2;Cuiabá;2;2;Empate
+2021;2021-10-07;São Paulo;1x1;Santos;1;1;Empate
+2021;2021-10-09;Fluminense;0x0;Atlético GO;0;0;Empate
+2021;2021-10-09;Atlético MG;3x1;Ceará;3;1;Atlético MG
+2021;2021-10-09;Sport;1x0;Corinthians;1;0;Sport
+2021;2021-10-09;Fortaleza;0x3;Flamengo;0;3;Flamengo
+2021;2021-10-09;Athletico PR;0x2;Bahia;0;2;Bahia
+2021;2021-10-09;Palmeiras;2x4;Bragantino;2;4;Bragantino
+2021;2021-10-09;Juventude;1x1;América MG;1;1;Empate
+2021;2021-10-10;Internacional;5x2;Chapecoense;5;2;Internacional
+2021;2021-10-10;Santos;1x0;Grêmio;1;0;Santos
+2021;2021-10-11;Cuiabá;0x0;São Paulo;0;0;Empate
+2021;2021-10-12;Bragantino;1x0;Atlético GO;1;0;Bragantino
+2021;2021-10-12;Bahia;0x0;Palmeiras;0;0;Empate
+2021;2021-10-13;Flamengo;3x1;Juventude;3;1;Flamengo
+2021;2021-10-13;Atlético MG;3x1;Santos;3;1;Atlético MG
+2021;2021-10-13;Chapecoense;1x1;Athletico PR;1;1;Empate
+2021;2021-10-13;Fortaleza;1x0;Grêmio;1;0;Fortaleza
+2021;2021-10-13;Corinthians;1x0;Fluminense;1;0;Corinthians
+2021;2021-10-13;Internacional;3x1;América MG;3;1;Internacional
+2021;2021-10-14;São Paulo;1x1;Ceará;1;1;Empate
+2021;2021-10-14;Cuiabá;1x0;Sport;1;0;Cuiabá
+2021;2021-10-16;Chapecoense;1x2;Fortaleza;1;2;Fortaleza
+2021;2021-10-16;América MG;0x0;Bahia;0;0;Empate
+2021;2021-10-17;Palmeiras;1x0;Internacional;1;0;Palmeiras
+2021;2021-10-17;Athletico PR;0x1;Fluminense;0;1;Fluminense
+2021;2021-10-17;Grêmio;3x2;Juventude;3;2;Grêmio
+2021;2021-10-17;Ceará;2x2;Bragantino;2;2;Empate
+2021;2021-10-17;Atlético GO;2x1;Atlético MG;2;1;Atlético GO
+2021;2021-10-17;Flamengo;0x0;Cuiabá;0;0;Empate
+2021;2021-10-17;Sport;0x0;Santos;0;0;Empate
+2021;2021-10-18;São Paulo;1x0;Corinthians;1;0;São Paulo
+2021;2021-10-23;Santos;0x2;América MG;0;2;América MG
+2021;2021-10-23;Juventude;0x0;Ceará;0;0;Empate
+2021;2021-10-23;Fluminense;3x1;Flamengo;3;1;Fluminense
+2021;2021-10-23;Fortaleza;3x0;Athletico PR;3;0;Fortaleza
+2021;2021-10-24;Atlético MG;2x1;Cuiabá;2;1;Atlético MG
+2021;2021-10-24;Internacional;2x2;Corinthians;2;2;Empate
+2021;2021-10-24;Bragantino;1x0;São Paulo;1;0;Bragantino
+2021;2021-10-24;Bahia;3x0;Chapecoense;3;0;Bahia
+2021;2021-10-25;Atlético GO;2x0;Grêmio;2;0;Atlético GO
+2021;2021-10-25;Palmeiras;2x1;Sport;2;1;Palmeiras
+2021;2021-10-30;Athletico PR;0x1;Santos;0;1;Santos
+2021;2021-10-30;Flamengo;1x0;Atlético MG;1;0;Flamengo
+2021;2021-10-30;Juventude;0x0;Bahia;0;0;Empate
+2021;2021-10-30;América MG;2x1;Fortaleza;2;1;América MG
+2021;2021-10-31;Grêmio;1x3;Palmeiras;1;3;Palmeiras
+2021;2021-10-31;Ceará;1x0;Fluminense;1;0;Ceará
+2021;2021-10-31;São Paulo;1x0;Internacional;1;0;São Paulo
+2021;2021-10-31;Sport;2x0;Atlético GO;2;0;Sport
+2021;2021-11-01;Cuiabá;1x0;Bragantino;1;0;Cuiabá
+2021;2021-11-01;Corinthians;1x0;Chapecoense;1;0;Corinthians
+2021;2021-11-06;Corinthians;1x0;Fortaleza;1;0;Corinthians
+2021;2021-11-06;Internacional;1x0;Grêmio;1;0;Internacional
+2021;2021-11-06;Fluminense;1x0;Sport;1;0;Fluminense
+2021;2021-11-07;Santos;0x2;Palmeiras;0;2;Palmeiras
+2021;2021-11-07;Atlético MG;1x0;América MG;1;0;Atlético MG
+2021;2021-11-07;Bragantino;0x2;Athletico PR;0;2;Athletico PR
+2021;2021-11-07;Bahia;1x0;São Paulo;1;0;Bahia
+2021;2021-11-07;Ceará;1x0;Cuiabá;1;0;Ceará
+2021;2021-11-08;Chapecoense;2x2;Flamengo;2;2;Empate
+2021;2021-11-23;Atlético GO;1x1;Juventude;1;1;Empate
+2021;2021-11-04;Cuiabá;0x0;Chapecoense;0;0;Empate
+2021;2021-11-09;Grêmio;1x0;Fluminense;1;0;Grêmio
+2021;2021-11-10;Athletico PR;2x1;Ceará;2;1;Athletico PR
+2021;2021-11-10;Santos;2x0;Bragantino;2;0;Santos
+2021;2021-11-10;Atlético MG;3x0;Corinthians;3;0;Atlético MG
+2021;2021-11-10;Palmeiras;4x0;Atlético GO;4;0;Palmeiras
+2021;2021-11-10;Fortaleza;1x1;São Paulo;1;1;Empate
+2021;2021-11-10;Sport;2x3;América MG;2;3;América MG
+2021;2021-11-10;Juventude;2x1;Internacional;2;1;Juventude
+2021;2021-11-11;Flamengo;3x0;Bahia;3;0;Flamengo
+2021;2021-11-13;Atlético GO;0x0;Santos;0;0;Empate
+2021;2021-11-13;América MG;3x1;Grêmio;3;1;América MG
+2021;2021-11-13;Internacional;2x1;Athletico PR;2;1;Internacional
+2021;2021-11-13;Bragantino;3x0;Fortaleza;3;0;Bragantino
+2021;2021-11-13;Corinthians;3x2;Cuiabá;3;2;Corinthians
+2021;2021-11-14;São Paulo;0x4;Flamengo;0;4;Flamengo
+2021;2021-11-14;Fluminense;2x1;Palmeiras;2;1;Fluminense
+2021;2021-11-14;Ceará;2x1;Sport;2;1;Ceará
+2021;2021-11-14;Chapecoense;0x2;Juventude;0;2;Juventude
+2021;2021-12-02;Bahia;x;Atlético MG;;;Empate
+2021;2021-11-16;Athletico PR;0x1;Atlético MG;0;1;Atlético MG
+2021;2021-11-16;Grêmio;3x0;Bragantino;3;0;Grêmio
+2021;2021-11-17;Santos;2x0;Chapecoense;2;0;Santos
+2021;2021-11-17;América MG;0x0;Atlético GO;0;0;Empate
+2021;2021-11-17;Cuiabá;1x0;Internacional;1;0;Cuiabá
+2021;2021-11-17;Fortaleza;0x4;Ceará;0;4;Ceará
+2021;2021-11-17;Palmeiras;0x2;São Paulo;0;2;São Paulo
+2021;2021-11-17;Juventude;1x0;Fluminense;1;0;Juventude
+2021;2021-11-17;Flamengo;1x0;Corinthians;1;0;Flamengo
+2021;2021-11-18;Sport;1x0;Bahia;1;0;Sport
+2021;2021-10-28;Bragantino;3x0;Sport;3;0;Bragantino
+2021;2021-11-20;Atlético MG;2x0;Juventude;2;0;Atlético MG
+2021;2021-11-20;Fortaleza;1x0;Palmeiras;1;0;Fortaleza
+2021;2021-11-20;Chapecoense;1x3;Grêmio;1;3;Grêmio
+2021;2021-11-20;Atlético GO;1x1;Ceará;1;1;Empate
+2021;2021-11-20;Internacional;1x2;Flamengo;1;2;Flamengo
+2021;2021-11-21;Corinthians;2x0;Santos;2;0;Corinthians
+2021;2021-11-21;Fluminense;2x0;América MG;2;0;Fluminense
+2021;2021-11-21;Bahia;0x0;Cuiabá;0;0;Empate
+2021;2021-11-24;São Paulo;0x0;Athletico PR;0;0;Empate
+2021;2021-11-23;Palmeiras;2x2;Atlético MG;2;2;Empate
+2021;2021-11-24;Fluminense;1x0;Internacional;1;0;Fluminense
+2021;2021-11-25;Santos;2x0;Fortaleza;2;0;Santos
+2021;2021-11-25;Ceará;2x1;Corinthians;2;1;Ceará
+2021;2021-11-29;Atlético GO;2x1;Bahia;2;1;Atlético GO
+2021;2021-11-30;Juventude;1x0;Bragantino;1;0;Juventude
+2021;2021-11-30;América MG;3x0;Chapecoense;3;0;América MG
+2021;2021-12-02;Grêmio;x;São Paulo;;;Empate
+2021;2021-12-03;Athletico PR;x;Cuiabá;;;Empate
+2021;2021-12-03;Sport;x;Flamengo;;;Empate
+2021;2021-11-26;Bahia;3x1;Grêmio;3;1;Bahia
+2021;2021-11-27;Bragantino;1x1;América MG;1;1;Empate
+2021;2021-11-27;São Paulo;2x0;Sport;2;0;São Paulo
+2021;2021-11-28;Corinthians;1x0;Athletico PR;1;0;Corinthians
+2021;2021-11-28;Atlético MG;2x1;Fluminense;2;1;Atlético MG
+2021;2021-11-28;Internacional;1x1;Santos;1;1;Empate
+2021;2021-11-30;Flamengo;2x1;Ceará;2;1;Flamengo
+2021;2021-11-30;Cuiabá;1x2;Palmeiras;1;2;Palmeiras
+2021;2021-12-03;Chapecoense;x;Atlético GO;;;Empate
+2021;2021-12-03;Fortaleza;x;Juventude;;;Empate
+2021;2021-12-05;Corinthians;x;Grêmio;;;Empate
+2021;2021-12-05;Atlético MG;x;Bragantino;;;Empate
+2021;2021-12-05;Bahia;x;Fluminense;;;Empate
+2021;2021-12-05;Ceará;x;América MG;;;Empate
+2021;2021-12-06;São Paulo;x;Juventude;;;Empate
+2021;2021-12-06;Athletico PR;x;Palmeiras;;;Empate
+2021;2021-12-06;Flamengo;x;Santos;;;Empate
+2021;2021-12-06;Internacional;x;Atlético GO;;;Empate
+2021;2021-12-06;Cuiabá;x;Fortaleza;;;Empate
+2021;2021-12-06;Chapecoense;x;Sport;;;Empate
+2021;2021-12-09;Fluminense;x;Chapecoense;;;Empate
+2021;2021-12-09;Palmeiras;x;Ceará;;;Empate
+2021;2021-12-09;Santos;x;Cuiabá;;;Empate
+2021;2021-12-09;América MG;x;São Paulo;;;Empate
+2021;2021-12-09;Grêmio;x;Atlético MG;;;Empate
+2021;2021-12-09;Fortaleza;x;Bahia;;;Empate
+2021;2021-12-09;Sport;x;Athletico PR;;;Empate
+2021;2021-12-09;Bragantino;x;Internacional;;;Empate
+2021;2021-12-09;Juventude;x;Corinthians;;;Empate
+2021;2021-12-09;Atlético GO;x;Flamengo;;;Empate

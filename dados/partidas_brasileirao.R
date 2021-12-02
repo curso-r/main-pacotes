@@ -1,6 +1,6 @@
 # Prepara a base para os exercicios de funcoes
 # remotes::install_github("williamorim/brasileirao")
-
+library(magrittr)
 brasileirao::matches %>%
   dplyr::mutate(
     home = brasileirao::fix_names(home),
