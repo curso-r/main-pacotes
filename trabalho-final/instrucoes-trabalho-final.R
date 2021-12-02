@@ -71,10 +71,12 @@ buscar_marmitas_veganas <- function() {
     xml2::read_html()
   
   url <- html %>%
-    xml2::xml_find_all("//a[contains(@class, 'action more')]") %>%
+    xml2::xml_find_all("//a[contains(@class, 'product-item-link')]") %>% 
     purrr::map(~ xml2::xml_attr(.x, "href")) %>%
     purrr::map_dfr(~ tibble::enframe(purrr::set_names(.x, "url")), .id = "item") %>%
-    dplyr::select("url" = value)
+    dplyr::select("url" = value) %>%
+    tidyr::drop_na()
+    
   
   nm <- c("nome", "descricao", "preco")
   infos <-
@@ -89,7 +91,7 @@ buscar_marmitas_veganas <- function() {
         stringr::str_detect(nome, "CREME DE|MINESTRONE") ~ "Sopa",
         TRUE ~ "Prato"
       )
-    )
+    ) 
   
   
   dplyr::bind_cols(infos, url)
@@ -102,7 +104,7 @@ buscar_marmitas_veganas()
 ## Disponibilize a base de marmitas no seu pacote! -----
 marmitas_veganas <- buscar_marmitas_veganas()
 
-max(marmitas_veganas$preco)
+
 
 ## Função 2 -----------
 # Função para sortear uma marmita, usando a base de marmitas
@@ -137,3 +139,22 @@ sortear_marmita(tipo = "Prato")
 
 # sobremesa:
 sortear_marmita(tipo = "Doce")
+
+
+# SORTEAR COMBO --------------------
+# A Beleaf vende combos de 12, 21 ou 30 marmitas, 
+# e muitas vezes é difícil escolher quais marmitas colocar no combo!
+# Essa função decide para nós :)
+
+sortear_combo_marmitas <- function(n_marmitas = 12){
+  marmitas_veganas |> 
+    dplyr::sample_n(n_marmitas, replace = TRUE)
+}
+
+# Sortear um combo de 12 marmitas
+sortear_combo_marmitas(12)
+# Sortear um combo de 21 marmitas
+sortear_combo_marmitas(21)
+# Sortear um combo de 30 marmitas
+sortear_combo_marmitas(30) 
+
