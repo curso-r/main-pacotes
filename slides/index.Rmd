@@ -1012,8 +1012,6 @@ knitr::include_graphics("img/fluxo_github_rstudio.png")
 
 - `r emo::ji("white_large_square")` Se apresentar para o `git` 
 
-- `r emo::ji("white_large_square")` Abrir o arquivo `.Renviron` 
-
 - `r emo::ji("white_large_square")` Criar um GitHub Token/PAT
 
 - `r emo::ji("white_large_square")` Armazenar o GitHub Token/PAT 
@@ -1031,6 +1029,8 @@ knitr::include_graphics("img/fluxo_github_rstudio.png")
 - `r emo::ji("white_large_square")` Se apresentar para o `git`
 
 - `r emo::ji("white_large_square")` Seguir este tutorial para configurar as chaves `SSH`: https://happygitwithr.com/ssh-keys.html 
+
+- `r emo::ji("white_large_square")` Reiniciar o RStudio
 
 Obs: Se você utiliza Linux, recomendamos usar `ssh`.
 
