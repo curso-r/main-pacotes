@@ -1188,7 +1188,7 @@ usethis::use_github()
 
 - O comando acima sincroniza a pasta com o GitHub.
 
-- Mais uma vez, você receberá algumas instruções, mas lembre-se apenas de selecionar o método de autenticação `https`.
+- Mais uma vez, você receberá algumas instruções, mas lembre-se  de alterar para o protocolo `ssh` caso tenha feito a configuração usando esse protocolo. Para isso, use o argumento `protocol = ssh`.
 
 ---
 # Stage & Commit
