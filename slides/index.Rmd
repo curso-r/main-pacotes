@@ -1031,11 +1031,13 @@ knitr::include_graphics("img/fluxo_github_rstudio.png")
 .pull-right[
 #### Usando SSH
 
-
-
 - `r emo::ji("white_large_square")` Ter o pacote `usethis` instalado 
 
-- `r emo::ji("white_large_square")` Se apresentar para o `git`
+- `r emo::ji("white_large_square")` Se apresentar para o `git` 
+
+- `r emo::ji("white_large_square")` Criar um GitHub Token/PAT
+
+- `r emo::ji("white_large_square")` Armazenar o GitHub Token/PAT 
 
 - `r emo::ji("white_large_square")` Seguir este tutorial para configurar as chaves `SSH`: https://happygitwithr.com/ssh-keys.html 
 
