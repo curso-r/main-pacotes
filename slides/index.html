@@ -1195,8 +1195,224 @@ usethis::git_sitrep()
 #&gt; ● Email(s): 'SEU EMAIL DEVE APARECER AQUI'
 ```
 
+---
+
+# Configurando com o SSH (Parte 1)
+
+
+
+.pull-left[
+
+- Se você utiliza Linux, recomendamos usar o protocolo `ssh`.
+
+- Além das etapas anteriores (se apresentar para o `git` e configurar o PAT), é necessário seguir os seguintes passos: 
+
+** CRIANDO UMA CHAVE SSH**
+
+- No RStudio, clique em `Tools` -&gt; `Global Options...` -&gt; `Git/SVN`. No campo `SSH RSA Key`, clique em `Create RSA Key`.
+
+
+
+Referência: https://happygitwithr.com/ssh-keys.html 
+
+]
+
+.pull-right[
+
+&lt;img src="img/ssh/etapa-1.png" width="90%" style="display: block; margin: auto;" /&gt;
+
+]
+
+
+
 
 ---
+
+# Configurando com o SSH (Parte 2)
+
+
+.pull-left[
+
+** CRIANDO UMA CHAVE SSH**
+
+- Não altere o primeiro campo, mas você pode adicionar uma senha caso queira. Porém você precisará informar essa senha todas as vezes que quiser fazer algumas ações como Pull ou Push. Clique em `Create`.
+
+A sua senha será criada e aparecerá uma caixinha com ela. Pode clicar em `Close`.
+
+Após fechar, veja se o campo `SSA RSA KEY` está preenchido.
+
+Referência: https://happygitwithr.com/ssh-keys.html 
+
+]
+
+.pull-right[
+
+
+&lt;img src="img/ssh/etapa-2.png" width="90%" style="display: block; margin: auto;" /&gt;
+
+]
+
+
+---
+
+
+# Configurando com o SSH (Parte 3)
+
+
+.pull-left[
+
+**Verificando se o ssh-agent está funcionando**
+
+
+
+
+
+Referência: https://happygitwithr.com/ssh-keys.html#add-key-to-ssh-agent
+
+]
+
+.pull-right[
+
+- **Mac OS ou Linux** - no terminal, escreva:
+
+```
+eval "$(ssh-agent -s)"
+```
+
+
+- **Windows** - no Git Bash shell, escreva:
+
+```
+eval $(ssh-agent -s)
+```
+
+
+
+&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;
+A resposta esperada, nessa etapa, é algo como:
+```
+Agent pid 14198
+```
+
+
+]
+
+
+
+---
+
+
+# Configurando com o SSH (Parte 4)
+
+
+.pull-left[
+
+**Adicionando a chave ssh no ssh-agent**
+
+- Se você definiu uma senha ao criar a chave ssh, ela será solicitada nessa etapa.
+
+
+- **Linux** - no terminal, escreva:
+
+```
+ssh-add ~/.ssh/id_rsa
+```
+
+
+- **Mac OS** - no terminal, escreva:
+
+```
+ssh-add -K ~/.ssh/id_rsa
+```
+
+
+- **Windows** - no Git Bash shell, escreva:
+
+```
+ssh-add ~/.ssh/id_rsa
+```
+&lt;br&gt;
+
+Referência: https://happygitwithr.com/ssh-keys.html#add-key-to-ssh-agent
+
+]
+
+.pull-right[
+
+A resposta esperada, nessa etapa, é algo como:
+```
+Identity added: /home/bea/.ssh/id_rsa
+```
+
+&lt;img src="img/ssh/etapa-5.png" width="100%" style="display: block; margin: auto;" /&gt;
+
+]
+
+
+---
+
+
+# Configurando com o SSH (Parte 5)
+
+
+
+**Adicionando a chave pública no GitHub**
+
+- No GitHub, vá em `Settings` -&gt; `SSH and GPG keys` -&gt; `New ssh key` (ou clique aqui: https://github.com/settings/ssh/new )  
+
+
+- No RStudio, clique em `Tools` -&gt; `Global Options...` -&gt; `Git/SVN`. No campo `SSH RSA Key`, clique em `View Public Key`.
+
+- Uma janela vai abrir com a chave pública e você deve copiar o conteúdo todo.
+
+- No campo `Title`, escreva algo que ajude você a lembrar em qual computador essa chave está sendo usada. No campo `Key`, cole todo o conteúdo copiado na etapa anterior. Clique em `Add SSH key`.
+
+
+
+&lt;br&gt;
+
+Referência: https://happygitwithr.com/ssh-keys.html#add-key-to-ssh-agent
+
+
+
+---
+
+
+# Configurando com o SSH (Parte 6)
+
+
+
+**Dicas**
+
+
+- Confira se está funcionando executando o seguinte código na aba Terminal, no RStudio: 
+```
+ssh -T git@github.com
+```
+
+- Ao clonar um projeto, é importante utilizar o protocolo que foi configurado. O protocolo padrão utilizado pelo usethis é o `https`. Para alterar para o `ssh` , altere no `.Rprofile` o protocolo padrão a ser utilizado: 
+
+  - Abrir o arquivo o `.Rprofile`: 
+  
+```
+usethis::edit_r_profile()
+```
+
+  - Adicione a seguinte linha neste arquivo:
+  
+```
+options(usethis.protocol = "ssh")
+```
+
+  - Salve o arquivo e reinicie o RStudio.
+
+
+&lt;br&gt;
+
+Referência: https://usethis.r-lib.org/reference/git_protocol.html
+
+---
+
 # Versione com o Git e o GitHub
 
 
