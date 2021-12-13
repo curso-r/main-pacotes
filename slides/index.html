@@ -1032,9 +1032,8 @@ O diagrama abaixo exemplifica o fluxo de trabalho de um projeto com versionament
 # Configurando o Git e GitHub no RStudio
 
 .pull-left[
-####  Usando HTTP
 
-
+####  Usando protocolo https
 
 - ⬜ Ter o pacote `usethis` instalado 
 
@@ -1048,19 +1047,21 @@ O diagrama abaixo exemplifica o fluxo de trabalho de um projeto com versionament
 ]
 
 .pull-right[
-#### Usando SSH
+#### Usando protocolo ssh
 
-- ⬜ Ter o pacote `usethis` instalado 
+- ⬜ Todas as etapas para o protocolo https (listadas ao lado)
 
-- ⬜ Se apresentar para o `git` 
+- ⬜ Criar as chaves SSH no RStudio
 
-- ⬜ Criar um GitHub Token/PAT
+- ⬜ Adicionar a chave ssh no ssh-agent
 
-- ⬜ Armazenar o GitHub Token/PAT 
+- ⬜ Adicionar as chaves públicas no  GitHub
 
-- ⬜ Seguir este tutorial para configurar as chaves `SSH`: https://happygitwithr.com/ssh-keys.html 
+- ⬜ Alterar o protocolo padrão no arquivo `.Rprofile`
 
 - ⬜ Reiniciar o RStudio
+
+
 
 Obs: Se você utiliza Linux, recomendamos usar `ssh`.
 

@@ -1013,9 +1013,8 @@ knitr::include_graphics("img/fluxo_github_rstudio.png")
 # Configurando o Git e GitHub no RStudio
 
 .pull-left[
-####  Usando HTTP
 
-
+####  Usando protocolo https
 
 - `r emo::ji("white_large_square")` Ter o pacote `usethis` instalado 
 
@@ -1029,19 +1028,21 @@ knitr::include_graphics("img/fluxo_github_rstudio.png")
 ]
 
 .pull-right[
-#### Usando SSH
+#### Usando protocolo ssh
 
-- `r emo::ji("white_large_square")` Ter o pacote `usethis` instalado 
+- `r emo::ji("white_large_square")` Todas as etapas para o protocolo https (listadas ao lado)
 
-- `r emo::ji("white_large_square")` Se apresentar para o `git` 
+- `r emo::ji("white_large_square")` Criar as chaves SSH no RStudio
 
-- `r emo::ji("white_large_square")` Criar um GitHub Token/PAT
+- `r emo::ji("white_large_square")` Adicionar a chave ssh no ssh-agent
 
-- `r emo::ji("white_large_square")` Armazenar o GitHub Token/PAT 
+- `r emo::ji("white_large_square")` Adicionar as chaves públicas no  GitHub
 
-- `r emo::ji("white_large_square")` Seguir este tutorial para configurar as chaves `SSH`: https://happygitwithr.com/ssh-keys.html 
+- `r emo::ji("white_large_square")` Alterar o protocolo padrão no arquivo `.Rprofile`
 
 - `r emo::ji("white_large_square")` Reiniciar o RStudio
+
+
 
 Obs: Se você utiliza Linux, recomendamos usar `ssh`.
 
