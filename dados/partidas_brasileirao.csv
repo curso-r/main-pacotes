@@ -7584,7 +7584,7 @@ temporada;data;time_casa;gols;time_visitante;gols_casa;gols_visitante;quem_ganho
 2021;2021-11-14;Fluminense;2x1;Palmeiras;2;1;Fluminense
 2021;2021-11-14;Ceará;2x1;Sport;2;1;Ceará
 2021;2021-11-14;Chapecoense;0x2;Juventude;0;2;Juventude
-2021;2021-12-02;Bahia;x;Atlético MG;;;Empate
+2021;2021-12-02;Bahia;2x3;Atlético MG;2;3;Atlético MG
 2021;2021-11-16;Athletico PR;0x1;Atlético MG;0;1;Atlético MG
 2021;2021-11-16;Grêmio;3x0;Bragantino;3;0;Grêmio
 2021;2021-11-17;Santos;2x0;Chapecoense;2;0;Santos
@@ -7612,9 +7612,9 @@ temporada;data;time_casa;gols;time_visitante;gols_casa;gols_visitante;quem_ganho
 2021;2021-11-29;Atlético GO;2x1;Bahia;2;1;Atlético GO
 2021;2021-11-30;Juventude;1x0;Bragantino;1;0;Juventude
 2021;2021-11-30;América MG;3x0;Chapecoense;3;0;América MG
-2021;2021-12-02;Grêmio;x;São Paulo;;;Empate
-2021;2021-12-03;Athletico PR;x;Cuiabá;;;Empate
-2021;2021-12-03;Sport;x;Flamengo;;;Empate
+2021;2021-12-02;Grêmio;3x0;São Paulo;3;0;Grêmio
+2021;2021-12-03;Athletico PR;1x0;Cuiabá;1;0;Athletico PR
+2021;2021-12-03;Sport;1x1;Flamengo;1;1;Empate
 2021;2021-11-26;Bahia;3x1;Grêmio;3;1;Bahia
 2021;2021-11-27;Bragantino;1x1;América MG;1;1;Empate
 2021;2021-11-27;São Paulo;2x0;Sport;2;0;São Paulo
@@ -7622,26 +7622,406 @@ temporada;data;time_casa;gols;time_visitante;gols_casa;gols_visitante;quem_ganho
 2021;2021-11-28;Atlético MG;2x1;Fluminense;2;1;Atlético MG
 2021;2021-11-28;Internacional;1x1;Santos;1;1;Empate
 2021;2021-11-30;Flamengo;2x1;Ceará;2;1;Flamengo
-2021;2021-11-30;Cuiabá;1x2;Palmeiras;1;2;Palmeiras
-2021;2021-12-03;Chapecoense;x;Atlético GO;;;Empate
-2021;2021-12-03;Fortaleza;x;Juventude;;;Empate
-2021;2021-12-05;Corinthians;x;Grêmio;;;Empate
-2021;2021-12-05;Atlético MG;x;Bragantino;;;Empate
-2021;2021-12-05;Bahia;x;Fluminense;;;Empate
-2021;2021-12-05;Ceará;x;América MG;;;Empate
-2021;2021-12-06;São Paulo;x;Juventude;;;Empate
-2021;2021-12-06;Athletico PR;x;Palmeiras;;;Empate
-2021;2021-12-06;Flamengo;x;Santos;;;Empate
-2021;2021-12-06;Internacional;x;Atlético GO;;;Empate
-2021;2021-12-06;Cuiabá;x;Fortaleza;;;Empate
-2021;2021-12-06;Chapecoense;x;Sport;;;Empate
-2021;2021-12-09;Fluminense;x;Chapecoense;;;Empate
-2021;2021-12-09;Palmeiras;x;Ceará;;;Empate
-2021;2021-12-09;Santos;x;Cuiabá;;;Empate
-2021;2021-12-09;América MG;x;São Paulo;;;Empate
-2021;2021-12-09;Grêmio;x;Atlético MG;;;Empate
-2021;2021-12-09;Fortaleza;x;Bahia;;;Empate
-2021;2021-12-09;Sport;x;Athletico PR;;;Empate
-2021;2021-12-09;Bragantino;x;Internacional;;;Empate
-2021;2021-12-09;Juventude;x;Corinthians;;;Empate
-2021;2021-12-09;Atlético GO;x;Flamengo;;;Empate
+2021;2021-11-30;Cuiabá;1x3;Palmeiras;1;3;Palmeiras
+2021;2021-12-03;Chapecoense;0x1;Atlético GO;0;1;Atlético GO
+2021;2021-12-03;Fortaleza;1x0;Juventude;1;0;Fortaleza
+2021;2021-12-05;Corinthians;1x1;Grêmio;1;1;Empate
+2021;2021-12-05;Atlético MG;4x3;Bragantino;4;3;Atlético MG
+2021;2021-12-05;Bahia;2x0;Fluminense;2;0;Bahia
+2021;2021-12-05;Ceará;0x0;América MG;0;0;Empate
+2021;2021-12-06;São Paulo;3x1;Juventude;3;1;São Paulo
+2021;2021-12-06;Athletico PR;0x0;Palmeiras;0;0;Empate
+2021;2021-12-06;Flamengo;0x1;Santos;0;1;Santos
+2021;2021-12-06;Internacional;1x2;Atlético GO;1;2;Atlético GO
+2021;2021-12-06;Cuiabá;1x0;Fortaleza;1;0;Cuiabá
+2021;2021-12-06;Chapecoense;0x1;Sport;0;1;Sport
+2021;2021-12-09;Fluminense;3x0;Chapecoense;3;0;Fluminense
+2021;2021-12-09;Palmeiras;1x0;Ceará;1;0;Palmeiras
+2021;2021-12-09;Santos;1x1;Cuiabá;1;1;Empate
+2021;2021-12-09;América MG;2x0;São Paulo;2;0;América MG
+2021;2021-12-09;Grêmio;4x3;Atlético MG;4;3;Grêmio
+2021;2021-12-09;Fortaleza;2x1;Bahia;2;1;Fortaleza
+2021;2021-12-09;Sport;1x1;Athletico PR;1;1;Empate
+2021;2021-12-09;Bragantino;1x0;Internacional;1;0;Bragantino
+2021;2021-12-09;Juventude;1x0;Corinthians;1;0;Juventude
+2021;2021-12-09;Atlético GO;2x0;Flamengo;2;0;Atlético GO
+2022;2022-04-09;Fluminense;0x0;Santos;0;0;Empate
+2022;2022-04-09;Atlético GO;1x1;Flamengo;1;1;Empate
+2022;2022-04-09;Palmeiras;2x3;Ceará;2;3;Ceará
+2022;2022-04-10;Coritiba;3x0;Goiás;3;0;Coritiba
+2022;2022-04-10;Atlético MG;2x0;Internacional;2;0;Atlético MG
+2022;2022-04-10;Botafogo;1x3;Corinthians;1;3;Corinthians
+2022;2022-04-10;Fortaleza;0x1;Cuiabá;0;1;Cuiabá
+2022;2022-04-10;São Paulo;4x0;Athletico PR;4;0;São Paulo
+2022;2022-04-10;Avaí;1x0;América MG;1;0;Avaí
+2022;2022-04-11;Juventude;2x2;Bragantino;2;2;Empate
+2022;2022-04-16;Goiás;1x1;Palmeiras;1;1;Empate
+2022;2022-04-16;América MG;4x1;Juventude;4;1;América MG
+2022;2022-04-16;Corinthians;3x0;Avaí;3;0;Corinthians
+2022;2022-04-16;Cuiabá;0x1;Fluminense;0;1;Fluminense
+2022;2022-04-17;Santos;2x1;Coritiba;2;1;Santos
+2022;2022-04-17;Flamengo;3x1;São Paulo;3;1;Flamengo
+2022;2022-04-17;Bragantino;4x0;Atlético GO;4;0;Bragantino
+2022;2022-04-17;Internacional;2x1;Fortaleza;2;1;Internacional
+2022;2022-04-17;Athletico PR;0x1;Atlético MG;0;1;Atlético MG
+2022;2022-04-17;Ceará;1x3;Botafogo;1;3;Botafogo
+2022;2022-04-23;Bragantino;1x1;São Paulo;1;1;Empate
+2022;2022-04-23;Athletico PR;1x0;Flamengo;1;0;Athletico PR
+2022;2022-04-23;Fluminense;0x1;Internacional;0;1;Internacional
+2022;2022-04-23;Palmeiras;3x0;Corinthians;3;0;Palmeiras
+2022;2022-04-23;Atlético MG;2x2;Coritiba;2;2;Empate
+2022;2022-04-24;Santos;3x0;América MG;3;0;Santos
+2022;2022-04-24;Juventude;0x1;Cuiabá;0;1;Cuiabá
+2022;2022-04-24;Atlético GO;1x1;Botafogo;1;1;Empate
+2022;2022-04-25;Avaí;3x2;Goiás;3;2;Avaí
+2022;2022-06-01;Fortaleza;x;Ceará;;;Empate
+2022;2022-04-20;Flamengo;0x0;Palmeiras;0;0;Empate
+2022;2022-04-30;América MG;1x0;Athletico PR;1;0;América MG
+2022;2022-04-30;Ceará;0x1;Bragantino;0;1;Bragantino
+2022;2022-04-30;Goiás;2x2;Atlético MG;2;2;Empate
+2022;2022-04-30;Cuiabá;1x1;Atlético GO;1;1;Empate
+2022;2022-05-01;Botafogo;1x1;Juventude;1;1;Empate
+2022;2022-05-01;Corinthians;1x0;Fortaleza;1;0;Corinthians
+2022;2022-05-01;Coritiba;3x2;Fluminense;3;2;Coritiba
+2022;2022-05-01;Internacional;0x0;Avaí;0;0;Empate
+2022;2022-05-02;São Paulo;2x1;Santos;2;1;São Paulo
+2022;2022-05-07;Atlético MG;1x2;América MG;1;2;América MG
+2022;2022-05-07;Athletico PR;1x0;Ceará;1;0;Athletico PR
+2022;2022-05-08;Flamengo;0x1;Botafogo;0;1;Botafogo
+2022;2022-05-08;Palmeiras;1x1;Fluminense;1;1;Empate
+2022;2022-05-08;Atlético GO;0x1;Goiás;0;1;Goiás
+2022;2022-05-08;Bragantino;0x1;Corinthians;0;1;Corinthians
+2022;2022-05-08;Santos;4x1;Cuiabá;4;1;Santos
+2022;2022-05-08;Juventude;1x1;Internacional;1;1;Empate
+2022;2022-05-08;Fortaleza;1x1;São Paulo;1;1;Empate
+2022;2022-05-09;Avaí;2x1;Coritiba;2;1;Avaí
+2022;2022-05-14;Palmeiras;2x0;Bragantino;2;0;Palmeiras
+2022;2022-05-14;Ceará;2x2;Flamengo;2;2;Empate
+2022;2022-05-14;Atlético MG;2x0;Atlético GO;2;0;Atlético MG
+2022;2022-05-14;Internacional;2x2;Corinthians;2;2;Empate
+2022;2022-05-14;Fluminense;2x1;Athletico PR;2;1;Fluminense
+2022;2022-05-15;São Paulo;2x1;Cuiabá;2;1;São Paulo
+2022;2022-05-15;Coritiba;1x0;América MG;1;0;Coritiba
+2022;2022-05-15;Botafogo;3x1;Fortaleza;3;1;Botafogo
+2022;2022-05-15;Avaí;1x2;Juventude;1;2;Juventude
+2022;2022-05-15;Goiás;1x0;Santos;1;0;Goiás
+2022;2022-05-11;Bragantino;1x1;Atlético MG;1;1;Empate
+2022;2022-05-21;Flamengo;x;Goiás;;;Empate
+2022;2022-05-21;Atlético GO;x;Coritiba;;;Empate
+2022;2022-05-21;Santos;x;Ceará;;;Empate
+2022;2022-05-21;Juventude;x;Palmeiras;;;Empate
+2022;2022-05-21;América MG;x;Botafogo;;;Empate
+2022;2022-05-21;Cuiabá;x;Internacional;;;Empate
+2022;2022-05-22;Corinthians;x;São Paulo;;;Empate
+2022;2022-05-22;Fortaleza;x;Fluminense;;;Empate
+2022;2022-05-22;Athletico PR;x;Avaí;;;Empate
+2022;2022-05-28;Goiás;x;Bragantino;;;Empate
+2022;2022-05-28;São Paulo;x;Ceará;;;Empate
+2022;2022-05-28;Fortaleza;x;Juventude;;;Empate
+2022;2022-05-29;Santos;x;Palmeiras;;;Empate
+2022;2022-05-29;Coritiba;x;Botafogo;;;Empate
+2022;2022-05-29;Fluminense;x;Flamengo;;;Empate
+2022;2022-05-29;Corinthians;x;América MG;;;Empate
+2022;2022-05-29;Cuiabá;x;Athletico PR;;;Empate
+2022;2022-05-29;Atlético MG;x;Avaí;;;Empate
+2022;2022-05-30;Internacional;x;Atlético GO;;;Empate
+2022;2022-06-04;América MG;x;Cuiabá;;;Empate
+2022;2022-06-04;Ceará;x;Coritiba;;;Empate
+2022;2022-06-04;Avaí;x;São Paulo;;;Empate
+2022;2022-06-04;Athletico PR;x;Santos;;;Empate
+2022;2022-06-04;Atlético GO;x;Corinthians;;;Empate
+2022;2022-06-05;Juventude;x;Fluminense;;;Empate
+2022;2022-06-05;Flamengo;x;Fortaleza;;;Empate
+2022;2022-06-05;Palmeiras;x;Atlético MG;;;Empate
+2022;2022-06-05;Bragantino;x;Internacional;;;Empate
+2022;2022-06-06;Botafogo;x;Goiás;;;Empate
+2022;2022-06-07;Coritiba;x;São Paulo;;;Empate
+2022;2022-06-08;América MG;x;Ceará;;;Empate
+2022;2022-06-08;Juventude;x;Athletico PR;;;Empate
+2022;2022-06-08;Bragantino;x;Flamengo;;;Empate
+2022;2022-06-08;Atlético GO;x;Avaí;;;Empate
+2022;2022-06-08;Fluminense;x;Atlético MG;;;Empate
+2022;2022-06-08;Santos;x;Internacional;;;Empate
+2022;2022-06-09;Palmeiras;x;Botafogo;;;Empate
+2022;2022-06-09;Cuiabá;x;Corinthians;;;Empate
+2022;2022-06-09;Fortaleza;x;Goiás;;;Empate
+2022;2022-06-12;Atlético MG;x;Santos;;;Empate
+2022;2022-06-12;Fluminense;x;Atlético GO;;;Empate
+2022;2022-06-12;São Paulo;x;América MG;;;Empate
+2022;2022-06-12;Corinthians;x;Juventude;;;Empate
+2022;2022-06-12;Botafogo;x;Avaí;;;Empate
+2022;2022-06-12;Internacional;x;Flamengo;;;Empate
+2022;2022-06-12;Fortaleza;x;Athletico PR;;;Empate
+2022;2022-06-12;Goiás;x;Ceará;;;Empate
+2022;2022-06-12;Cuiabá;x;Bragantino;;;Empate
+2022;2022-06-12;Coritiba;x;Palmeiras;;;Empate
+2022;2022-06-15;América MG;x;Fluminense;;;Empate
+2022;2022-06-15;Flamengo;x;Cuiabá;;;Empate
+2022;2022-06-15;Bragantino;x;Coritiba;;;Empate
+2022;2022-06-15;Palmeiras;x;Atlético GO;;;Empate
+2022;2022-06-15;Botafogo;x;São Paulo;;;Empate
+2022;2022-06-15;Juventude;x;Santos;;;Empate
+2022;2022-06-15;Ceará;x;Atlético MG;;;Empate
+2022;2022-06-15;Goiás;x;Internacional;;;Empate
+2022;2022-06-15;Avaí;x;Fortaleza;;;Empate
+2022;2022-06-15;Athletico PR;x;Corinthians;;;Empate
+2022;2022-06-19;Atlético MG;x;Flamengo;;;Empate
+2022;2022-06-19;Fluminense;x;Avaí;;;Empate
+2022;2022-06-19;São Paulo;x;Palmeiras;;;Empate
+2022;2022-06-19;Corinthians;x;Goiás;;;Empate
+2022;2022-06-19;Santos;x;Bragantino;;;Empate
+2022;2022-06-19;Internacional;x;Botafogo;;;Empate
+2022;2022-06-19;Fortaleza;x;América MG;;;Empate
+2022;2022-06-19;Atlético GO;x;Juventude;;;Empate
+2022;2022-06-19;Cuiabá;x;Ceará;;;Empate
+2022;2022-06-19;Coritiba;x;Athletico PR;;;Empate
+2022;2022-06-26;Atlético MG;x;Fortaleza;;;Empate
+2022;2022-06-26;Flamengo;x;América MG;;;Empate
+2022;2022-06-26;São Paulo;x;Juventude;;;Empate
+2022;2022-06-26;Corinthians;x;Santos;;;Empate
+2022;2022-06-26;Botafogo;x;Fluminense;;;Empate
+2022;2022-06-26;Internacional;x;Coritiba;;;Empate
+2022;2022-06-26;Ceará;x;Atlético GO;;;Empate
+2022;2022-06-26;Goiás;x;Cuiabá;;;Empate
+2022;2022-06-26;Avaí;x;Palmeiras;;;Empate
+2022;2022-06-26;Athletico PR;x;Bragantino;;;Empate
+2022;2022-07-03;América MG;x;Goiás;;;Empate
+2022;2022-07-03;Fluminense;x;Corinthians;;;Empate
+2022;2022-07-03;Bragantino;x;Botafogo;;;Empate
+2022;2022-07-03;Palmeiras;x;Athletico PR;;;Empate
+2022;2022-07-03;Santos;x;Flamengo;;;Empate
+2022;2022-07-03;Juventude;x;Atlético MG;;;Empate
+2022;2022-07-03;Ceará;x;Internacional;;;Empate
+2022;2022-07-03;Atlético GO;x;São Paulo;;;Empate
+2022;2022-07-03;Avaí;x;Cuiabá;;;Empate
+2022;2022-07-03;Coritiba;x;Fortaleza;;;Empate
+2022;2022-07-10;Atlético MG;x;São Paulo;;;Empate
+2022;2022-07-10;Fluminense;x;Ceará;;;Empate
+2022;2022-07-10;Bragantino;x;Avaí;;;Empate
+2022;2022-07-10;Corinthians;x;Flamengo;;;Empate
+2022;2022-07-10;Santos;x;Atlético GO;;;Empate
+2022;2022-07-10;Internacional;x;América MG;;;Empate
+2022;2022-07-10;Fortaleza;x;Palmeiras;;;Empate
+2022;2022-07-10;Goiás;x;Athletico PR;;;Empate
+2022;2022-07-10;Cuiabá;x;Botafogo;;;Empate
+2022;2022-07-10;Coritiba;x;Juventude;;;Empate
+2022;2022-07-17;América MG;x;Bragantino;;;Empate
+2022;2022-07-17;Flamengo;x;Coritiba;;;Empate
+2022;2022-07-17;São Paulo;x;Fluminense;;;Empate
+2022;2022-07-17;Palmeiras;x;Cuiabá;;;Empate
+2022;2022-07-17;Botafogo;x;Atlético MG;;;Empate
+2022;2022-07-17;Juventude;x;Goiás;;;Empate
+2022;2022-07-17;Ceará;x;Corinthians;;;Empate
+2022;2022-07-17;Atlético GO;x;Fortaleza;;;Empate
+2022;2022-07-17;Avaí;x;Santos;;;Empate
+2022;2022-07-17;Athletico PR;x;Internacional;;;Empate
+2022;2022-07-20;América MG;x;Palmeiras;;;Empate
+2022;2022-07-20;Flamengo;x;Juventude;;;Empate
+2022;2022-07-20;Bragantino;x;Fortaleza;;;Empate
+2022;2022-07-20;Corinthians;x;Coritiba;;;Empate
+2022;2022-07-20;Santos;x;Botafogo;;;Empate
+2022;2022-07-20;Internacional;x;São Paulo;;;Empate
+2022;2022-07-20;Ceará;x;Avaí;;;Empate
+2022;2022-07-20;Goiás;x;Fluminense;;;Empate
+2022;2022-07-20;Cuiabá;x;Atlético MG;;;Empate
+2022;2022-07-20;Athletico PR;x;Atlético GO;;;Empate
+2022;2022-07-24;Atlético MG;x;Corinthians;;;Empate
+2022;2022-07-24;Fluminense;x;Bragantino;;;Empate
+2022;2022-07-24;São Paulo;x;Goiás;;;Empate
+2022;2022-07-24;Palmeiras;x;Internacional;;;Empate
+2022;2022-07-24;Botafogo;x;Athletico PR;;;Empate
+2022;2022-07-24;Juventude;x;Ceará;;;Empate
+2022;2022-07-24;Fortaleza;x;Santos;;;Empate
+2022;2022-07-24;Atlético GO;x;América MG;;;Empate
+2022;2022-07-24;Avaí;x;Flamengo;;;Empate
+2022;2022-07-24;Coritiba;x;Cuiabá;;;Empate
+2022;2022-07-31;América MG;x;Avaí;;;Empate
+2022;2022-07-31;Flamengo;x;Atlético GO;;;Empate
+2022;2022-07-31;Bragantino;x;Juventude;;;Empate
+2022;2022-07-31;Corinthians;x;Botafogo;;;Empate
+2022;2022-07-31;Santos;x;Fluminense;;;Empate
+2022;2022-07-31;Internacional;x;Atlético MG;;;Empate
+2022;2022-07-31;Ceará;x;Palmeiras;;;Empate
+2022;2022-07-31;Goiás;x;Coritiba;;;Empate
+2022;2022-07-31;Cuiabá;x;Fortaleza;;;Empate
+2022;2022-07-31;Athletico PR;x;São Paulo;;;Empate
+2022;2022-08-07;Atlético MG;x;Athletico PR;;;Empate
+2022;2022-08-07;Fluminense;x;Cuiabá;;;Empate
+2022;2022-08-07;São Paulo;x;Flamengo;;;Empate
+2022;2022-08-07;Palmeiras;x;Goiás;;;Empate
+2022;2022-08-07;Botafogo;x;Ceará;;;Empate
+2022;2022-08-07;Juventude;x;América MG;;;Empate
+2022;2022-08-07;Fortaleza;x;Internacional;;;Empate
+2022;2022-08-07;Atlético GO;x;Bragantino;;;Empate
+2022;2022-08-07;Avaí;x;Corinthians;;;Empate
+2022;2022-08-07;Coritiba;x;Santos;;;Empate
+2022;2022-08-14;América MG;x;Santos;;;Empate
+2022;2022-08-14;Flamengo;x;Athletico PR;;;Empate
+2022;2022-08-14;São Paulo;x;Bragantino;;;Empate
+2022;2022-08-14;Corinthians;x;Palmeiras;;;Empate
+2022;2022-08-14;Botafogo;x;Atlético GO;;;Empate
+2022;2022-08-14;Internacional;x;Fluminense;;;Empate
+2022;2022-08-14;Ceará;x;Fortaleza;;;Empate
+2022;2022-08-14;Goiás;x;Avaí;;;Empate
+2022;2022-08-14;Cuiabá;x;Juventude;;;Empate
+2022;2022-08-14;Coritiba;x;Atlético MG;;;Empate
+2022;2022-08-21;Atlético MG;x;Goiás;;;Empate
+2022;2022-08-21;Fluminense;x;Coritiba;;;Empate
+2022;2022-08-21;Bragantino;x;Ceará;;;Empate
+2022;2022-08-21;Palmeiras;x;Flamengo;;;Empate
+2022;2022-08-21;Santos;x;São Paulo;;;Empate
+2022;2022-08-21;Juventude;x;Botafogo;;;Empate
+2022;2022-08-21;Fortaleza;x;Corinthians;;;Empate
+2022;2022-08-21;Atlético GO;x;Cuiabá;;;Empate
+2022;2022-08-21;Avaí;x;Internacional;;;Empate
+2022;2022-08-21;Athletico PR;x;América MG;;;Empate
+2022;2022-08-28;América MG;x;Atlético MG;;;Empate
+2022;2022-08-28;Fluminense;x;Palmeiras;;;Empate
+2022;2022-08-28;São Paulo;x;Fortaleza;;;Empate
+2022;2022-08-28;Corinthians;x;Bragantino;;;Empate
+2022;2022-08-28;Botafogo;x;Flamengo;;;Empate
+2022;2022-08-28;Internacional;x;Juventude;;;Empate
+2022;2022-08-28;Ceará;x;Athletico PR;;;Empate
+2022;2022-08-28;Goiás;x;Atlético GO;;;Empate
+2022;2022-08-28;Cuiabá;x;Santos;;;Empate
+2022;2022-08-28;Coritiba;x;Avaí;;;Empate
+2022;2022-09-04;América MG;x;Coritiba;;;Empate
+2022;2022-09-04;Flamengo;x;Ceará;;;Empate
+2022;2022-09-04;Bragantino;x;Palmeiras;;;Empate
+2022;2022-09-04;Corinthians;x;Internacional;;;Empate
+2022;2022-09-04;Santos;x;Goiás;;;Empate
+2022;2022-09-04;Juventude;x;Avaí;;;Empate
+2022;2022-09-04;Fortaleza;x;Botafogo;;;Empate
+2022;2022-09-04;Atlético GO;x;Atlético MG;;;Empate
+2022;2022-09-04;Cuiabá;x;São Paulo;;;Empate
+2022;2022-09-04;Athletico PR;x;Fluminense;;;Empate
+2022;2022-09-11;Atlético MG;x;Bragantino;;;Empate
+2022;2022-09-11;Fluminense;x;Fortaleza;;;Empate
+2022;2022-09-11;São Paulo;x;Corinthians;;;Empate
+2022;2022-09-11;Palmeiras;x;Juventude;;;Empate
+2022;2022-09-11;Botafogo;x;América MG;;;Empate
+2022;2022-09-11;Internacional;x;Cuiabá;;;Empate
+2022;2022-09-11;Ceará;x;Santos;;;Empate
+2022;2022-09-11;Goiás;x;Flamengo;;;Empate
+2022;2022-09-11;Avaí;x;Athletico PR;;;Empate
+2022;2022-09-11;Coritiba;x;Atlético GO;;;Empate
+2022;2022-09-18;América MG;x;Corinthians;;;Empate
+2022;2022-09-18;Flamengo;x;Fluminense;;;Empate
+2022;2022-09-18;Bragantino;x;Goiás;;;Empate
+2022;2022-09-18;Palmeiras;x;Santos;;;Empate
+2022;2022-09-18;Botafogo;x;Coritiba;;;Empate
+2022;2022-09-18;Juventude;x;Fortaleza;;;Empate
+2022;2022-09-18;Ceará;x;São Paulo;;;Empate
+2022;2022-09-18;Atlético GO;x;Internacional;;;Empate
+2022;2022-09-18;Avaí;x;Atlético MG;;;Empate
+2022;2022-09-18;Athletico PR;x;Cuiabá;;;Empate
+2022;2022-09-28;Atlético MG;x;Palmeiras;;;Empate
+2022;2022-09-28;Fluminense;x;Juventude;;;Empate
+2022;2022-09-28;São Paulo;x;Avaí;;;Empate
+2022;2022-09-28;Corinthians;x;Atlético GO;;;Empate
+2022;2022-09-28;Santos;x;Athletico PR;;;Empate
+2022;2022-09-28;Internacional;x;Bragantino;;;Empate
+2022;2022-09-28;Fortaleza;x;Flamengo;;;Empate
+2022;2022-09-28;Goiás;x;Botafogo;;;Empate
+2022;2022-09-28;Cuiabá;x;América MG;;;Empate
+2022;2022-09-28;Coritiba;x;Ceará;;;Empate
+2022;2022-10-01;Atlético MG;x;Fluminense;;;Empate
+2022;2022-10-01;Flamengo;x;Bragantino;;;Empate
+2022;2022-10-01;São Paulo;x;Coritiba;;;Empate
+2022;2022-10-01;Corinthians;x;Cuiabá;;;Empate
+2022;2022-10-01;Botafogo;x;Palmeiras;;;Empate
+2022;2022-10-01;Internacional;x;Santos;;;Empate
+2022;2022-10-01;Ceará;x;América MG;;;Empate
+2022;2022-10-01;Goiás;x;Fortaleza;;;Empate
+2022;2022-10-01;Avaí;x;Atlético GO;;;Empate
+2022;2022-10-01;Athletico PR;x;Juventude;;;Empate
+2022;2022-10-05;América MG;x;São Paulo;;;Empate
+2022;2022-10-05;Flamengo;x;Internacional;;;Empate
+2022;2022-10-05;Bragantino;x;Cuiabá;;;Empate
+2022;2022-10-05;Palmeiras;x;Coritiba;;;Empate
+2022;2022-10-05;Santos;x;Atlético MG;;;Empate
+2022;2022-10-05;Juventude;x;Corinthians;;;Empate
+2022;2022-10-05;Ceará;x;Goiás;;;Empate
+2022;2022-10-05;Atlético GO;x;Fluminense;;;Empate
+2022;2022-10-05;Avaí;x;Botafogo;;;Empate
+2022;2022-10-05;Athletico PR;x;Fortaleza;;;Empate
+2022;2022-10-09;Atlético MG;x;Ceará;;;Empate
+2022;2022-10-09;Fluminense;x;América MG;;;Empate
+2022;2022-10-09;São Paulo;x;Botafogo;;;Empate
+2022;2022-10-09;Corinthians;x;Athletico PR;;;Empate
+2022;2022-10-09;Santos;x;Juventude;;;Empate
+2022;2022-10-09;Internacional;x;Goiás;;;Empate
+2022;2022-10-09;Fortaleza;x;Avaí;;;Empate
+2022;2022-10-09;Atlético GO;x;Palmeiras;;;Empate
+2022;2022-10-09;Cuiabá;x;Flamengo;;;Empate
+2022;2022-10-09;Coritiba;x;Bragantino;;;Empate
+2022;2022-10-16;América MG;x;Fortaleza;;;Empate
+2022;2022-10-16;Flamengo;x;Atlético MG;;;Empate
+2022;2022-10-16;Bragantino;x;Santos;;;Empate
+2022;2022-10-16;Palmeiras;x;São Paulo;;;Empate
+2022;2022-10-16;Botafogo;x;Internacional;;;Empate
+2022;2022-10-16;Juventude;x;Atlético GO;;;Empate
+2022;2022-10-16;Ceará;x;Cuiabá;;;Empate
+2022;2022-10-16;Goiás;x;Corinthians;;;Empate
+2022;2022-10-16;Avaí;x;Fluminense;;;Empate
+2022;2022-10-16;Athletico PR;x;Coritiba;;;Empate
+2022;2022-10-23;América MG;x;Flamengo;;;Empate
+2022;2022-10-23;Fluminense;x;Botafogo;;;Empate
+2022;2022-10-23;Bragantino;x;Athletico PR;;;Empate
+2022;2022-10-23;Palmeiras;x;Avaí;;;Empate
+2022;2022-10-23;Santos;x;Corinthians;;;Empate
+2022;2022-10-23;Juventude;x;São Paulo;;;Empate
+2022;2022-10-23;Fortaleza;x;Atlético MG;;;Empate
+2022;2022-10-23;Atlético GO;x;Ceará;;;Empate
+2022;2022-10-23;Cuiabá;x;Goiás;;;Empate
+2022;2022-10-23;Coritiba;x;Internacional;;;Empate
+2022;2022-10-26;Atlético MG;x;Juventude;;;Empate
+2022;2022-10-26;Flamengo;x;Santos;;;Empate
+2022;2022-10-26;São Paulo;x;Atlético GO;;;Empate
+2022;2022-10-26;Corinthians;x;Fluminense;;;Empate
+2022;2022-10-26;Botafogo;x;Bragantino;;;Empate
+2022;2022-10-26;Internacional;x;Ceará;;;Empate
+2022;2022-10-26;Fortaleza;x;Coritiba;;;Empate
+2022;2022-10-26;Goiás;x;América MG;;;Empate
+2022;2022-10-26;Cuiabá;x;Avaí;;;Empate
+2022;2022-10-26;Athletico PR;x;Palmeiras;;;Empate
+2022;2022-10-29;América MG;x;Internacional;;;Empate
+2022;2022-10-29;Flamengo;x;Corinthians;;;Empate
+2022;2022-10-29;São Paulo;x;Atlético MG;;;Empate
+2022;2022-10-29;Palmeiras;x;Fortaleza;;;Empate
+2022;2022-10-29;Botafogo;x;Cuiabá;;;Empate
+2022;2022-10-29;Juventude;x;Coritiba;;;Empate
+2022;2022-10-29;Ceará;x;Fluminense;;;Empate
+2022;2022-10-29;Atlético GO;x;Santos;;;Empate
+2022;2022-10-29;Avaí;x;Bragantino;;;Empate
+2022;2022-10-29;Athletico PR;x;Goiás;;;Empate
+2022;2022-11-06;Atlético MG;x;Botafogo;;;Empate
+2022;2022-11-06;Fluminense;x;São Paulo;;;Empate
+2022;2022-11-06;Bragantino;x;América MG;;;Empate
+2022;2022-11-06;Corinthians;x;Ceará;;;Empate
+2022;2022-11-06;Santos;x;Avaí;;;Empate
+2022;2022-11-06;Internacional;x;Athletico PR;;;Empate
+2022;2022-11-06;Fortaleza;x;Atlético GO;;;Empate
+2022;2022-11-06;Goiás;x;Juventude;;;Empate
+2022;2022-11-06;Cuiabá;x;Palmeiras;;;Empate
+2022;2022-11-06;Coritiba;x;Flamengo;;;Empate
+2022;2022-11-09;Atlético MG;x;Cuiabá;;;Empate
+2022;2022-11-09;Fluminense;x;Goiás;;;Empate
+2022;2022-11-09;São Paulo;x;Internacional;;;Empate
+2022;2022-11-09;Palmeiras;x;América MG;;;Empate
+2022;2022-11-09;Botafogo;x;Santos;;;Empate
+2022;2022-11-09;Juventude;x;Flamengo;;;Empate
+2022;2022-11-09;Fortaleza;x;Bragantino;;;Empate
+2022;2022-11-09;Atlético GO;x;Athletico PR;;;Empate
+2022;2022-11-09;Avaí;x;Ceará;;;Empate
+2022;2022-11-09;Coritiba;x;Corinthians;;;Empate
+2022;2022-11-13;América MG;x;Atlético GO;;;Empate
+2022;2022-11-13;Flamengo;x;Avaí;;;Empate
+2022;2022-11-13;Bragantino;x;Fluminense;;;Empate
+2022;2022-11-13;Corinthians;x;Atlético MG;;;Empate
+2022;2022-11-13;Santos;x;Fortaleza;;;Empate
+2022;2022-11-13;Internacional;x;Palmeiras;;;Empate
+2022;2022-11-13;Ceará;x;Juventude;;;Empate
+2022;2022-11-13;Goiás;x;São Paulo;;;Empate
+2022;2022-11-13;Cuiabá;x;Coritiba;;;Empate
+2022;2022-11-13;Athletico PR;x;Botafogo;;;Empate
