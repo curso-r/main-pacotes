@@ -7674,7 +7674,7 @@ temporada;data;time_casa;gols;time_visitante;gols_casa;gols_visitante;quem_ganho
 2022;2022-04-24;Juventude;0x1;Cuiabá;0;1;Cuiabá
 2022;2022-04-24;Atlético GO;1x1;Botafogo;1;1;Empate
 2022;2022-04-25;Avaí;3x2;Goiás;3;2;Avaí
-2022;2022-06-01;Fortaleza;x;Ceará;;;Empate
+2022;2022-06-01;Fortaleza;x;Ceará;;;Jogo futuro
 2022;2022-04-20;Flamengo;0x0;Palmeiras;0;0;Empate
 2022;2022-04-30;América MG;1x0;Athletico PR;1;0;América MG
 2022;2022-04-30;Ceará;0x1;Bragantino;0;1;Bragantino
@@ -7706,322 +7706,322 @@ temporada;data;time_casa;gols;time_visitante;gols_casa;gols_visitante;quem_ganho
 2022;2022-05-15;Avaí;1x2;Juventude;1;2;Juventude
 2022;2022-05-15;Goiás;1x0;Santos;1;0;Goiás
 2022;2022-05-11;Bragantino;1x1;Atlético MG;1;1;Empate
-2022;2022-05-21;Flamengo;x;Goiás;;;Empate
-2022;2022-05-21;Atlético GO;x;Coritiba;;;Empate
-2022;2022-05-21;Santos;x;Ceará;;;Empate
-2022;2022-05-21;Juventude;x;Palmeiras;;;Empate
-2022;2022-05-21;América MG;x;Botafogo;;;Empate
-2022;2022-05-21;Cuiabá;x;Internacional;;;Empate
-2022;2022-05-22;Corinthians;x;São Paulo;;;Empate
-2022;2022-05-22;Fortaleza;x;Fluminense;;;Empate
-2022;2022-05-22;Athletico PR;x;Avaí;;;Empate
-2022;2022-05-28;Goiás;x;Bragantino;;;Empate
-2022;2022-05-28;São Paulo;x;Ceará;;;Empate
-2022;2022-05-28;Fortaleza;x;Juventude;;;Empate
-2022;2022-05-29;Santos;x;Palmeiras;;;Empate
-2022;2022-05-29;Coritiba;x;Botafogo;;;Empate
-2022;2022-05-29;Fluminense;x;Flamengo;;;Empate
-2022;2022-05-29;Corinthians;x;América MG;;;Empate
-2022;2022-05-29;Cuiabá;x;Athletico PR;;;Empate
-2022;2022-05-29;Atlético MG;x;Avaí;;;Empate
-2022;2022-05-30;Internacional;x;Atlético GO;;;Empate
-2022;2022-06-04;América MG;x;Cuiabá;;;Empate
-2022;2022-06-04;Ceará;x;Coritiba;;;Empate
-2022;2022-06-04;Avaí;x;São Paulo;;;Empate
-2022;2022-06-04;Athletico PR;x;Santos;;;Empate
-2022;2022-06-04;Atlético GO;x;Corinthians;;;Empate
-2022;2022-06-05;Juventude;x;Fluminense;;;Empate
-2022;2022-06-05;Flamengo;x;Fortaleza;;;Empate
-2022;2022-06-05;Palmeiras;x;Atlético MG;;;Empate
-2022;2022-06-05;Bragantino;x;Internacional;;;Empate
-2022;2022-06-06;Botafogo;x;Goiás;;;Empate
-2022;2022-06-07;Coritiba;x;São Paulo;;;Empate
-2022;2022-06-08;América MG;x;Ceará;;;Empate
-2022;2022-06-08;Juventude;x;Athletico PR;;;Empate
-2022;2022-06-08;Bragantino;x;Flamengo;;;Empate
-2022;2022-06-08;Atlético GO;x;Avaí;;;Empate
-2022;2022-06-08;Fluminense;x;Atlético MG;;;Empate
-2022;2022-06-08;Santos;x;Internacional;;;Empate
-2022;2022-06-09;Palmeiras;x;Botafogo;;;Empate
-2022;2022-06-09;Cuiabá;x;Corinthians;;;Empate
-2022;2022-06-09;Fortaleza;x;Goiás;;;Empate
-2022;2022-06-12;Atlético MG;x;Santos;;;Empate
-2022;2022-06-12;Fluminense;x;Atlético GO;;;Empate
-2022;2022-06-12;São Paulo;x;América MG;;;Empate
-2022;2022-06-12;Corinthians;x;Juventude;;;Empate
-2022;2022-06-12;Botafogo;x;Avaí;;;Empate
-2022;2022-06-12;Internacional;x;Flamengo;;;Empate
-2022;2022-06-12;Fortaleza;x;Athletico PR;;;Empate
-2022;2022-06-12;Goiás;x;Ceará;;;Empate
-2022;2022-06-12;Cuiabá;x;Bragantino;;;Empate
-2022;2022-06-12;Coritiba;x;Palmeiras;;;Empate
-2022;2022-06-15;América MG;x;Fluminense;;;Empate
-2022;2022-06-15;Flamengo;x;Cuiabá;;;Empate
-2022;2022-06-15;Bragantino;x;Coritiba;;;Empate
-2022;2022-06-15;Palmeiras;x;Atlético GO;;;Empate
-2022;2022-06-15;Botafogo;x;São Paulo;;;Empate
-2022;2022-06-15;Juventude;x;Santos;;;Empate
-2022;2022-06-15;Ceará;x;Atlético MG;;;Empate
-2022;2022-06-15;Goiás;x;Internacional;;;Empate
-2022;2022-06-15;Avaí;x;Fortaleza;;;Empate
-2022;2022-06-15;Athletico PR;x;Corinthians;;;Empate
-2022;2022-06-19;Atlético MG;x;Flamengo;;;Empate
-2022;2022-06-19;Fluminense;x;Avaí;;;Empate
-2022;2022-06-19;São Paulo;x;Palmeiras;;;Empate
-2022;2022-06-19;Corinthians;x;Goiás;;;Empate
-2022;2022-06-19;Santos;x;Bragantino;;;Empate
-2022;2022-06-19;Internacional;x;Botafogo;;;Empate
-2022;2022-06-19;Fortaleza;x;América MG;;;Empate
-2022;2022-06-19;Atlético GO;x;Juventude;;;Empate
-2022;2022-06-19;Cuiabá;x;Ceará;;;Empate
-2022;2022-06-19;Coritiba;x;Athletico PR;;;Empate
-2022;2022-06-26;Atlético MG;x;Fortaleza;;;Empate
-2022;2022-06-26;Flamengo;x;América MG;;;Empate
-2022;2022-06-26;São Paulo;x;Juventude;;;Empate
-2022;2022-06-26;Corinthians;x;Santos;;;Empate
-2022;2022-06-26;Botafogo;x;Fluminense;;;Empate
-2022;2022-06-26;Internacional;x;Coritiba;;;Empate
-2022;2022-06-26;Ceará;x;Atlético GO;;;Empate
-2022;2022-06-26;Goiás;x;Cuiabá;;;Empate
-2022;2022-06-26;Avaí;x;Palmeiras;;;Empate
-2022;2022-06-26;Athletico PR;x;Bragantino;;;Empate
-2022;2022-07-03;América MG;x;Goiás;;;Empate
-2022;2022-07-03;Fluminense;x;Corinthians;;;Empate
-2022;2022-07-03;Bragantino;x;Botafogo;;;Empate
-2022;2022-07-03;Palmeiras;x;Athletico PR;;;Empate
-2022;2022-07-03;Santos;x;Flamengo;;;Empate
-2022;2022-07-03;Juventude;x;Atlético MG;;;Empate
-2022;2022-07-03;Ceará;x;Internacional;;;Empate
-2022;2022-07-03;Atlético GO;x;São Paulo;;;Empate
-2022;2022-07-03;Avaí;x;Cuiabá;;;Empate
-2022;2022-07-03;Coritiba;x;Fortaleza;;;Empate
-2022;2022-07-10;Atlético MG;x;São Paulo;;;Empate
-2022;2022-07-10;Fluminense;x;Ceará;;;Empate
-2022;2022-07-10;Bragantino;x;Avaí;;;Empate
-2022;2022-07-10;Corinthians;x;Flamengo;;;Empate
-2022;2022-07-10;Santos;x;Atlético GO;;;Empate
-2022;2022-07-10;Internacional;x;América MG;;;Empate
-2022;2022-07-10;Fortaleza;x;Palmeiras;;;Empate
-2022;2022-07-10;Goiás;x;Athletico PR;;;Empate
-2022;2022-07-10;Cuiabá;x;Botafogo;;;Empate
-2022;2022-07-10;Coritiba;x;Juventude;;;Empate
-2022;2022-07-17;América MG;x;Bragantino;;;Empate
-2022;2022-07-17;Flamengo;x;Coritiba;;;Empate
-2022;2022-07-17;São Paulo;x;Fluminense;;;Empate
-2022;2022-07-17;Palmeiras;x;Cuiabá;;;Empate
-2022;2022-07-17;Botafogo;x;Atlético MG;;;Empate
-2022;2022-07-17;Juventude;x;Goiás;;;Empate
-2022;2022-07-17;Ceará;x;Corinthians;;;Empate
-2022;2022-07-17;Atlético GO;x;Fortaleza;;;Empate
-2022;2022-07-17;Avaí;x;Santos;;;Empate
-2022;2022-07-17;Athletico PR;x;Internacional;;;Empate
-2022;2022-07-20;América MG;x;Palmeiras;;;Empate
-2022;2022-07-20;Flamengo;x;Juventude;;;Empate
-2022;2022-07-20;Bragantino;x;Fortaleza;;;Empate
-2022;2022-07-20;Corinthians;x;Coritiba;;;Empate
-2022;2022-07-20;Santos;x;Botafogo;;;Empate
-2022;2022-07-20;Internacional;x;São Paulo;;;Empate
-2022;2022-07-20;Ceará;x;Avaí;;;Empate
-2022;2022-07-20;Goiás;x;Fluminense;;;Empate
-2022;2022-07-20;Cuiabá;x;Atlético MG;;;Empate
-2022;2022-07-20;Athletico PR;x;Atlético GO;;;Empate
-2022;2022-07-24;Atlético MG;x;Corinthians;;;Empate
-2022;2022-07-24;Fluminense;x;Bragantino;;;Empate
-2022;2022-07-24;São Paulo;x;Goiás;;;Empate
-2022;2022-07-24;Palmeiras;x;Internacional;;;Empate
-2022;2022-07-24;Botafogo;x;Athletico PR;;;Empate
-2022;2022-07-24;Juventude;x;Ceará;;;Empate
-2022;2022-07-24;Fortaleza;x;Santos;;;Empate
-2022;2022-07-24;Atlético GO;x;América MG;;;Empate
-2022;2022-07-24;Avaí;x;Flamengo;;;Empate
-2022;2022-07-24;Coritiba;x;Cuiabá;;;Empate
-2022;2022-07-31;América MG;x;Avaí;;;Empate
-2022;2022-07-31;Flamengo;x;Atlético GO;;;Empate
-2022;2022-07-31;Bragantino;x;Juventude;;;Empate
-2022;2022-07-31;Corinthians;x;Botafogo;;;Empate
-2022;2022-07-31;Santos;x;Fluminense;;;Empate
-2022;2022-07-31;Internacional;x;Atlético MG;;;Empate
-2022;2022-07-31;Ceará;x;Palmeiras;;;Empate
-2022;2022-07-31;Goiás;x;Coritiba;;;Empate
-2022;2022-07-31;Cuiabá;x;Fortaleza;;;Empate
-2022;2022-07-31;Athletico PR;x;São Paulo;;;Empate
-2022;2022-08-07;Atlético MG;x;Athletico PR;;;Empate
-2022;2022-08-07;Fluminense;x;Cuiabá;;;Empate
-2022;2022-08-07;São Paulo;x;Flamengo;;;Empate
-2022;2022-08-07;Palmeiras;x;Goiás;;;Empate
-2022;2022-08-07;Botafogo;x;Ceará;;;Empate
-2022;2022-08-07;Juventude;x;América MG;;;Empate
-2022;2022-08-07;Fortaleza;x;Internacional;;;Empate
-2022;2022-08-07;Atlético GO;x;Bragantino;;;Empate
-2022;2022-08-07;Avaí;x;Corinthians;;;Empate
-2022;2022-08-07;Coritiba;x;Santos;;;Empate
-2022;2022-08-14;América MG;x;Santos;;;Empate
-2022;2022-08-14;Flamengo;x;Athletico PR;;;Empate
-2022;2022-08-14;São Paulo;x;Bragantino;;;Empate
-2022;2022-08-14;Corinthians;x;Palmeiras;;;Empate
-2022;2022-08-14;Botafogo;x;Atlético GO;;;Empate
-2022;2022-08-14;Internacional;x;Fluminense;;;Empate
-2022;2022-08-14;Ceará;x;Fortaleza;;;Empate
-2022;2022-08-14;Goiás;x;Avaí;;;Empate
-2022;2022-08-14;Cuiabá;x;Juventude;;;Empate
-2022;2022-08-14;Coritiba;x;Atlético MG;;;Empate
-2022;2022-08-21;Atlético MG;x;Goiás;;;Empate
-2022;2022-08-21;Fluminense;x;Coritiba;;;Empate
-2022;2022-08-21;Bragantino;x;Ceará;;;Empate
-2022;2022-08-21;Palmeiras;x;Flamengo;;;Empate
-2022;2022-08-21;Santos;x;São Paulo;;;Empate
-2022;2022-08-21;Juventude;x;Botafogo;;;Empate
-2022;2022-08-21;Fortaleza;x;Corinthians;;;Empate
-2022;2022-08-21;Atlético GO;x;Cuiabá;;;Empate
-2022;2022-08-21;Avaí;x;Internacional;;;Empate
-2022;2022-08-21;Athletico PR;x;América MG;;;Empate
-2022;2022-08-28;América MG;x;Atlético MG;;;Empate
-2022;2022-08-28;Fluminense;x;Palmeiras;;;Empate
-2022;2022-08-28;São Paulo;x;Fortaleza;;;Empate
-2022;2022-08-28;Corinthians;x;Bragantino;;;Empate
-2022;2022-08-28;Botafogo;x;Flamengo;;;Empate
-2022;2022-08-28;Internacional;x;Juventude;;;Empate
-2022;2022-08-28;Ceará;x;Athletico PR;;;Empate
-2022;2022-08-28;Goiás;x;Atlético GO;;;Empate
-2022;2022-08-28;Cuiabá;x;Santos;;;Empate
-2022;2022-08-28;Coritiba;x;Avaí;;;Empate
-2022;2022-09-04;América MG;x;Coritiba;;;Empate
-2022;2022-09-04;Flamengo;x;Ceará;;;Empate
-2022;2022-09-04;Bragantino;x;Palmeiras;;;Empate
-2022;2022-09-04;Corinthians;x;Internacional;;;Empate
-2022;2022-09-04;Santos;x;Goiás;;;Empate
-2022;2022-09-04;Juventude;x;Avaí;;;Empate
-2022;2022-09-04;Fortaleza;x;Botafogo;;;Empate
-2022;2022-09-04;Atlético GO;x;Atlético MG;;;Empate
-2022;2022-09-04;Cuiabá;x;São Paulo;;;Empate
-2022;2022-09-04;Athletico PR;x;Fluminense;;;Empate
-2022;2022-09-11;Atlético MG;x;Bragantino;;;Empate
-2022;2022-09-11;Fluminense;x;Fortaleza;;;Empate
-2022;2022-09-11;São Paulo;x;Corinthians;;;Empate
-2022;2022-09-11;Palmeiras;x;Juventude;;;Empate
-2022;2022-09-11;Botafogo;x;América MG;;;Empate
-2022;2022-09-11;Internacional;x;Cuiabá;;;Empate
-2022;2022-09-11;Ceará;x;Santos;;;Empate
-2022;2022-09-11;Goiás;x;Flamengo;;;Empate
-2022;2022-09-11;Avaí;x;Athletico PR;;;Empate
-2022;2022-09-11;Coritiba;x;Atlético GO;;;Empate
-2022;2022-09-18;América MG;x;Corinthians;;;Empate
-2022;2022-09-18;Flamengo;x;Fluminense;;;Empate
-2022;2022-09-18;Bragantino;x;Goiás;;;Empate
-2022;2022-09-18;Palmeiras;x;Santos;;;Empate
-2022;2022-09-18;Botafogo;x;Coritiba;;;Empate
-2022;2022-09-18;Juventude;x;Fortaleza;;;Empate
-2022;2022-09-18;Ceará;x;São Paulo;;;Empate
-2022;2022-09-18;Atlético GO;x;Internacional;;;Empate
-2022;2022-09-18;Avaí;x;Atlético MG;;;Empate
-2022;2022-09-18;Athletico PR;x;Cuiabá;;;Empate
-2022;2022-09-28;Atlético MG;x;Palmeiras;;;Empate
-2022;2022-09-28;Fluminense;x;Juventude;;;Empate
-2022;2022-09-28;São Paulo;x;Avaí;;;Empate
-2022;2022-09-28;Corinthians;x;Atlético GO;;;Empate
-2022;2022-09-28;Santos;x;Athletico PR;;;Empate
-2022;2022-09-28;Internacional;x;Bragantino;;;Empate
-2022;2022-09-28;Fortaleza;x;Flamengo;;;Empate
-2022;2022-09-28;Goiás;x;Botafogo;;;Empate
-2022;2022-09-28;Cuiabá;x;América MG;;;Empate
-2022;2022-09-28;Coritiba;x;Ceará;;;Empate
-2022;2022-10-01;Atlético MG;x;Fluminense;;;Empate
-2022;2022-10-01;Flamengo;x;Bragantino;;;Empate
-2022;2022-10-01;São Paulo;x;Coritiba;;;Empate
-2022;2022-10-01;Corinthians;x;Cuiabá;;;Empate
-2022;2022-10-01;Botafogo;x;Palmeiras;;;Empate
-2022;2022-10-01;Internacional;x;Santos;;;Empate
-2022;2022-10-01;Ceará;x;América MG;;;Empate
-2022;2022-10-01;Goiás;x;Fortaleza;;;Empate
-2022;2022-10-01;Avaí;x;Atlético GO;;;Empate
-2022;2022-10-01;Athletico PR;x;Juventude;;;Empate
-2022;2022-10-05;América MG;x;São Paulo;;;Empate
-2022;2022-10-05;Flamengo;x;Internacional;;;Empate
-2022;2022-10-05;Bragantino;x;Cuiabá;;;Empate
-2022;2022-10-05;Palmeiras;x;Coritiba;;;Empate
-2022;2022-10-05;Santos;x;Atlético MG;;;Empate
-2022;2022-10-05;Juventude;x;Corinthians;;;Empate
-2022;2022-10-05;Ceará;x;Goiás;;;Empate
-2022;2022-10-05;Atlético GO;x;Fluminense;;;Empate
-2022;2022-10-05;Avaí;x;Botafogo;;;Empate
-2022;2022-10-05;Athletico PR;x;Fortaleza;;;Empate
-2022;2022-10-09;Atlético MG;x;Ceará;;;Empate
-2022;2022-10-09;Fluminense;x;América MG;;;Empate
-2022;2022-10-09;São Paulo;x;Botafogo;;;Empate
-2022;2022-10-09;Corinthians;x;Athletico PR;;;Empate
-2022;2022-10-09;Santos;x;Juventude;;;Empate
-2022;2022-10-09;Internacional;x;Goiás;;;Empate
-2022;2022-10-09;Fortaleza;x;Avaí;;;Empate
-2022;2022-10-09;Atlético GO;x;Palmeiras;;;Empate
-2022;2022-10-09;Cuiabá;x;Flamengo;;;Empate
-2022;2022-10-09;Coritiba;x;Bragantino;;;Empate
-2022;2022-10-16;América MG;x;Fortaleza;;;Empate
-2022;2022-10-16;Flamengo;x;Atlético MG;;;Empate
-2022;2022-10-16;Bragantino;x;Santos;;;Empate
-2022;2022-10-16;Palmeiras;x;São Paulo;;;Empate
-2022;2022-10-16;Botafogo;x;Internacional;;;Empate
-2022;2022-10-16;Juventude;x;Atlético GO;;;Empate
-2022;2022-10-16;Ceará;x;Cuiabá;;;Empate
-2022;2022-10-16;Goiás;x;Corinthians;;;Empate
-2022;2022-10-16;Avaí;x;Fluminense;;;Empate
-2022;2022-10-16;Athletico PR;x;Coritiba;;;Empate
-2022;2022-10-23;América MG;x;Flamengo;;;Empate
-2022;2022-10-23;Fluminense;x;Botafogo;;;Empate
-2022;2022-10-23;Bragantino;x;Athletico PR;;;Empate
-2022;2022-10-23;Palmeiras;x;Avaí;;;Empate
-2022;2022-10-23;Santos;x;Corinthians;;;Empate
-2022;2022-10-23;Juventude;x;São Paulo;;;Empate
-2022;2022-10-23;Fortaleza;x;Atlético MG;;;Empate
-2022;2022-10-23;Atlético GO;x;Ceará;;;Empate
-2022;2022-10-23;Cuiabá;x;Goiás;;;Empate
-2022;2022-10-23;Coritiba;x;Internacional;;;Empate
-2022;2022-10-26;Atlético MG;x;Juventude;;;Empate
-2022;2022-10-26;Flamengo;x;Santos;;;Empate
-2022;2022-10-26;São Paulo;x;Atlético GO;;;Empate
-2022;2022-10-26;Corinthians;x;Fluminense;;;Empate
-2022;2022-10-26;Botafogo;x;Bragantino;;;Empate
-2022;2022-10-26;Internacional;x;Ceará;;;Empate
-2022;2022-10-26;Fortaleza;x;Coritiba;;;Empate
-2022;2022-10-26;Goiás;x;América MG;;;Empate
-2022;2022-10-26;Cuiabá;x;Avaí;;;Empate
-2022;2022-10-26;Athletico PR;x;Palmeiras;;;Empate
-2022;2022-10-29;América MG;x;Internacional;;;Empate
-2022;2022-10-29;Flamengo;x;Corinthians;;;Empate
-2022;2022-10-29;São Paulo;x;Atlético MG;;;Empate
-2022;2022-10-29;Palmeiras;x;Fortaleza;;;Empate
-2022;2022-10-29;Botafogo;x;Cuiabá;;;Empate
-2022;2022-10-29;Juventude;x;Coritiba;;;Empate
-2022;2022-10-29;Ceará;x;Fluminense;;;Empate
-2022;2022-10-29;Atlético GO;x;Santos;;;Empate
-2022;2022-10-29;Avaí;x;Bragantino;;;Empate
-2022;2022-10-29;Athletico PR;x;Goiás;;;Empate
-2022;2022-11-06;Atlético MG;x;Botafogo;;;Empate
-2022;2022-11-06;Fluminense;x;São Paulo;;;Empate
-2022;2022-11-06;Bragantino;x;América MG;;;Empate
-2022;2022-11-06;Corinthians;x;Ceará;;;Empate
-2022;2022-11-06;Santos;x;Avaí;;;Empate
-2022;2022-11-06;Internacional;x;Athletico PR;;;Empate
-2022;2022-11-06;Fortaleza;x;Atlético GO;;;Empate
-2022;2022-11-06;Goiás;x;Juventude;;;Empate
-2022;2022-11-06;Cuiabá;x;Palmeiras;;;Empate
-2022;2022-11-06;Coritiba;x;Flamengo;;;Empate
-2022;2022-11-09;Atlético MG;x;Cuiabá;;;Empate
-2022;2022-11-09;Fluminense;x;Goiás;;;Empate
-2022;2022-11-09;São Paulo;x;Internacional;;;Empate
-2022;2022-11-09;Palmeiras;x;América MG;;;Empate
-2022;2022-11-09;Botafogo;x;Santos;;;Empate
-2022;2022-11-09;Juventude;x;Flamengo;;;Empate
-2022;2022-11-09;Fortaleza;x;Bragantino;;;Empate
-2022;2022-11-09;Atlético GO;x;Athletico PR;;;Empate
-2022;2022-11-09;Avaí;x;Ceará;;;Empate
-2022;2022-11-09;Coritiba;x;Corinthians;;;Empate
-2022;2022-11-13;América MG;x;Atlético GO;;;Empate
-2022;2022-11-13;Flamengo;x;Avaí;;;Empate
-2022;2022-11-13;Bragantino;x;Fluminense;;;Empate
-2022;2022-11-13;Corinthians;x;Atlético MG;;;Empate
-2022;2022-11-13;Santos;x;Fortaleza;;;Empate
-2022;2022-11-13;Internacional;x;Palmeiras;;;Empate
-2022;2022-11-13;Ceará;x;Juventude;;;Empate
-2022;2022-11-13;Goiás;x;São Paulo;;;Empate
-2022;2022-11-13;Cuiabá;x;Coritiba;;;Empate
-2022;2022-11-13;Athletico PR;x;Botafogo;;;Empate
+2022;2022-05-21;Flamengo;x;Goiás;;;Jogo futuro
+2022;2022-05-21;Atlético GO;x;Coritiba;;;Jogo futuro
+2022;2022-05-21;Santos;x;Ceará;;;Jogo futuro
+2022;2022-05-21;Juventude;x;Palmeiras;;;Jogo futuro
+2022;2022-05-21;América MG;x;Botafogo;;;Jogo futuro
+2022;2022-05-21;Cuiabá;x;Internacional;;;Jogo futuro
+2022;2022-05-22;Corinthians;x;São Paulo;;;Jogo futuro
+2022;2022-05-22;Fortaleza;x;Fluminense;;;Jogo futuro
+2022;2022-05-22;Athletico PR;x;Avaí;;;Jogo futuro
+2022;2022-05-28;Goiás;x;Bragantino;;;Jogo futuro
+2022;2022-05-28;São Paulo;x;Ceará;;;Jogo futuro
+2022;2022-05-28;Fortaleza;x;Juventude;;;Jogo futuro
+2022;2022-05-29;Santos;x;Palmeiras;;;Jogo futuro
+2022;2022-05-29;Coritiba;x;Botafogo;;;Jogo futuro
+2022;2022-05-29;Fluminense;x;Flamengo;;;Jogo futuro
+2022;2022-05-29;Corinthians;x;América MG;;;Jogo futuro
+2022;2022-05-29;Cuiabá;x;Athletico PR;;;Jogo futuro
+2022;2022-05-29;Atlético MG;x;Avaí;;;Jogo futuro
+2022;2022-05-30;Internacional;x;Atlético GO;;;Jogo futuro
+2022;2022-06-04;América MG;x;Cuiabá;;;Jogo futuro
+2022;2022-06-04;Ceará;x;Coritiba;;;Jogo futuro
+2022;2022-06-04;Avaí;x;São Paulo;;;Jogo futuro
+2022;2022-06-04;Athletico PR;x;Santos;;;Jogo futuro
+2022;2022-06-04;Atlético GO;x;Corinthians;;;Jogo futuro
+2022;2022-06-05;Juventude;x;Fluminense;;;Jogo futuro
+2022;2022-06-05;Flamengo;x;Fortaleza;;;Jogo futuro
+2022;2022-06-05;Palmeiras;x;Atlético MG;;;Jogo futuro
+2022;2022-06-05;Bragantino;x;Internacional;;;Jogo futuro
+2022;2022-06-06;Botafogo;x;Goiás;;;Jogo futuro
+2022;2022-06-07;Coritiba;x;São Paulo;;;Jogo futuro
+2022;2022-06-08;América MG;x;Ceará;;;Jogo futuro
+2022;2022-06-08;Juventude;x;Athletico PR;;;Jogo futuro
+2022;2022-06-08;Bragantino;x;Flamengo;;;Jogo futuro
+2022;2022-06-08;Atlético GO;x;Avaí;;;Jogo futuro
+2022;2022-06-08;Fluminense;x;Atlético MG;;;Jogo futuro
+2022;2022-06-08;Santos;x;Internacional;;;Jogo futuro
+2022;2022-06-09;Palmeiras;x;Botafogo;;;Jogo futuro
+2022;2022-06-09;Cuiabá;x;Corinthians;;;Jogo futuro
+2022;2022-06-09;Fortaleza;x;Goiás;;;Jogo futuro
+2022;2022-06-12;Atlético MG;x;Santos;;;Jogo futuro
+2022;2022-06-12;Fluminense;x;Atlético GO;;;Jogo futuro
+2022;2022-06-12;São Paulo;x;América MG;;;Jogo futuro
+2022;2022-06-12;Corinthians;x;Juventude;;;Jogo futuro
+2022;2022-06-12;Botafogo;x;Avaí;;;Jogo futuro
+2022;2022-06-12;Internacional;x;Flamengo;;;Jogo futuro
+2022;2022-06-12;Fortaleza;x;Athletico PR;;;Jogo futuro
+2022;2022-06-12;Goiás;x;Ceará;;;Jogo futuro
+2022;2022-06-12;Cuiabá;x;Bragantino;;;Jogo futuro
+2022;2022-06-12;Coritiba;x;Palmeiras;;;Jogo futuro
+2022;2022-06-15;América MG;x;Fluminense;;;Jogo futuro
+2022;2022-06-15;Flamengo;x;Cuiabá;;;Jogo futuro
+2022;2022-06-15;Bragantino;x;Coritiba;;;Jogo futuro
+2022;2022-06-15;Palmeiras;x;Atlético GO;;;Jogo futuro
+2022;2022-06-15;Botafogo;x;São Paulo;;;Jogo futuro
+2022;2022-06-15;Juventude;x;Santos;;;Jogo futuro
+2022;2022-06-15;Ceará;x;Atlético MG;;;Jogo futuro
+2022;2022-06-15;Goiás;x;Internacional;;;Jogo futuro
+2022;2022-06-15;Avaí;x;Fortaleza;;;Jogo futuro
+2022;2022-06-15;Athletico PR;x;Corinthians;;;Jogo futuro
+2022;2022-06-19;Atlético MG;x;Flamengo;;;Jogo futuro
+2022;2022-06-19;Fluminense;x;Avaí;;;Jogo futuro
+2022;2022-06-19;São Paulo;x;Palmeiras;;;Jogo futuro
+2022;2022-06-19;Corinthians;x;Goiás;;;Jogo futuro
+2022;2022-06-19;Santos;x;Bragantino;;;Jogo futuro
+2022;2022-06-19;Internacional;x;Botafogo;;;Jogo futuro
+2022;2022-06-19;Fortaleza;x;América MG;;;Jogo futuro
+2022;2022-06-19;Atlético GO;x;Juventude;;;Jogo futuro
+2022;2022-06-19;Cuiabá;x;Ceará;;;Jogo futuro
+2022;2022-06-19;Coritiba;x;Athletico PR;;;Jogo futuro
+2022;2022-06-26;Atlético MG;x;Fortaleza;;;Jogo futuro
+2022;2022-06-26;Flamengo;x;América MG;;;Jogo futuro
+2022;2022-06-26;São Paulo;x;Juventude;;;Jogo futuro
+2022;2022-06-26;Corinthians;x;Santos;;;Jogo futuro
+2022;2022-06-26;Botafogo;x;Fluminense;;;Jogo futuro
+2022;2022-06-26;Internacional;x;Coritiba;;;Jogo futuro
+2022;2022-06-26;Ceará;x;Atlético GO;;;Jogo futuro
+2022;2022-06-26;Goiás;x;Cuiabá;;;Jogo futuro
+2022;2022-06-26;Avaí;x;Palmeiras;;;Jogo futuro
+2022;2022-06-26;Athletico PR;x;Bragantino;;;Jogo futuro
+2022;2022-07-03;América MG;x;Goiás;;;Jogo futuro
+2022;2022-07-03;Fluminense;x;Corinthians;;;Jogo futuro
+2022;2022-07-03;Bragantino;x;Botafogo;;;Jogo futuro
+2022;2022-07-03;Palmeiras;x;Athletico PR;;;Jogo futuro
+2022;2022-07-03;Santos;x;Flamengo;;;Jogo futuro
+2022;2022-07-03;Juventude;x;Atlético MG;;;Jogo futuro
+2022;2022-07-03;Ceará;x;Internacional;;;Jogo futuro
+2022;2022-07-03;Atlético GO;x;São Paulo;;;Jogo futuro
+2022;2022-07-03;Avaí;x;Cuiabá;;;Jogo futuro
+2022;2022-07-03;Coritiba;x;Fortaleza;;;Jogo futuro
+2022;2022-07-10;Atlético MG;x;São Paulo;;;Jogo futuro
+2022;2022-07-10;Fluminense;x;Ceará;;;Jogo futuro
+2022;2022-07-10;Bragantino;x;Avaí;;;Jogo futuro
+2022;2022-07-10;Corinthians;x;Flamengo;;;Jogo futuro
+2022;2022-07-10;Santos;x;Atlético GO;;;Jogo futuro
+2022;2022-07-10;Internacional;x;América MG;;;Jogo futuro
+2022;2022-07-10;Fortaleza;x;Palmeiras;;;Jogo futuro
+2022;2022-07-10;Goiás;x;Athletico PR;;;Jogo futuro
+2022;2022-07-10;Cuiabá;x;Botafogo;;;Jogo futuro
+2022;2022-07-10;Coritiba;x;Juventude;;;Jogo futuro
+2022;2022-07-17;América MG;x;Bragantino;;;Jogo futuro
+2022;2022-07-17;Flamengo;x;Coritiba;;;Jogo futuro
+2022;2022-07-17;São Paulo;x;Fluminense;;;Jogo futuro
+2022;2022-07-17;Palmeiras;x;Cuiabá;;;Jogo futuro
+2022;2022-07-17;Botafogo;x;Atlético MG;;;Jogo futuro
+2022;2022-07-17;Juventude;x;Goiás;;;Jogo futuro
+2022;2022-07-17;Ceará;x;Corinthians;;;Jogo futuro
+2022;2022-07-17;Atlético GO;x;Fortaleza;;;Jogo futuro
+2022;2022-07-17;Avaí;x;Santos;;;Jogo futuro
+2022;2022-07-17;Athletico PR;x;Internacional;;;Jogo futuro
+2022;2022-07-20;América MG;x;Palmeiras;;;Jogo futuro
+2022;2022-07-20;Flamengo;x;Juventude;;;Jogo futuro
+2022;2022-07-20;Bragantino;x;Fortaleza;;;Jogo futuro
+2022;2022-07-20;Corinthians;x;Coritiba;;;Jogo futuro
+2022;2022-07-20;Santos;x;Botafogo;;;Jogo futuro
+2022;2022-07-20;Internacional;x;São Paulo;;;Jogo futuro
+2022;2022-07-20;Ceará;x;Avaí;;;Jogo futuro
+2022;2022-07-20;Goiás;x;Fluminense;;;Jogo futuro
+2022;2022-07-20;Cuiabá;x;Atlético MG;;;Jogo futuro
+2022;2022-07-20;Athletico PR;x;Atlético GO;;;Jogo futuro
+2022;2022-07-24;Atlético MG;x;Corinthians;;;Jogo futuro
+2022;2022-07-24;Fluminense;x;Bragantino;;;Jogo futuro
+2022;2022-07-24;São Paulo;x;Goiás;;;Jogo futuro
+2022;2022-07-24;Palmeiras;x;Internacional;;;Jogo futuro
+2022;2022-07-24;Botafogo;x;Athletico PR;;;Jogo futuro
+2022;2022-07-24;Juventude;x;Ceará;;;Jogo futuro
+2022;2022-07-24;Fortaleza;x;Santos;;;Jogo futuro
+2022;2022-07-24;Atlético GO;x;América MG;;;Jogo futuro
+2022;2022-07-24;Avaí;x;Flamengo;;;Jogo futuro
+2022;2022-07-24;Coritiba;x;Cuiabá;;;Jogo futuro
+2022;2022-07-31;América MG;x;Avaí;;;Jogo futuro
+2022;2022-07-31;Flamengo;x;Atlético GO;;;Jogo futuro
+2022;2022-07-31;Bragantino;x;Juventude;;;Jogo futuro
+2022;2022-07-31;Corinthians;x;Botafogo;;;Jogo futuro
+2022;2022-07-31;Santos;x;Fluminense;;;Jogo futuro
+2022;2022-07-31;Internacional;x;Atlético MG;;;Jogo futuro
+2022;2022-07-31;Ceará;x;Palmeiras;;;Jogo futuro
+2022;2022-07-31;Goiás;x;Coritiba;;;Jogo futuro
+2022;2022-07-31;Cuiabá;x;Fortaleza;;;Jogo futuro
+2022;2022-07-31;Athletico PR;x;São Paulo;;;Jogo futuro
+2022;2022-08-07;Atlético MG;x;Athletico PR;;;Jogo futuro
+2022;2022-08-07;Fluminense;x;Cuiabá;;;Jogo futuro
+2022;2022-08-07;São Paulo;x;Flamengo;;;Jogo futuro
+2022;2022-08-07;Palmeiras;x;Goiás;;;Jogo futuro
+2022;2022-08-07;Botafogo;x;Ceará;;;Jogo futuro
+2022;2022-08-07;Juventude;x;América MG;;;Jogo futuro
+2022;2022-08-07;Fortaleza;x;Internacional;;;Jogo futuro
+2022;2022-08-07;Atlético GO;x;Bragantino;;;Jogo futuro
+2022;2022-08-07;Avaí;x;Corinthians;;;Jogo futuro
+2022;2022-08-07;Coritiba;x;Santos;;;Jogo futuro
+2022;2022-08-14;América MG;x;Santos;;;Jogo futuro
+2022;2022-08-14;Flamengo;x;Athletico PR;;;Jogo futuro
+2022;2022-08-14;São Paulo;x;Bragantino;;;Jogo futuro
+2022;2022-08-14;Corinthians;x;Palmeiras;;;Jogo futuro
+2022;2022-08-14;Botafogo;x;Atlético GO;;;Jogo futuro
+2022;2022-08-14;Internacional;x;Fluminense;;;Jogo futuro
+2022;2022-08-14;Ceará;x;Fortaleza;;;Jogo futuro
+2022;2022-08-14;Goiás;x;Avaí;;;Jogo futuro
+2022;2022-08-14;Cuiabá;x;Juventude;;;Jogo futuro
+2022;2022-08-14;Coritiba;x;Atlético MG;;;Jogo futuro
+2022;2022-08-21;Atlético MG;x;Goiás;;;Jogo futuro
+2022;2022-08-21;Fluminense;x;Coritiba;;;Jogo futuro
+2022;2022-08-21;Bragantino;x;Ceará;;;Jogo futuro
+2022;2022-08-21;Palmeiras;x;Flamengo;;;Jogo futuro
+2022;2022-08-21;Santos;x;São Paulo;;;Jogo futuro
+2022;2022-08-21;Juventude;x;Botafogo;;;Jogo futuro
+2022;2022-08-21;Fortaleza;x;Corinthians;;;Jogo futuro
+2022;2022-08-21;Atlético GO;x;Cuiabá;;;Jogo futuro
+2022;2022-08-21;Avaí;x;Internacional;;;Jogo futuro
+2022;2022-08-21;Athletico PR;x;América MG;;;Jogo futuro
+2022;2022-08-28;América MG;x;Atlético MG;;;Jogo futuro
+2022;2022-08-28;Fluminense;x;Palmeiras;;;Jogo futuro
+2022;2022-08-28;São Paulo;x;Fortaleza;;;Jogo futuro
+2022;2022-08-28;Corinthians;x;Bragantino;;;Jogo futuro
+2022;2022-08-28;Botafogo;x;Flamengo;;;Jogo futuro
+2022;2022-08-28;Internacional;x;Juventude;;;Jogo futuro
+2022;2022-08-28;Ceará;x;Athletico PR;;;Jogo futuro
+2022;2022-08-28;Goiás;x;Atlético GO;;;Jogo futuro
+2022;2022-08-28;Cuiabá;x;Santos;;;Jogo futuro
+2022;2022-08-28;Coritiba;x;Avaí;;;Jogo futuro
+2022;2022-09-04;América MG;x;Coritiba;;;Jogo futuro
+2022;2022-09-04;Flamengo;x;Ceará;;;Jogo futuro
+2022;2022-09-04;Bragantino;x;Palmeiras;;;Jogo futuro
+2022;2022-09-04;Corinthians;x;Internacional;;;Jogo futuro
+2022;2022-09-04;Santos;x;Goiás;;;Jogo futuro
+2022;2022-09-04;Juventude;x;Avaí;;;Jogo futuro
+2022;2022-09-04;Fortaleza;x;Botafogo;;;Jogo futuro
+2022;2022-09-04;Atlético GO;x;Atlético MG;;;Jogo futuro
+2022;2022-09-04;Cuiabá;x;São Paulo;;;Jogo futuro
+2022;2022-09-04;Athletico PR;x;Fluminense;;;Jogo futuro
+2022;2022-09-11;Atlético MG;x;Bragantino;;;Jogo futuro
+2022;2022-09-11;Fluminense;x;Fortaleza;;;Jogo futuro
+2022;2022-09-11;São Paulo;x;Corinthians;;;Jogo futuro
+2022;2022-09-11;Palmeiras;x;Juventude;;;Jogo futuro
+2022;2022-09-11;Botafogo;x;América MG;;;Jogo futuro
+2022;2022-09-11;Internacional;x;Cuiabá;;;Jogo futuro
+2022;2022-09-11;Ceará;x;Santos;;;Jogo futuro
+2022;2022-09-11;Goiás;x;Flamengo;;;Jogo futuro
+2022;2022-09-11;Avaí;x;Athletico PR;;;Jogo futuro
+2022;2022-09-11;Coritiba;x;Atlético GO;;;Jogo futuro
+2022;2022-09-18;América MG;x;Corinthians;;;Jogo futuro
+2022;2022-09-18;Flamengo;x;Fluminense;;;Jogo futuro
+2022;2022-09-18;Bragantino;x;Goiás;;;Jogo futuro
+2022;2022-09-18;Palmeiras;x;Santos;;;Jogo futuro
+2022;2022-09-18;Botafogo;x;Coritiba;;;Jogo futuro
+2022;2022-09-18;Juventude;x;Fortaleza;;;Jogo futuro
+2022;2022-09-18;Ceará;x;São Paulo;;;Jogo futuro
+2022;2022-09-18;Atlético GO;x;Internacional;;;Jogo futuro
+2022;2022-09-18;Avaí;x;Atlético MG;;;Jogo futuro
+2022;2022-09-18;Athletico PR;x;Cuiabá;;;Jogo futuro
+2022;2022-09-28;Atlético MG;x;Palmeiras;;;Jogo futuro
+2022;2022-09-28;Fluminense;x;Juventude;;;Jogo futuro
+2022;2022-09-28;São Paulo;x;Avaí;;;Jogo futuro
+2022;2022-09-28;Corinthians;x;Atlético GO;;;Jogo futuro
+2022;2022-09-28;Santos;x;Athletico PR;;;Jogo futuro
+2022;2022-09-28;Internacional;x;Bragantino;;;Jogo futuro
+2022;2022-09-28;Fortaleza;x;Flamengo;;;Jogo futuro
+2022;2022-09-28;Goiás;x;Botafogo;;;Jogo futuro
+2022;2022-09-28;Cuiabá;x;América MG;;;Jogo futuro
+2022;2022-09-28;Coritiba;x;Ceará;;;Jogo futuro
+2022;2022-10-01;Atlético MG;x;Fluminense;;;Jogo futuro
+2022;2022-10-01;Flamengo;x;Bragantino;;;Jogo futuro
+2022;2022-10-01;São Paulo;x;Coritiba;;;Jogo futuro
+2022;2022-10-01;Corinthians;x;Cuiabá;;;Jogo futuro
+2022;2022-10-01;Botafogo;x;Palmeiras;;;Jogo futuro
+2022;2022-10-01;Internacional;x;Santos;;;Jogo futuro
+2022;2022-10-01;Ceará;x;América MG;;;Jogo futuro
+2022;2022-10-01;Goiás;x;Fortaleza;;;Jogo futuro
+2022;2022-10-01;Avaí;x;Atlético GO;;;Jogo futuro
+2022;2022-10-01;Athletico PR;x;Juventude;;;Jogo futuro
+2022;2022-10-05;América MG;x;São Paulo;;;Jogo futuro
+2022;2022-10-05;Flamengo;x;Internacional;;;Jogo futuro
+2022;2022-10-05;Bragantino;x;Cuiabá;;;Jogo futuro
+2022;2022-10-05;Palmeiras;x;Coritiba;;;Jogo futuro
+2022;2022-10-05;Santos;x;Atlético MG;;;Jogo futuro
+2022;2022-10-05;Juventude;x;Corinthians;;;Jogo futuro
+2022;2022-10-05;Ceará;x;Goiás;;;Jogo futuro
+2022;2022-10-05;Atlético GO;x;Fluminense;;;Jogo futuro
+2022;2022-10-05;Avaí;x;Botafogo;;;Jogo futuro
+2022;2022-10-05;Athletico PR;x;Fortaleza;;;Jogo futuro
+2022;2022-10-09;Atlético MG;x;Ceará;;;Jogo futuro
+2022;2022-10-09;Fluminense;x;América MG;;;Jogo futuro
+2022;2022-10-09;São Paulo;x;Botafogo;;;Jogo futuro
+2022;2022-10-09;Corinthians;x;Athletico PR;;;Jogo futuro
+2022;2022-10-09;Santos;x;Juventude;;;Jogo futuro
+2022;2022-10-09;Internacional;x;Goiás;;;Jogo futuro
+2022;2022-10-09;Fortaleza;x;Avaí;;;Jogo futuro
+2022;2022-10-09;Atlético GO;x;Palmeiras;;;Jogo futuro
+2022;2022-10-09;Cuiabá;x;Flamengo;;;Jogo futuro
+2022;2022-10-09;Coritiba;x;Bragantino;;;Jogo futuro
+2022;2022-10-16;América MG;x;Fortaleza;;;Jogo futuro
+2022;2022-10-16;Flamengo;x;Atlético MG;;;Jogo futuro
+2022;2022-10-16;Bragantino;x;Santos;;;Jogo futuro
+2022;2022-10-16;Palmeiras;x;São Paulo;;;Jogo futuro
+2022;2022-10-16;Botafogo;x;Internacional;;;Jogo futuro
+2022;2022-10-16;Juventude;x;Atlético GO;;;Jogo futuro
+2022;2022-10-16;Ceará;x;Cuiabá;;;Jogo futuro
+2022;2022-10-16;Goiás;x;Corinthians;;;Jogo futuro
+2022;2022-10-16;Avaí;x;Fluminense;;;Jogo futuro
+2022;2022-10-16;Athletico PR;x;Coritiba;;;Jogo futuro
+2022;2022-10-23;América MG;x;Flamengo;;;Jogo futuro
+2022;2022-10-23;Fluminense;x;Botafogo;;;Jogo futuro
+2022;2022-10-23;Bragantino;x;Athletico PR;;;Jogo futuro
+2022;2022-10-23;Palmeiras;x;Avaí;;;Jogo futuro
+2022;2022-10-23;Santos;x;Corinthians;;;Jogo futuro
+2022;2022-10-23;Juventude;x;São Paulo;;;Jogo futuro
+2022;2022-10-23;Fortaleza;x;Atlético MG;;;Jogo futuro
+2022;2022-10-23;Atlético GO;x;Ceará;;;Jogo futuro
+2022;2022-10-23;Cuiabá;x;Goiás;;;Jogo futuro
+2022;2022-10-23;Coritiba;x;Internacional;;;Jogo futuro
+2022;2022-10-26;Atlético MG;x;Juventude;;;Jogo futuro
+2022;2022-10-26;Flamengo;x;Santos;;;Jogo futuro
+2022;2022-10-26;São Paulo;x;Atlético GO;;;Jogo futuro
+2022;2022-10-26;Corinthians;x;Fluminense;;;Jogo futuro
+2022;2022-10-26;Botafogo;x;Bragantino;;;Jogo futuro
+2022;2022-10-26;Internacional;x;Ceará;;;Jogo futuro
+2022;2022-10-26;Fortaleza;x;Coritiba;;;Jogo futuro
+2022;2022-10-26;Goiás;x;América MG;;;Jogo futuro
+2022;2022-10-26;Cuiabá;x;Avaí;;;Jogo futuro
+2022;2022-10-26;Athletico PR;x;Palmeiras;;;Jogo futuro
+2022;2022-10-29;América MG;x;Internacional;;;Jogo futuro
+2022;2022-10-29;Flamengo;x;Corinthians;;;Jogo futuro
+2022;2022-10-29;São Paulo;x;Atlético MG;;;Jogo futuro
+2022;2022-10-29;Palmeiras;x;Fortaleza;;;Jogo futuro
+2022;2022-10-29;Botafogo;x;Cuiabá;;;Jogo futuro
+2022;2022-10-29;Juventude;x;Coritiba;;;Jogo futuro
+2022;2022-10-29;Ceará;x;Fluminense;;;Jogo futuro
+2022;2022-10-29;Atlético GO;x;Santos;;;Jogo futuro
+2022;2022-10-29;Avaí;x;Bragantino;;;Jogo futuro
+2022;2022-10-29;Athletico PR;x;Goiás;;;Jogo futuro
+2022;2022-11-06;Atlético MG;x;Botafogo;;;Jogo futuro
+2022;2022-11-06;Fluminense;x;São Paulo;;;Jogo futuro
+2022;2022-11-06;Bragantino;x;América MG;;;Jogo futuro
+2022;2022-11-06;Corinthians;x;Ceará;;;Jogo futuro
+2022;2022-11-06;Santos;x;Avaí;;;Jogo futuro
+2022;2022-11-06;Internacional;x;Athletico PR;;;Jogo futuro
+2022;2022-11-06;Fortaleza;x;Atlético GO;;;Jogo futuro
+2022;2022-11-06;Goiás;x;Juventude;;;Jogo futuro
+2022;2022-11-06;Cuiabá;x;Palmeiras;;;Jogo futuro
+2022;2022-11-06;Coritiba;x;Flamengo;;;Jogo futuro
+2022;2022-11-09;Atlético MG;x;Cuiabá;;;Jogo futuro
+2022;2022-11-09;Fluminense;x;Goiás;;;Jogo futuro
+2022;2022-11-09;São Paulo;x;Internacional;;;Jogo futuro
+2022;2022-11-09;Palmeiras;x;América MG;;;Jogo futuro
+2022;2022-11-09;Botafogo;x;Santos;;;Jogo futuro
+2022;2022-11-09;Juventude;x;Flamengo;;;Jogo futuro
+2022;2022-11-09;Fortaleza;x;Bragantino;;;Jogo futuro
+2022;2022-11-09;Atlético GO;x;Athletico PR;;;Jogo futuro
+2022;2022-11-09;Avaí;x;Ceará;;;Jogo futuro
+2022;2022-11-09;Coritiba;x;Corinthians;;;Jogo futuro
+2022;2022-11-13;América MG;x;Atlético GO;;;Jogo futuro
+2022;2022-11-13;Flamengo;x;Avaí;;;Jogo futuro
+2022;2022-11-13;Bragantino;x;Fluminense;;;Jogo futuro
+2022;2022-11-13;Corinthians;x;Atlético MG;;;Jogo futuro
+2022;2022-11-13;Santos;x;Fortaleza;;;Jogo futuro
+2022;2022-11-13;Internacional;x;Palmeiras;;;Jogo futuro
+2022;2022-11-13;Ceará;x;Juventude;;;Jogo futuro
+2022;2022-11-13;Goiás;x;São Paulo;;;Jogo futuro
+2022;2022-11-13;Cuiabá;x;Coritiba;;;Jogo futuro
+2022;2022-11-13;Athletico PR;x;Botafogo;;;Jogo futuro
