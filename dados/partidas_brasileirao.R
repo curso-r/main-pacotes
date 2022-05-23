@@ -27,5 +27,5 @@ brasileirao::matches %>%
       gols_visitante > gols_casa ~ time_visitante,
       gols_visitante == gols_casa ~ "Empate"
     )
-  ) %>%View()
+  ) %>%
   readr::write_csv2("dados/partidas_brasileirao.csv")
