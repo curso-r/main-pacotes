@@ -13,9 +13,9 @@ abaixo**.
 
 | Turma            | Material                                   | Github                                      |
 |:-----------------|:-------------------------------------------|:--------------------------------------------|
-| Dezembro de 2021 | <https://curso-r.github.io/202112-pacotes> | <https://github.com/curso-r/202112-pacotes> |
-| Agosto de 2021   | <https://curso-r.github.io/202108-pacotes> | <https://github.com/curso-r/202108-pacotes> |
-| Abril de 2021    | <https://curso-r.github.io/202104-pacotes> | <https://github.com/curso-r/202104-pacotes> |
+| novembro de 2022 | <https://curso-r.github.io/202211-pacotes> | <https://github.com/curso-r/202211-pacotes> |
+| agosto de 2022   | <https://curso-r.github.io/202208-pacotes> | <https://github.com/curso-r/202208-pacotes> |
+| maio de 2022     | <https://curso-r.github.io/202205-pacotes> | <https://github.com/curso-r/202205-pacotes> |
 
 **Atenção**: o material de cursos que ainda não começaram pode não
 existir ainda.
