@@ -4,30 +4,32 @@
     <title>Pacotes 📦</title>
     <meta charset="utf-8" />
     <meta name="author" content="" />
-    <script src="libs/header-attrs-2.11/header-attrs.js"></script>
+    <script src="libs/header-attrs-2.16/header-attrs.js"></script>
     <link rel="stylesheet" href="css/xaringan-themer.css" type="text/css" />
   </head>
   <body>
     <textarea id="source">
 class: center, middle, inverse, title-slide
 
+.title[
 # Pacotes 📦
+]
+.author[
 ### <img src = 'https://d33wubrfki0l68.cloudfront.net/9b0699f18268059bdd2e5c21538a29eade7cbd2b/67e5c/img/logo/cursor1-5.png' width = '30%'>
+]
 
 ---
 
 
 
 
-# Sumário
-
-1. Sobre a Curso-R
-
-1. Sobre o curso
+# Objetivos de aprendizagem
 
 1. Preparando o ambiente de desenvolvimento
 
 1. Fundamentos de desenvolvimento de pacotes em R
+
+1. Dados
 
 1. Documentação
 
@@ -54,28 +56,6 @@ class: middle, center, inverse
 .pull-right[
 &lt;img src="img/produtos.png" width="80%" style="display: block; margin: auto;" /&gt;
 ]
-
----
-# Ministrantes
-
-.pull-left[
-## Caio Lente
-&lt;img src="img/caio.jpeg" width="40%" style="display: block; margin: auto;" /&gt;
-
-Mestrando em Ciência da Computação no IME-USP e cientista de dados na Terranova Consultoria. Programador desde os 15 anos, começou a se apaixonar pelo R em 2016 e agora não fala em outra coisa. Metido a designer, maníaco da organização e metade texano.
-]
-
-.pull-right[
-## Beatriz Milz
-&lt;img src="img/bea.jpg" width="40%" style="display: block; margin: auto;" /&gt;
-
-Doutoranda em Ciência Ambiental (PROCAM/IEE/USP) na Universidade de São Paulo. Co-organizadora da [R-Ladies São Paulo](https://www.meetup.com/R-Ladies-Sao-Paulo/). Instrutora da [Carpentries](https://carpentries.org/instructors/), um projeto que tem como missão ensinar habilidades de ciência de dados para pessoas pesquisadoras. Instrutora de tidyverse [certificada pela RStudio](https://education.rstudio.com/trainers/people/milz+beatriz/). 
-]
-
----
-# Linha do tempo
-
-&lt;img src="img/linha_do_tempo.png" width="35%" style="display: block; margin: auto;" /&gt;
 
 ---
 # Nossos cursos
@@ -162,7 +142,7 @@ class: middle, center, inverse
 
 - Se teste! Coloque em prática o que você aprendeu resolvendo exercícios ou inserindo o R no seu dia-a-dia.
 
-.footnote[[Nahurhodo 205 - Powerpoint é útil para a aprendizagem?](https://www.b9.com.br/shows/naruhodo/naruhodo-205-powerpoint-e-util-para-a-aprendizagem/)]
+&lt;img src="img/cat-computer.gif" style="display: block; margin: auto;" /&gt;
 
 ---
 # Tirando dúvidas
@@ -220,10 +200,6 @@ devtools::has_devel()
 - [Conta no GitHub criada](https://github.com/)
 
 ---
-class: middle, center, inverse
-# .RData e .Rhistory
-
----
 # Os arquivos .RData e .Rhistory 
 
 Em sua configuração padrão, a IDE manterá na "memória" todos os últimos comandos executados, todos os dados utilizados e todos os objetos criados.
@@ -261,7 +237,7 @@ class: middle, center, inverse
 # Fundamentos de desenvolvimento de pacotes em R
 
 ---
-# Pacotes
+# O que é?
 
 Um pacote do R é uma forma específica de organizar seus código, seguindo o protocolo descrito pela R Foundation:
 
@@ -286,7 +262,7 @@ Um pacote do R é uma forma específica de organizar seus código, seguindo o pr
 ]
 
 ---
-# Motivação
+# Por quê?
 
 Por que aprender a fazer um pacote se scripts funcionam bem o suficiente? Por que divulgar meus pacotes em algum serviço open source?
 
@@ -301,9 +277,9 @@ Por que aprender a fazer um pacote se scripts funcionam bem o suficiente? Por qu
 ---
 # Vantagens
 
-- Padroniza a organização dos códigos
+- Padroniza a organização dos códigos nos projetos
 
-- Integração com pacotes que aceleram desenvolvimento
+- Integra com pacotes que aceleram desenvolvimento
 
 - Motiva e facilita a documentação do código
 
@@ -320,57 +296,19 @@ Por que aprender a fazer um pacote se scripts funcionam bem o suficiente? Por qu
 
 O pacote `{usethis}` ajuda com todo o fluxo de desenvolvimento em R. Ele ajuda a criar arquivos, projetos, usar o Git, criar repositórios no GitHub e muito mais.
 
-Apresentaremos várias funções do `{usethis}` ao longo do curso!
-
-&lt;br&gt;
-
-&lt;img src="img/usethis.png" width="15%" style="display: block; margin: auto;" /&gt;
-
----
-class: middle, center
-
-# Resumo do pacote usethis
-
 &lt;img src="https://raw.githubusercontent.com/allisonhorst/stats-illustrations/master/rstats-artwork/usethis.png" width="70%" style="display: block; margin: auto;" /&gt;
 
-
 ---
-# Nomes
+# Pacote usethis
 
-Suponha que você criou uma função incrível que você quer compartilhar com o mundo. Ela tem várias funções auxiliares e um comportamento complexo o suficiente para depender de uma documentação... Você precisa criar um pacote.
+O pacote `{usethis}` realiza ações que são possíveis de fazer manualmente, mas que __demandariam muitos cliques__ e são sujeitas a __erros humanos__. Alguns exemplos de poderes do usethis:
 
-Mas qual deve ser o seu nome?
+- Criar um projeto com estrutura de pacotes
+- Adicionar uma dependência no pacote
+- Integrar o pacote com Git e GitHub
+- Adicionar uma GitHub Action ao pacote
 
-&gt; _Há apenas duas coisas difíceis na Ciência da Computação: invalidação de cache e dar nome para as coisas._
-&gt; 
-&gt; — Phil Karlton
-
-Os melhores nomes são simples e descritivos. Pense em algo que possa ser procurado facilmente no Google e que, preferencialmente, seja em inglês (a menos que você não ache que pessoas de outro país usarão o seu pacote).
-
-Evite usar letras maiúsculas ou mesmo números pois isso pode confundir os usuários. Você definitivamente ganha pontos extras se conseguir inserir alguma brincadeira com a letra R no nome (`stringr`, `decryptr`, `plyr`, `purrr`, etc.).
-
----
-# Dica para pesquisar nomes
-
-
-```r
-available::available("chess", browse = FALSE)
-```
-
-```
-#&gt; Urban Dictionary can contain potentially offensive results,
-#&gt;   should they be included? [Y]es / [N]o:
-#&gt; 1: No
-#&gt; ── chess ──────────────────────────────────────────────────────────────
-#&gt; Name valid: ✔
-#&gt; Available on CRAN: ✖ 
-#&gt; Available on Bioconductor: ✔
-#&gt; Available on GitHub:  ✖ 
-#&gt; Abbreviations: http://www.abbreviations.com/chess
-#&gt; Wikipedia: https://en.wikipedia.org/wiki/chess
-#&gt; Wiktionary: https://en.wiktionary.org/wiki/chess
-#&gt; Sentiment:???
-```
+Apresentaremos várias funções do `{usethis}` ao longo do curso!
 
 ---
 # Criando um pacote
@@ -416,6 +354,62 @@ usethis::create_package("~/Documents/meupacote")
 ```
 
 ---
+# Nomes
+
+Suponha que você criou uma função incrível que você quer compartilhar com o mundo. Ela tem várias funções auxiliares e um comportamento complexo o suficiente para depender de uma documentação... Você precisa criar um pacote.
+
+Mas qual deve ser o seu nome?
+
+&gt; _Há apenas duas coisas difíceis na Ciência da Computação: invalidação de cache e dar nome para as coisas._
+&gt; 
+&gt; — Phil Karlton
+
+Os melhores nomes são simples e descritivos. Pense em algo que possa ser procurado facilmente no Google e que, preferencialmente, seja em inglês (a menos que você não ache que pessoas de outro país usarão o seu pacote).
+
+Evite usar letras maiúsculas ou mesmo números pois isso pode confundir os usuários. Você definitivamente ganha pontos extras se conseguir inserir alguma brincadeira com a letra R no nome (`stringr`, `decryptr`, `plyr`, `purrr`, etc.).
+
+---
+# Dica para pesquisar nomes
+
+
+```r
+available::available("chess", browse = FALSE)
+```
+
+```
+#&gt; Urban Dictionary can contain potentially offensive results,
+#&gt;   should they be included? [Y]es / [N]o:
+#&gt; 1: No
+#&gt; ── chess ──────────────────────────────────────────────────────────────
+#&gt; Name valid: ✔
+#&gt; Available on CRAN: ✖ 
+#&gt; Available on Bioconductor: ✔
+#&gt; Available on GitHub:  ✖ 
+#&gt; Abbreviations: http://www.abbreviations.com/chess
+#&gt; Wikipedia: https://en.wikipedia.org/wiki/chess
+#&gt; Wiktionary: https://en.wiktionary.org/wiki/chess
+#&gt; Sentiment:???
+```
+
+---
+# Estrutura básica do pacote
+
+Essa é a estrutura criada quando usamos a função `usethis::create_package()`:
+
+- `meupacote.Rproj`: este arquivo faz com que este diretório seja um projeto na RStudio IDE
+
+- `DESCRIPTION`: define o nome, descrição, versão, licença, dependências e outras caracaterísticas do seu pacote
+
+- `R/`: aqui ficam as funções desenvolvidas em R
+
+- `.Rbuildignore`:  Lista arquivos que não devem ser incluídos ao compilar o pacote R a partir do código-fonte
+&lt;!-- usethis::use_build_ignore("..") ajuda a adicionar arquivos no .Rbuildignore--&gt;
+
+- `NAMESPACE`: __Não editar manualmente__. Ele declara as funções que o pacote exporta para uso externo e as funções externas que seu pacote importa de outros pacotes
+
+- `.gitignore`: Lista de arquivos que não devem ser considerados pelo Git
+
+---
 # Diretório de trabalho
 
 O arquivo `meupacote.Rproj` indica para o RStudio que aquele diretório será a raiz de um projeto e que, sempre que o projeto estiver aberto, será utilizado por padrão como o diretório de trabalho.
@@ -426,60 +420,41 @@ O arquivo `meupacote.Rproj` indica para o RStudio que aquele diretório será a 
 
 Fixar o diretório de trabalho como a pasta raiz do projeto, ao lado da regra de manter todos os arquivos dentro da pasta do projeto, garante que sua análise poderá ser executada por qualquer pessoa e em qualquer computador sem a preocupação de ajustar caminhos até os arquivos utilizados ou criados pelo seu código.
 
----
-# Estrutura básica do pacote
-
-Essa é a estrutura criada quando usamos a função `usethis::create_package()`:
-
-- `meupacote.Rproj`: este arquivo faz com que este diretório seja um projeto no RStudio (RStudio Project)
-
-- `LICENSE`: especifica os termos de uso e distribuição do seu pacote
-
-- `DESCRIPTION`: define o nome, descrição, versão, licença, dependências e outras caracaterísticas do seu pacote
-
-- `R/`: aqui ficam as funções desenvolvidas em R
-
-- `.Rbuildignore`:  Lista arquivos que não devem ser incluídos ao compilar o pacote R a partir do código-fonte
-&lt;!-- usethis::use_build_ignore("..") ajuda a adicionar arquivos no .Rbuildignore--&gt;
-
-- `NAMESPACE`: Não devemos editar este arquivo manualmente. Ele declara as funções que o pacote exporta para uso externo e as funções externas que seu pacote importa de outros pacotes
 
 ---
-# Sobre licenças de código aberto
+# Licenças de software
 
-- O pacote `{usethis}` possui algumas funcões para nos ajudar a declarar uma licenças como, por exemplo:
+- O pacote `{usethis}` possui funcões para declarar licenças como, por exemplo:
 
 
 ```r
 usethis::use_cc0_license()
 ```
 
-- CC0: essa licença, muitas vezes chamada de "sem direitos reservados", permite que o trabalho seja colocado em domínio público. Qualquer pessoa pode usar, modificar, distribuir e vender o seu trabalho sem nenhuma restrição de direitos autorais
+- CC0: "sem direitos reservados", permite que o trabalho seja colocado em domínio público. Qualquer pessoa pode usar, modificar, distribuir e vender o seu trabalho sem restrição de direitos autorais
 
 
 ```r
 usethis::use_mit_license()
 ```
 
-- MIT: curta e permissiva, a licença MIT exige apenas manutenção dos direitos autorais. Modificações e trabalhos maiores podem ser distribuídos sob outros termos de uso
+- MIT: curta e permissiva, exige apenas manutenção dos direitos autorais. Modificações e trabalhos maiores podem ser distribuídos sob outros termos de uso
 
 
 ```r
 usethis::use_gpl3_license()
 ```
 
-- GPLv3: essa licença exige que o código-fonte dos derivados seja _open source_ sob a mesma licença. Direitos autorais devem ser preservados.
+- GPLv3: chamada *software livre* exige que o código-fonte dos derivados seja distribuído sob a mesma licença. Direitos autorais devem ser preservados.
 
 
 - O help é útil: `?usethis::use_mit_license`, e também o site [Choose a License](https://choosealicense.com/licenses/).
 
 ---
 
-# Testando o pacote na prática
+# Verificando o pacote automaticamente
 
-Podemos usar a função `devtools::check()`. Ela carrega todo o código, gera toda a documentação e executa todos os testes, verificando em todo passo se tudo está funcionando como o esperado.
-
-1. Crie o pacote usando a função `usethis::create_package("caminho_onde_o_pacote_sera_criado/nomedopacote")` 
+Pacotes do R possuem regras e boas práticas. A função `devtools::check()` verifica se estmos seguindo essas regras, ou se estamos devendo alguma coisa.
 
 1. Observe a estrutura do diretório
 
@@ -505,48 +480,49 @@ Dentro de um pacote, a pasta `R/` só pode ter arquivos R com funções.
 - Assim que escrevermos/modificarmos alguma função, podemos carregá-las e testá-las manualmente com `devtools::load_all()`
 
 ---
-# Vantagens de usar funções
+# O que é uma função?
+
+Quando queremos encapsular um bloco de códigos para usar posteriormente, fazemos uma função.
+
+Exemplo de função:
+
+
+```r
+juros_compostos &lt;- function(x, tx = 0.01, tempo = 12) {
+  resultado &lt;- x * (1 + tx) ^ tempo
+  resultado
+}
+juros_compostos(10)
+```
+
+```
+#&gt; [1] 11.26825
+```
+
+```r
+juros_compostos(100, .02, 5)
+```
+
+```
+#&gt; [1] 110.4081
+```
+
+- O parâmetro `x` é __obrigatório__.
+- Os parâmetros `tx` e `tempo` são __opcionais__.
+
+---
+# Vantagens ao usar funções
 
 - Um código bem encapsulado reduz a necessidade de objetos intermediários (`base_tratada`, `base_filtrada` etc.) pois para gerar um deles basta a aplicação de uma função.
 
 - Programas com funções normalmente são muito mais enxutos e limpos do que *scripts* soltos, pois estes estimulam repetição de código.
 
-- Ao encontrar um bug, haverá apenas um lugar para concertar; se surgir a necessidade de modificar uma propriedade, haverá apenas um lugar para editar; se aquele código se tornar obsoleto, haverá apenas um lugar para deletar.
+- Ao encontrar um problema no código, haverá apenas um lugar para consertar; se surgir a necessidade de modificar uma propriedade, haverá apenas um lugar para editar; se aquele código se tornar obsoleto, haverá apenas um lugar para deletar.
 
 .footnote[Leia mais [neste capítulo do livro R for Data Science](https://r4ds.had.co.nz/functions.html)]
 
 ---
-# Criando a sua própria função
-
-Quando estamos desenvolvendo pacotes, iremos criar funções para executar as tarefas necessárias:
-
-
-```r
-nome_da_funcao &lt;- function(argumento_1, argumento_2 = valor_padrao_2) {
-  # Código que a função irá executar
-}
-```
-
-Um exemplo: vamos criar uma função que soma dois números.
-
-
-```r
-minha_soma &lt;- function(x, y) { # minha_soma é uma função de x e y
-  soma &lt;- x + y # soma é igual a x + y
-  soma # resultado retornado
-}
-
-minha_soma(2, 2)
-```
-
-```
-#&gt; [1] 4
-```
-
-Se quisermos dar valores padrões para os argumentos, basta colocar um `=` na definição da função.
-
----
-# Dependências
+# Pacotes externos
 
 Sem os inúmeros pacotes criados pela comunidade, o R provavelmente já estaria no porão da Ciência de Dados. Por isso, é a primeira coisa que escrevemos nos nossos *scripts* quase sempre é `library(algumPacoteLegal)`.
 
@@ -563,176 +539,165 @@ Quando lidamos com pacotes, a função `library()` não pode ser utilizada, e to
 - Para escrever `dplyr::`, por exemplo, basta digitar `d`, `p`, `l` e apertar TAB uma vez. Com os `::`, as sugestões passarão a ser somente de funções daquele pacote.
 
 ---
-# Discussão em sala
+# Prática
 
 - Como podemos transformar o código a seguir em uma função que fará parte de um pacote?
 
-- Exemplo: Importar a base mananciais e calcular a média do volume de água armazenado (em %) para o sistema Cantareira, em abril de 2021.
+- Exemplo: calcular a população e expectativa de vida média de países em um determinados anos e continente.
 
 
 ```r
 library(tidyverse)
-library(lubridate)
+library(dados)
 
-"https://git.io/JOLeb" %&gt;%
-  read_csv2() %&gt;%
-  mutate(ano = year(data), mes = month(data)) %&gt;%
-  group_by(sistema, ano, mes) %&gt;%
-  summarise(media_volume_porcentagem = mean(volume_porcentagem)) %&gt;%
-  filter(ano == 2021, mes == 4, sistema == "Cantareira")
+dados_gapminder |&gt; 
+  filter(continente %in% "Europa", ano &gt;= 2000) |&gt; 
+  group_by(ano) |&gt; 
+  summarise(
+    pop = sum(populacao) / 1e6,
+    vida = mean(expectativa_de_vida),
+    .groups = "drop"
+  )
 ```
 
-.footnote[Fonte: [pacote](https://github.com/beatrizmilz/mananciais/raw/master/inst/extdata/mananciais.csv) `{mananciais}` por Beatriz Milz]
-
 ---
-# Discussão em sala
+# Prática
 
-Código original:
+__Passo 1__: Adicionar os quatro pontos `::`
 
 
 ```r
 library(tidyverse)
-library(lubridate)
+library(dados)
 
-"https://git.io/JOLeb" %&gt;%
-  read_csv2() %&gt;%
-  mutate(ano = year(data), mes = month(data)) %&gt;%
-  group_by(sistema, ano, mes) %&gt;%
-  summarise(media_volume_porcentagem = mean(volume_porcentagem)) %&gt;%
-  ungroup() %&gt;%
-  filter(ano == 2021, mes == 4, sistema == "Cantareira")
+dados::dados_gapminder |&gt; 
+  dplyr::filter(continente %in% "Europa", ano &gt;= 2000) |&gt; 
+  dplyr::group_by(continente, ano) |&gt; 
+  dplyr::summarise(
+    pop = sum(populacao) / 1e6,
+    vida = mean(expectativa_de_vida),
+    .groups = "drop"
+  )
 ```
 
 ---
-# Discussão em sala
+# Prática
 
-Passo 1: Adicionar os quatro pontos `::`
-
-
-```r
-library(tidyverse)
-library(lubridate)
-
-"https://git.io/JOLeb" %&gt;%
-  readr::read_csv2() %&gt;%
-  dplyr::mutate(ano = lubridate::year(data), mes = lubridate::month(data)) %&gt;%
-  dplyr::group_by(sistema, ano, mes) %&gt;%
-  dplyr::summarise(media_volume_porcentagem = mean(volume_porcentagem)) %&gt;%
-  dplyr::ungroup() %&gt;%
-  dplyr::filter(ano == 2021, mes == 4, sistema == "Cantareira")
-```
-
----
-# Discussão em sala
-
-Passo 2: Declarar as dependências com a função `usethis::use_package()`. Não precisaremos mais do `library()`!
+__Passo 2__: Declarar as dependências com a função `usethis::use_package()`. Não precisaremos mais do `library()`!
 
 Vamos **remover** isso do código da função...
 
 
 ```r
 library(tidyverse)
-library(lubridate)
+library(dados)
 ```
 
 E declararemos as dependências... faremos isso no console, e não no código da função!
 
 
 ```r
-usethis::use_package("lubridate")
-usethis::use_package("readr")
 usethis::use_package("dplyr")
-
-# Também usamos o pipe!
-usethis::use_pipe()
-devtools::document() # Após usar o use_pipe(), atualize a documentação
+usethis::use_package("dados")
 ```
 
 ---
-# Discussão em sala
+# Prática
 
-Passo 3: Adicionar o código dentro de uma função. Chamaremos de `calcular_media_volume()`.
+__Passo 3__: Adicionar o código dentro de uma função. Chamaremos de `calcular_estatisticas()`.
 
 
 ```r
-calcular_media_volume &lt;- function() {
-  "https://git.io/JOLeb" %&gt;%
-    readr::read_csv2() %&gt;%
-    dplyr::mutate(ano = lubridate::year(data), mes = lubridate::month(data)) %&gt;%
-    dplyr::group_by(sistema, ano, mes) %&gt;%
-    dplyr::summarise(media_volume_porcentagem = base::mean(volume_porcentagem)) %&gt;%
-    dplyr::ungroup() %&gt;%
-    dplyr::filter(ano == 2021, mes == 4, sistema == "Cantareira")
+calcular_estatisticas &lt;- function() {
+  dados::dados_gapminder |&gt; 
+    dplyr::filter(continente %in% "Europa", ano &gt;= 2000) |&gt; 
+    dplyr::group_by(continente, ano) |&gt; 
+    dplyr::summarise(
+      pop = sum(populacao) / 1e6,
+      vida = mean(expectativa_de_vida),
+      .groups = "drop"
+    )
 }
 ```
 
 ---
-# Discussão em sala
+# Prática
 
-Passo 4: pensar em quais podem ser os argumentos da nossa função. E se eu quiser calcular a média em outro mês? Outro ano? Outro sistema?
+__Passo 4__: Quais são os argumentos da nossa função?
 
 
 ```r
-calcular_media_volume &lt;- function(filtro_sistema, filtro_ano, filtro_mes) {
-  "https://git.io/JOLeb" %&gt;%
-    readr::read_csv2() %&gt;%
-    dplyr::mutate(ano = lubridate::year(data), mes = lubridate::month(data)) %&gt;%
-    dplyr::group_by(sistema, ano, mes) %&gt;%
-    dplyr::summarise(media_volume_porcentagem = base::mean(volume_porcentagem)) %&gt;%
-    dplyr::ungroup() %&gt;%
-    dplyr::filter(ano == filtro_ano, mes == filtro_mes, sistema == filtro_sistema)
+calcular_estatisticas &lt;- function(continentes, ano_minimo) {
+  dados::dados_gapminder |&gt; 
+    dplyr::filter(continente %in% continentes, ano &gt;= ano_minimo) |&gt; 
+    dplyr::group_by(continente, ano) |&gt; 
+    dplyr::summarise(
+      pop = sum(populacao) / 1e6,
+      vida = mean(expectativa_de_vida),
+      .groups = "drop"
+    )
 }
-```
-
-
-```r
-calcular_media_volume(filtro_sistema = "Guarapiranga",
-                      filtro_ano = 2021, filtro_mes = 3)
+calcular_estatisticas(continentes = c("Oceania", "Ásia"), ano_minimo = 2005)
 ```
 
 ```
-#&gt; # A tibble: 1 × 4
-#&gt;   sistema        ano   mes media_volume_porcentagem
-#&gt;   &lt;chr&gt;        &lt;dbl&gt; &lt;dbl&gt;                    &lt;dbl&gt;
-#&gt; 1 Guarapiranga  2021     3                     73.9
+#&gt; # A tibble: 2 × 4
+#&gt;   continente   ano    pop  vida
+#&gt;   &lt;fct&gt;      &lt;int&gt;  &lt;dbl&gt; &lt;dbl&gt;
+#&gt; 1 Ásia        2007 3812.   70.7
+#&gt; 2 Oceania     2007   24.5  80.7
 ```
 
 ---
-# Discussão em sala
+# Prática
 
-Passo 5: argumentos padrão. E se eu quiser que a função funcione caso o ano e/ou o mês não seja informado como argumento? 
+__Passo 5__: E se eu quiser que a função funcione caso os argumentos não sejam informados? 
 
 
 ```r
-calcular_media_volume &lt;- function(filtro_sistema,
-                                  filtro_ano = 2021,
-                                  filtro_mes = 4) {
-  "https://git.io/JOLeb" %&gt;%
-    readr::read_csv2() %&gt;%
-    dplyr::mutate(ano = lubridate::year(data), mes = lubridate::month(data)) %&gt;%
-    dplyr::group_by(sistema, ano, mes) %&gt;%
-    dplyr::summarise(media_volume_porcentagem = base::mean(volume_porcentagem)) %&gt;%
-    dplyr::ungroup() %&gt;%
-    dplyr::filter(ano %in% filtro_ano,
-                  mes %in% filtro_mes,
-                  sistema %in% filtro_sistema)
+calcular_estatisticas &lt;- function(continentes = "Europa", ano_minimo = 2000) {
+  dados::dados_gapminder |&gt; 
+    dplyr::filter(continente %in% continentes, ano &gt;= ano_minimo) |&gt; 
+    dplyr::group_by(continente, ano) |&gt; 
+    dplyr::summarise(
+      pop = sum(populacao) / 1e6,
+      vida = mean(expectativa_de_vida),
+      .groups = "drop"
+    )
 }
+calcular_estatisticas(continentes = c("Europa", "Américas"))
+```
+
+```
+#&gt; # A tibble: 4 × 4
+#&gt;   continente   ano   pop  vida
+#&gt;   &lt;fct&gt;      &lt;int&gt; &lt;dbl&gt; &lt;dbl&gt;
+#&gt; 1 Américas    2002  850.  72.4
+#&gt; 2 Américas    2007  899.  73.6
+#&gt; 3 Europa      2002  578.  76.7
+#&gt; 4 Europa      2007  586.  77.6
 ```
 
 ---
-# Discussão em sala
+# Exercício
 
+- Criar um arquivo onde iremos escrever a função para o pacote. Dica: use a função `usethis::use_r("nome-do-arquivo")`!
 
-```r
-calcular_media_volume(filtro_sistema = "Guarapiranga")
-```
+- Copiar o código disponível em [git.io/JO8NV](https://git.io/JO8NV) e cole no arquivo criado.
 
-```
-#&gt; # A tibble: 1 × 4
-#&gt;   sistema        ano   mes media_volume_porcentagem
-#&gt;   &lt;chr&gt;        &lt;dbl&gt; &lt;dbl&gt;                    &lt;dbl&gt;
-#&gt; 1 Guarapiranga  2021     4                     70.3
-```
+- Adaptar o código e o transforme em uma função. Não esqueça das dependências
+
+- Verificar que o arquivo onde sua função foi escrita está no diretório `R/` e que as dependências estão descritas no arquivo `DESCRIPTION`
+
+- Carregar o pacote com `devtools::load_all()`, e confira se está tudo ok com `devtools::check()`!
+
+### Outros exercícios para casa
+
+- [Exercício: git.io/JO8Nr](https://git.io/JO8Nr)
+
+- [Desafio: git.io/JO8NP](https://git.io/JO8NP)
+
+.footnote[Fonte: dados do [pacote brasileirão](https://blog.curso-r.com/posts/2021-03-02-brasileirao/)]
 
 ---
 # Recomendações
@@ -745,34 +710,16 @@ Algumas recomendação sobre como organizar seu código:
 
 - Tente se limitar a 80 caracteres por linha porque isso permite que seu código caiba confortavelmente em qualquer tela
 
-- Não use `library()` ou `require()`, pois isso vai causar problemas (use a notação `pacote::função()`)
+- Não use `library()` ou `require()`, pois isso vai causar problemas (use a notação `pacote::funcao()`)
 
 - **Nunca** use `source()`, todo o código já será carregado automaticamente com `devtools::load_all()`
 
-- Não usar "metapackages" (como o tidyverse)
+- Não carregar "metapackages" (como o tidyverse)
 
 ---
-# Criando uma função na prática
+class: inverse, center, middle
 
-- Crie um arquivo onde iremos escrever a função para o pacote. Dica: use a função `usethis::use_r("nome-do-arquivo")`!
-
-- Copie o código disponível em [git.io/JO8NV](https://git.io/JO8NV) e cole no arquivo criado.
-
-- Adapte o código e o transforme em uma função. Não esqueça das dependências
-
-- Verifique que o arquivo onde sua função foi escrita está no diretório `R/` e que as dependências estão descritas no arquivo `DESCRIPTION`
-
-- Carregue o pacote com `devtools::load_all()`, e confira se está tudo ok com `devtools::check()`!
-
-### Exercícios para casa
-
-- [Exercício: git.io/JO8Nr](https://git.io/JO8Nr)
-
-- [Desafio: git.io/JO8NP](https://git.io/JO8NP)
-
-
-
-.footnote[Fonte: dados do [pacote brasileirão](https://blog.curso-r.com/posts/2021-03-02-brasileirao/)]
+# Dados
 
 ---
 # Dados
@@ -804,12 +751,12 @@ usethis::use_data(partidas_brasileirao)
 
 ```r
 encontrar_pior_ano_time &lt;- function(time) {
-  partidas_brasileirao %&gt;%
-    dplyr::group_by(temporada, quem_ganhou) %&gt;%
-    dplyr::filter(quem_ganhou != "Empate", quem_ganhou %in% time) %&gt;%
-    dplyr::count(quem_ganhou, sort = TRUE, name = "n_vitorias") %&gt;%
-    dplyr::ungroup() %&gt;%
-    dplyr::filter(n_vitorias == min(n_vitorias)) %&gt;%
+  partidas_brasileirao |&gt;
+    dplyr::group_by(temporada, quem_ganhou) |&gt;
+    dplyr::filter(quem_ganhou != "Empate", quem_ganhou %in% time) |&gt;
+    dplyr::count(quem_ganhou, sort = TRUE, name = "n_vitorias") |&gt;
+    dplyr::ungroup() |&gt;
+    dplyr::filter(n_vitorias == min(n_vitorias)) |&gt;
     dplyr::rename("time" = quem_ganhou)
 }
 ```
@@ -1896,7 +1843,7 @@ class: middle, center, inverse
 
 - Declare as dependências usando:
 
-  - pipe `%&gt;%`: `usethis::use_pipe()` + `devtools::document()` + `devtools::load_all()`
+  - pipe `|&gt;`: `usethis::use_pipe()` + `devtools::document()` + `devtools::load_all()`
   
   - Pacotes instalados via CRAN: `usethis::use_package("nome_do_pacote")`
   
@@ -1968,6 +1915,19 @@ if (window.HTMLWidgets) slideshow.on('afterShowSlide', function (slide) {
     deleted = true;
   });
 })();
+// add `data-at-shortcutkeys` attribute to <body> to resolve conflicts with JAWS
+// screen reader (see PR #262)
+(function(d) {
+  let res = {};
+  d.querySelectorAll('.remark-help-content table tr').forEach(tr => {
+    const t = tr.querySelector('td:nth-child(2)').innerText;
+    tr.querySelectorAll('td:first-child .key').forEach(key => {
+      const k = key.innerText;
+      if (/^[a-z]$/.test(k)) res[k] = t;  // must be a single letter (key)
+    });
+  });
+  d.body.setAttribute('data-at-shortcutkeys', JSON.stringify(res));
+})(document);
 (function() {
   "use strict"
   // Replace <script> tags in slides area to make them executable
