@@ -10,12 +10,12 @@ library(tidyverse)
 
 ano <- 2018
 
-"https://git.io/JOqUN" %>%
-  read_csv2() %>%
-  group_by(temporada) %>%
-  filter(quem_ganhou != "Empate", temporada %in% ano) %>%
-  count(quem_ganhou, sort = TRUE, name = "n_vitorias") %>%
-  filter(n_vitorias == max(n_vitorias)) %>%
+"https://git.io/JOqUN" |>
+  read_csv2() |>
+  group_by(temporada) |>
+  filter(quem_ganhou != "Empate", temporada %in% ano) |>
+  count(quem_ganhou, sort = TRUE, name = "n_vitorias") |>
+  filter(n_vitorias == max(n_vitorias)) |>
   arrange(temporada)
 
 # Escreva abaixo sua função -------------------------------------------

@@ -13,11 +13,11 @@
 #' @examples
 #' melhor_time_temporada(2018)
 melhor_time_temporada <- function(ano = 2003:2021) {
-  "https://git.io/JOqUN" %>%
-    readr::read_csv2() %>%
-    dplyr::group_by(temporada) %>%
-    dplyr::filter(quem_ganhou != "Empate", temporada %in% ano) %>%
-    dplyr::count(quem_ganhou, sort = TRUE, name = "n_vitorias") %>%
-    dplyr::filter(n_vitorias == max(n_vitorias)) %>%
+  "https://git.io/JOqUN" |>
+    readr::read_csv2() |>
+    dplyr::group_by(temporada) |>
+    dplyr::filter(quem_ganhou != "Empate", temporada %in% ano) |>
+    dplyr::count(quem_ganhou, sort = TRUE, name = "n_vitorias") |>
+    dplyr::filter(n_vitorias == max(n_vitorias)) |>
     dplyr::arrange(temporada)
 }

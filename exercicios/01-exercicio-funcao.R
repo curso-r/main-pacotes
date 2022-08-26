@@ -13,13 +13,13 @@ library(tidyverse)
 
 time <- "Cruzeiro"
 
-"https://git.io/JOqUN" %>%
-  read_csv2() %>%
-  group_by(temporada, quem_ganhou) %>%
-  filter(quem_ganhou != "Empate", quem_ganhou %in% time) %>%
-  count(quem_ganhou, sort = TRUE, name = "n_vitorias") %>%
-  ungroup() %>%
-  filter(n_vitorias == min(n_vitorias)) %>%
+"https://git.io/JOqUN" |>
+  read_csv2() |>
+  group_by(temporada, quem_ganhou) |>
+  filter(quem_ganhou != "Empate", quem_ganhou %in% time) |>
+  count(quem_ganhou, sort = TRUE, name = "n_vitorias") |>
+  ungroup() |>
+  filter(n_vitorias == min(n_vitorias)) |>
   rename("time" = quem_ganhou)
 
 # Escreva abaixo sua função -------------------------------------------
