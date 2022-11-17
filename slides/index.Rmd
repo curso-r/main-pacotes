@@ -311,8 +311,11 @@ knitr::include_graphics("https://raw.githubusercontent.com/allisonhorst/stats-il
 O pacote `{usethis}` realiza ações que são possíveis de fazer manualmente, mas que __demandariam muitos cliques__ e são sujeitas a __erros humanos__. Alguns exemplos de poderes do usethis:
 
 - Criar um projeto com estrutura de pacotes
+
 - Adicionar uma dependência no pacote
+
 - Integrar o pacote com Git e GitHub
+
 - Adicionar uma GitHub Action ao pacote
 
 Apresentaremos várias funções do `{usethis}` ao longo do curso!
@@ -334,10 +337,10 @@ usethis::create_package("~/Documents/meupacote")
 ---
 
 ```
-#> ✓ Creating '/home/clente/Documents/meupacote/'
-#> ✓ Setting active project to '/home/clente/Documents/meupacote'
-#> ✓ Creating 'R/'
-#> ✓ Writing 'DESCRIPTION'
+#> ✔ Creating '/Users/clente/Documents/meupacote/'
+#> ✔ Setting active project to '/Users/clente/Documents/meupacote'
+#> ✔ Creating 'R/'
+#> ✔ Writing 'DESCRIPTION'
 #> Package: meupacote
 #> Title: What the Package Does (One Line, Title Case)
 #> Version: 0.0.0.9000
@@ -347,16 +350,15 @@ usethis::create_package("~/Documents/meupacote")
 #> License: `use_mit_license()`, `use_gpl3_license()` or friends to
 #>     pick a license
 #> Encoding: UTF-8
-#> LazyData: true
 #> Roxygen: list(markdown = TRUE)
-#> RoxygenNote: 7.1.1
-#> ✓ Writing 'NAMESPACE'
-#> ✓ Writing 'meupacote.Rproj'
-#> ✓ Adding '^meupacote\\.Rproj$' to '.Rbuildignore'
-#> ✓ Adding '.Rproj.user' to '.gitignore'
-#> ✓ Adding '^\\.Rproj\\.user$' to '.Rbuildignore'
-#> ✓ Opening '/home/clente/Documents/meupacote/' in new RStudio session
-#> ✓ Setting active project to '<no active project>'
+#> RoxygenNote: 7.2.1
+#> ✔ Writing 'NAMESPACE'
+#> ✔ Writing 'meupacote.Rproj'
+#> ✔ Adding '^meupacote\\.Rproj$' to '.Rbuildignore'
+#> ✔ Adding '.Rproj.user' to '.gitignore'
+#> ✔ Adding '^\\.Rproj\\.user$' to '.Rbuildignore'
+#> ✔ Opening '/Users/clente/Documents/meupacote/' in new RStudio session
+#> ✔ Setting active project to '<no active project>'
 ```
 
 ---
@@ -382,10 +384,7 @@ available::available("chess", browse = FALSE)
 ```
 
 ```
-#> Urban Dictionary can contain potentially offensive results,
-#>   should they be included? [Y]es / [N]o:
-#> 1: No
-#> ── chess ──────────────────────────────────────────────────────────────
+#> ── chess ─────────────────────────────────────────────────────────────────
 #> Name valid: ✔
 #> Available on CRAN: ✖ 
 #> Available on Bioconductor: ✔
@@ -1523,7 +1522,7 @@ pkgdown::build_site()
 
   - No repositório do pacote, clique em **Settings**, e no menu lateral escolha **Pages**
     
-  - Em **Source**, selecione a sua branch principal (provavelmente chama de **main** ou **master**), escolha o diretório `docs/` e clique em **save**
+  - Em **Source**, selecione **Deploy from a branch**, escolha o diretório `docs/` e clique em **save**
     
 ```{r echo=FALSE, out.width="50%"}
 knitr::include_graphics("img/githubpages.png")
@@ -1701,8 +1700,8 @@ jobs:
   R-CMD-check:                                          # Job
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v2                       # Use
-      - uses: r-lib/actions/setup-r@v1                  # Use
+      - uses: actions/checkout@v3                       # Use
+      - uses: r-lib/actions/setup-r@v2                  # Use
       - name: Install dependencies                      # Step
         run: |                                          # Action
           install.packages(c("remotes", "rcmdcheck"))

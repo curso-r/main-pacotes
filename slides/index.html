@@ -4,7 +4,7 @@
     <title>Pacotes 📦</title>
     <meta charset="utf-8" />
     <meta name="author" content="" />
-    <script src="libs/header-attrs-2.16/header-attrs.js"></script>
+    <script src="libs/header-attrs-2.17/header-attrs.js"></script>
     <link rel="stylesheet" href="css/xaringan-themer.css" type="text/css" />
   </head>
   <body>
@@ -304,8 +304,11 @@ O pacote `{usethis}` ajuda com todo o fluxo de desenvolvimento em R. Ele ajuda a
 O pacote `{usethis}` realiza ações que são possíveis de fazer manualmente, mas que __demandariam muitos cliques__ e são sujeitas a __erros humanos__. Alguns exemplos de poderes do usethis:
 
 - Criar um projeto com estrutura de pacotes
+
 - Adicionar uma dependência no pacote
+
 - Integrar o pacote com Git e GitHub
+
 - Adicionar uma GitHub Action ao pacote
 
 Apresentaremos várias funções do `{usethis}` ao longo do curso!
@@ -328,10 +331,10 @@ usethis::create_package("~/Documents/meupacote")
 ---
 
 ```
-#&gt; ✓ Creating '/home/clente/Documents/meupacote/'
-#&gt; ✓ Setting active project to '/home/clente/Documents/meupacote'
-#&gt; ✓ Creating 'R/'
-#&gt; ✓ Writing 'DESCRIPTION'
+#&gt; ✔ Creating '/Users/clente/Documents/meupacote/'
+#&gt; ✔ Setting active project to '/Users/clente/Documents/meupacote'
+#&gt; ✔ Creating 'R/'
+#&gt; ✔ Writing 'DESCRIPTION'
 #&gt; Package: meupacote
 #&gt; Title: What the Package Does (One Line, Title Case)
 #&gt; Version: 0.0.0.9000
@@ -341,16 +344,15 @@ usethis::create_package("~/Documents/meupacote")
 #&gt; License: `use_mit_license()`, `use_gpl3_license()` or friends to
 #&gt;     pick a license
 #&gt; Encoding: UTF-8
-#&gt; LazyData: true
 #&gt; Roxygen: list(markdown = TRUE)
-#&gt; RoxygenNote: 7.1.1
-#&gt; ✓ Writing 'NAMESPACE'
-#&gt; ✓ Writing 'meupacote.Rproj'
-#&gt; ✓ Adding '^meupacote\\.Rproj$' to '.Rbuildignore'
-#&gt; ✓ Adding '.Rproj.user' to '.gitignore'
-#&gt; ✓ Adding '^\\.Rproj\\.user$' to '.Rbuildignore'
-#&gt; ✓ Opening '/home/clente/Documents/meupacote/' in new RStudio session
-#&gt; ✓ Setting active project to '&lt;no active project&gt;'
+#&gt; RoxygenNote: 7.2.1
+#&gt; ✔ Writing 'NAMESPACE'
+#&gt; ✔ Writing 'meupacote.Rproj'
+#&gt; ✔ Adding '^meupacote\\.Rproj$' to '.Rbuildignore'
+#&gt; ✔ Adding '.Rproj.user' to '.gitignore'
+#&gt; ✔ Adding '^\\.Rproj\\.user$' to '.Rbuildignore'
+#&gt; ✔ Opening '/Users/clente/Documents/meupacote/' in new RStudio session
+#&gt; ✔ Setting active project to '&lt;no active project&gt;'
 ```
 
 ---
@@ -377,10 +379,7 @@ available::available("chess", browse = FALSE)
 ```
 
 ```
-#&gt; Urban Dictionary can contain potentially offensive results,
-#&gt;   should they be included? [Y]es / [N]o:
-#&gt; 1: No
-#&gt; ── chess ──────────────────────────────────────────────────────────────
+#&gt; ── chess ─────────────────────────────────────────────────────────────────
 #&gt; Name valid: ✔
 #&gt; Available on CRAN: ✖ 
 #&gt; Available on Bioconductor: ✔
@@ -1546,7 +1545,7 @@ pkgdown::build_site()
 
   - No repositório do pacote, clique em **Settings**, e no menu lateral escolha **Pages**
     
-  - Em **Source**, selecione a sua branch principal (provavelmente chama de **main** ou **master**), escolha o diretório `docs/` e clique em **save**
+  - Em **Source**, selecione **Deploy from a branch**, escolha o diretório `docs/` e clique em **save**
     
 &lt;img src="img/githubpages.png" width="50%" style="display: block; margin: auto;" /&gt;
   
@@ -1720,8 +1719,8 @@ jobs:
   R-CMD-check:                                          # Job
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v2                       # Use
-      - uses: r-lib/actions/setup-r@v1                  # Use
+      - uses: actions/checkout@v3                       # Use
+      - uses: r-lib/actions/setup-r@v2                  # Use
       - name: Install dependencies                      # Step
         run: |                                          # Action
           install.packages(c("remotes", "rcmdcheck"))
